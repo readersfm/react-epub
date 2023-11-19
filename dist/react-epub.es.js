@@ -1,4 +1,4 @@
-import gi, { useRef as Ht, useEffect as Kt, createContext as za, useContext as ja, useState as jt, useMemo as ls, useReducer as Ma } from "react";
+import gi, { useRef as Ht, useEffect as Kt, createContext as za, useContext as ja, useState as Pt, useMemo as ls, useReducer as Ma } from "react";
 var It = typeof globalThis < "u" ? globalThis : typeof window < "u" ? window : typeof global < "u" ? global : typeof self < "u" ? self : {};
 function or(n) {
   return n && n.__esModule && Object.prototype.hasOwnProperty.call(n, "default") ? n.default : n;
@@ -20,14 +20,14 @@ function Ua() {
   Cn = 1;
   var n = gi, e = Symbol.for("react.element"), t = Symbol.for("react.fragment"), r = Object.prototype.hasOwnProperty, i = n.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED.ReactCurrentOwner, s = { key: !0, ref: !0, __self: !0, __source: !0 };
   function a(o, u, h) {
-    var f, c = {}, b = null, m = null;
-    h !== void 0 && (b = "" + h), u.key !== void 0 && (b = "" + u.key), u.ref !== void 0 && (m = u.ref);
+    var f, c = {}, w = null, m = null;
+    h !== void 0 && (w = "" + h), u.key !== void 0 && (w = "" + u.key), u.ref !== void 0 && (m = u.ref);
     for (f in u)
       r.call(u, f) && !s.hasOwnProperty(f) && (c[f] = u[f]);
     if (o && o.defaultProps)
       for (f in u = o.defaultProps, u)
         c[f] === void 0 && (c[f] = u[f]);
-    return { $$typeof: e, type: o, key: b, ref: m, props: c, _owner: i.current };
+    return { $$typeof: e, type: o, key: w, ref: m, props: c, _owner: i.current };
   }
   return Dr.Fragment = t, Dr.jsx = a, Dr.jsxs = a, Dr;
 }
@@ -44,11 +44,11 @@ var Ar = {};
 var Dn;
 function Wa() {
   return Dn || (Dn = 1, process.env.NODE_ENV !== "production" && function() {
-    var n = gi, e = Symbol.for("react.element"), t = Symbol.for("react.portal"), r = Symbol.for("react.fragment"), i = Symbol.for("react.strict_mode"), s = Symbol.for("react.profiler"), a = Symbol.for("react.provider"), o = Symbol.for("react.context"), u = Symbol.for("react.forward_ref"), h = Symbol.for("react.suspense"), f = Symbol.for("react.suspense_list"), c = Symbol.for("react.memo"), b = Symbol.for("react.lazy"), m = Symbol.for("react.offscreen"), T = Symbol.iterator, N = "@@iterator";
+    var n = gi, e = Symbol.for("react.element"), t = Symbol.for("react.portal"), r = Symbol.for("react.fragment"), i = Symbol.for("react.strict_mode"), s = Symbol.for("react.profiler"), a = Symbol.for("react.provider"), o = Symbol.for("react.context"), u = Symbol.for("react.forward_ref"), h = Symbol.for("react.suspense"), f = Symbol.for("react.suspense_list"), c = Symbol.for("react.memo"), w = Symbol.for("react.lazy"), m = Symbol.for("react.offscreen"), S = Symbol.iterator, N = "@@iterator";
     function p(d) {
       if (d === null || typeof d != "object")
         return null;
-      var I = T && d[T] || d[N];
+      var I = S && d[S] || d[N];
       return typeof I == "function" ? I : null;
     }
     var v = n.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
@@ -69,10 +69,10 @@ function Wa() {
         ye.unshift("Warning: " + I), Function.prototype.apply.call(console[d], console, ye);
       }
     }
-    var k = !1, w = !1, C = !1, S = !1, R = !1, z;
+    var k = !1, b = !1, C = !1, T = !1, R = !1, z;
     z = Symbol.for("react.module.reference");
     function M(d) {
-      return !!(typeof d == "string" || typeof d == "function" || d === r || d === s || R || d === i || d === h || d === f || S || d === m || k || w || C || typeof d == "object" && d !== null && (d.$$typeof === b || d.$$typeof === c || d.$$typeof === a || d.$$typeof === o || d.$$typeof === u || // This needs to include all possible module reference object
+      return !!(typeof d == "string" || typeof d == "function" || d === r || d === s || R || d === i || d === h || d === f || T || d === m || k || b || C || typeof d == "object" && d !== null && (d.$$typeof === w || d.$$typeof === c || d.$$typeof === a || d.$$typeof === o || d.$$typeof === u || // This needs to include all possible module reference object
       // types supported by any Flight configuration anywhere since
       // we don't know which Flight build this will end up being used
       // with.
@@ -122,7 +122,7 @@ function Wa() {
           case c:
             var K = d.displayName || null;
             return K !== null ? K : te(d.type) || "Memo";
-          case b: {
+          case w: {
             var ce = d, ye = ce._payload, re = ce._init;
             try {
               return te(re(ye));
@@ -311,7 +311,7 @@ function Wa() {
             return Ie(d.render);
           case c:
             return We(d.type, I, U);
-          case b: {
+          case w: {
             var K = d, ce = K._payload, ye = K._init;
             try {
               return We(ye(ce), I, U);
@@ -551,7 +551,7 @@ Check the top-level render call using <` + U + ">.");
         }
       }
     }
-    function W(d) {
+    function q(d) {
       {
         var I = d.type;
         if (I == null || typeof I == "string")
@@ -615,7 +615,7 @@ Check the top-level render call using <` + U + ">.");
             else
               O(Ve, d);
         }
-        return d === r ? me(xe) : W(xe), xe;
+        return d === r ? me(xe) : q(xe), xe;
       }
     }
     function he(d, I, U) {
@@ -629,7 +629,7 @@ Check the top-level render call using <` + U + ">.");
   }()), Ar;
 }
 process.env.NODE_ENV === "production" ? Ui.exports = Ua() : Ui.exports = Wa();
-var q = Ui.exports, Wi = { exports: {} }, hs = { exports: {} }, qa = void 0, fs = function(n) {
+var W = Ui.exports, Wi = { exports: {} }, hs = { exports: {} }, qa = void 0, fs = function(n) {
   return n !== qa && n !== null;
 }, Va = fs, Ha = {
   object: !0,
@@ -756,35 +756,35 @@ var wo = hs.exports, _o = function(n) {
   return n;
 };
 (function(n, e) {
-  var t = wo, r = _o, i = Function.prototype.apply, s = Function.prototype.call, a = Object.create, o = Object.defineProperty, u = Object.defineProperties, h = Object.prototype.hasOwnProperty, f = { configurable: !0, enumerable: !1, writable: !0 }, c, b, m, T, N, p, v;
+  var t = wo, r = _o, i = Function.prototype.apply, s = Function.prototype.call, a = Object.create, o = Object.defineProperty, u = Object.defineProperties, h = Object.prototype.hasOwnProperty, f = { configurable: !0, enumerable: !1, writable: !0 }, c, w, m, S, N, p, v;
   c = function(y, A) {
     var k;
     return r(A), h.call(this, "__ee__") ? k = this.__ee__ : (k = f.value = a(null), o(this, "__ee__", f), f.value = null), k[y] ? typeof k[y] == "object" ? k[y].push(A) : k[y] = [k[y], A] : k[y] = A, this;
-  }, b = function(y, A) {
-    var k, w;
-    return r(A), w = this, c.call(this, y, k = function() {
-      m.call(w, y, k), i.call(A, this, arguments);
+  }, w = function(y, A) {
+    var k, b;
+    return r(A), b = this, c.call(this, y, k = function() {
+      m.call(b, y, k), i.call(A, this, arguments);
     }), k.__eeOnceListener__ = A, this;
   }, m = function(y, A) {
-    var k, w, C, S;
+    var k, b, C, T;
     if (r(A), !h.call(this, "__ee__"))
       return this;
     if (k = this.__ee__, !k[y])
       return this;
-    if (w = k[y], typeof w == "object")
-      for (S = 0; C = w[S]; ++S)
-        (C === A || C.__eeOnceListener__ === A) && (w.length === 2 ? k[y] = w[S ? 0 : 1] : w.splice(S, 1));
+    if (b = k[y], typeof b == "object")
+      for (T = 0; C = b[T]; ++T)
+        (C === A || C.__eeOnceListener__ === A) && (b.length === 2 ? k[y] = b[T ? 0 : 1] : b.splice(T, 1));
     else
-      (w === A || w.__eeOnceListener__ === A) && delete k[y];
+      (b === A || b.__eeOnceListener__ === A) && delete k[y];
     return this;
-  }, T = function(y) {
-    var A, k, w, C, S;
+  }, S = function(y) {
+    var A, k, b, C, T;
     if (h.call(this, "__ee__") && (C = this.__ee__[y], !!C))
       if (typeof C == "object") {
-        for (k = arguments.length, S = new Array(k - 1), A = 1; A < k; ++A)
-          S[A - 1] = arguments[A];
-        for (C = C.slice(), A = 0; w = C[A]; ++A)
-          i.call(w, this, S);
+        for (k = arguments.length, T = new Array(k - 1), A = 1; A < k; ++A)
+          T[A - 1] = arguments[A];
+        for (C = C.slice(), A = 0; b = C[A]; ++A)
+          i.call(b, this, T);
       } else
         switch (arguments.length) {
           case 1:
@@ -797,20 +797,20 @@ var wo = hs.exports, _o = function(n) {
             s.call(C, this, arguments[1], arguments[2]);
             break;
           default:
-            for (k = arguments.length, S = new Array(k - 1), A = 1; A < k; ++A)
-              S[A - 1] = arguments[A];
-            i.call(C, this, S);
+            for (k = arguments.length, T = new Array(k - 1), A = 1; A < k; ++A)
+              T[A - 1] = arguments[A];
+            i.call(C, this, T);
         }
   }, N = {
     on: c,
-    once: b,
+    once: w,
     off: m,
-    emit: T
+    emit: S
   }, p = {
     on: t(c),
-    once: t(b),
+    once: t(w),
     off: t(m),
-    emit: t(T)
+    emit: t(S)
   }, v = u({}, p), n.exports = e = function(y) {
     return y == null ? a(v) : u(Object(y), p);
   }, e.methods = N;
@@ -962,7 +962,7 @@ function At(n, e) {
   }
   t.constructor != n && (typeof n != "function" && console.error("unknown Class:" + n), t.constructor = n);
 }
-var St = {}, Pt = St.ELEMENT_NODE = 1, wr = St.ATTRIBUTE_NODE = 2, ri = St.TEXT_NODE = 3, ms = St.CDATA_SECTION_NODE = 4, ys = St.ENTITY_REFERENCE_NODE = 5, To = St.ENTITY_NODE = 6, bs = St.PROCESSING_INSTRUCTION_NODE = 7, ws = St.COMMENT_NODE = 8, _s = St.DOCUMENT_NODE = 9, Es = St.DOCUMENT_TYPE_NODE = 10, Zt = St.DOCUMENT_FRAGMENT_NODE = 11, ko = St.NOTATION_NODE = 12, wt = {}, vt = {};
+var St = {}, zt = St.ELEMENT_NODE = 1, wr = St.ATTRIBUTE_NODE = 2, ri = St.TEXT_NODE = 3, ms = St.CDATA_SECTION_NODE = 4, ys = St.ENTITY_REFERENCE_NODE = 5, To = St.ENTITY_NODE = 6, bs = St.PROCESSING_INSTRUCTION_NODE = 7, ws = St.COMMENT_NODE = 8, _s = St.DOCUMENT_NODE = 9, Es = St.DOCUMENT_TYPE_NODE = 10, Zt = St.DOCUMENT_FRAGMENT_NODE = 11, ko = St.NOTATION_NODE = 12, wt = {}, vt = {};
 wt.INDEX_SIZE_ERR = (vt[1] = "Index size error", 1);
 wt.DOMSTRING_SIZE_ERR = (vt[2] = "DOMString size error", 2);
 var Dt = wt.HIERARCHY_REQUEST_ERR = (vt[3] = "Hierarchy request error", 3);
@@ -1460,7 +1460,7 @@ Ur.prototype = {
       }
       return n;
     }
-    return ni(this, n, e), n.ownerDocument = this, this.documentElement === null && n.nodeType === Pt && (this.documentElement = n), n;
+    return ni(this, n, e), n.ownerDocument = this, this.documentElement === null && n.nodeType === zt && (this.documentElement = n), n;
   },
   removeChild: function(n) {
     return this.documentElement == n && (this.documentElement = null), Ts(this, n);
@@ -1476,7 +1476,7 @@ Ur.prototype = {
   getElementById: function(n) {
     var e = null;
     return Br(this.documentElement, function(t) {
-      if (t.nodeType == Pt && t.getAttribute("id") == n)
+      if (t.nodeType == zt && t.getAttribute("id") == n)
         return e = t, !0;
     }), e;
   },
@@ -1502,7 +1502,7 @@ Ur.prototype = {
     return new _r(this, function(t) {
       var r = [];
       return e.length > 0 && Br(t.documentElement, function(i) {
-        if (i !== t && i.nodeType === Pt) {
+        if (i !== t && i.nodeType === zt) {
           var s = i.getAttribute("class");
           if (s) {
             var a = n === s;
@@ -1567,7 +1567,7 @@ function sr() {
   this._nsMap = {};
 }
 sr.prototype = {
-  nodeType: Pt,
+  nodeType: zt,
   hasAttribute: function(n) {
     return this.getAttributeNode(n) != null;
   },
@@ -1622,7 +1622,7 @@ sr.prototype = {
     return new _r(this, function(e) {
       var t = [];
       return Br(e, function(r) {
-        r !== e && r.nodeType == Pt && (n === "*" || r.tagName == n) && t.push(r);
+        r !== e && r.nodeType == zt && (n === "*" || r.tagName == n) && t.push(r);
       }), t;
     });
   },
@@ -1630,7 +1630,7 @@ sr.prototype = {
     return new _r(this, function(t) {
       var r = [];
       return Br(t, function(i) {
-        i !== t && i.nodeType === Pt && (n === "*" || i.namespaceURI === n) && (e === "*" || i.localName == e) && r.push(i);
+        i !== t && i.nodeType === zt && (n === "*" || i.namespaceURI === n) && (e === "*" || i.localName == e) && r.push(i);
       }), r;
     });
   }
@@ -1761,7 +1761,7 @@ function yr(n, e, t, r, i) {
     } else
       return;
   switch (n.nodeType) {
-    case Pt:
+    case zt:
       var s = n.attributes, a = s.length, v = n.firstChild, o = n.tagName;
       t = Lr.isHTML(n.namespaceURI) || t;
       var u = o;
@@ -1773,33 +1773,33 @@ function yr(n, e, t, r, i) {
           }
         if (!h)
           for (var c = i.length - 1; c >= 0; c--) {
-            var b = i[c];
-            if (b.prefix === "" && b.namespace === n.namespaceURI) {
-              h = b.namespace;
+            var w = i[c];
+            if (w.prefix === "" && w.namespace === n.namespaceURI) {
+              h = w.namespace;
               break;
             }
           }
         if (h !== n.namespaceURI)
           for (var c = i.length - 1; c >= 0; c--) {
-            var b = i[c];
-            if (b.namespace === n.namespaceURI) {
-              b.prefix && (u = b.prefix + ":" + o);
+            var w = i[c];
+            if (w.namespace === n.namespaceURI) {
+              w.prefix && (u = w.prefix + ":" + o);
               break;
             }
           }
       }
       e.push("<", u);
       for (var m = 0; m < a; m++) {
-        var T = s.item(m);
-        T.prefix == "xmlns" ? i.push({ prefix: T.localName, namespace: T.value }) : T.nodeName == "xmlns" && i.push({ prefix: "", namespace: T.value });
+        var S = s.item(m);
+        S.prefix == "xmlns" ? i.push({ prefix: S.localName, namespace: S.value }) : S.nodeName == "xmlns" && i.push({ prefix: "", namespace: S.value });
       }
       for (var m = 0; m < a; m++) {
-        var T = s.item(m);
-        if (jn(T, t, i)) {
-          var N = T.prefix || "", p = T.namespaceURI;
+        var S = s.item(m);
+        if (jn(S, t, i)) {
+          var N = S.prefix || "", p = S.namespaceURI;
           Fi(e, N ? "xmlns:" + N : "xmlns", p), i.push({ prefix: N, namespace: p });
         }
-        yr(T, e, t, r, i);
+        yr(S, e, t, r, i);
       }
       if (o === u && jn(n, t, i)) {
         var N = n.prefix || "", p = n.namespaceURI;
@@ -1853,7 +1853,7 @@ function yr(n, e, t, r, i) {
 function Ls(n, e, t) {
   var r;
   switch (e.nodeType) {
-    case Pt:
+    case zt:
       r = e.cloneNode(!1), r.ownerDocument = n;
     case Zt:
       break;
@@ -1874,7 +1874,7 @@ function qi(n, e, t) {
       typeof s != "object" && s != r[i] && (r[i] = s);
     }
   switch (e.childNodes && (r.childNodes = new $t()), r.ownerDocument = n, r.nodeType) {
-    case Pt:
+    case zt:
       var a = e.attributes, o = r.attributes = new ii(), u = a.length;
       o._ownerElement = r;
       for (var h = 0; h < u; h++)
@@ -1895,7 +1895,7 @@ try {
   if (Object.defineProperty) {
     let n = function(e) {
       switch (e.nodeType) {
-        case Pt:
+        case zt:
         case Zt:
           var t = [];
           for (e = e.firstChild; e; )
@@ -1915,7 +1915,7 @@ try {
       },
       set: function(e) {
         switch (this.nodeType) {
-          case Pt:
+          case zt:
           case Zt:
             for (; this.firstChild; )
               this.removeChild(this.firstChild);
@@ -4112,15 +4112,15 @@ function Fo(n, e, t, r, i) {
   function o(ve) {
     if (ve > N) {
       var de = n.substring(N, ve).replace(/&#?\w+;/g, a);
-      b && u(N), r.characters(de, 0, ve - N), N = ve;
+      w && u(N), r.characters(de, 0, ve - N), N = ve;
     }
   }
   function u(ve, de) {
     for (; ve >= f && (de = c.exec(n)); )
-      h = de.index, f = h + de[0].length, b.lineNumber++;
-    b.columnNumber = ve - h + 1;
+      h = de.index, f = h + de[0].length, w.lineNumber++;
+    w.columnNumber = ve - h + 1;
   }
-  for (var h = 0, f = 0, c = /.*(?:\r\n?|\n)|.*$/g, b = r.locator, m = [{ currentNSMap: e }], T = {}, N = 0; ; ) {
+  for (var h = 0, f = 0, c = /.*(?:\r\n?|\n)|.*$/g, w = r.locator, m = [{ currentNSMap: e }], S = {}, N = 0; ; ) {
     try {
       var p = n.indexOf("<", N);
       if (p < 0) {
@@ -4134,31 +4134,31 @@ function Fo(n, e, t, r, i) {
         case "/":
           var Y = n.indexOf(">", p + 3), A = n.substring(p + 2, Y).replace(/[ \t\n\r]+$/g, ""), k = m.pop();
           Y < 0 ? (A = n.substring(p + 2).replace(/[\s<].*/, ""), i.error("end tag name: " + A + " is not complete:" + k.tagName), Y = p + 1 + A.length) : A.match(/\s</) && (A = A.replace(/[\s<].*/, ""), i.error("end tag name: " + A + " maybe not complete"), Y = p + 1 + A.length);
-          var w = k.localNSMap, C = k.tagName == A, S = C || k.tagName && k.tagName.toLowerCase() == A.toLowerCase();
-          if (S) {
-            if (r.endElement(k.uri, k.localName, A), w)
-              for (var R in w)
-                Object.prototype.hasOwnProperty.call(w, R) && r.endPrefixMapping(R);
+          var b = k.localNSMap, C = k.tagName == A, T = C || k.tagName && k.tagName.toLowerCase() == A.toLowerCase();
+          if (T) {
+            if (r.endElement(k.uri, k.localName, A), b)
+              for (var R in b)
+                Object.prototype.hasOwnProperty.call(b, R) && r.endPrefixMapping(R);
             C || i.fatalError("end tag name: " + A + " is not match the current start tagName:" + k.tagName);
           } else
             m.push(k);
           Y++;
           break;
         case "?":
-          b && u(p), Y = Uo(n, p, r);
+          w && u(p), Y = Uo(n, p, r);
           break;
         case "!":
-          b && u(p), Y = Mo(n, p, r, i);
+          w && u(p), Y = Mo(n, p, r, i);
           break;
         default:
-          b && u(p);
+          w && u(p);
           var z = new js(), M = m[m.length - 1].currentNSMap, Y = Po(n, p, z, M, a, i), Z = z.length;
-          if (!z.closed && jo(n, Y, z.tagName, T) && (z.closed = !0, t.nbsp || i.warning("unclosed xml attribute")), b && Z) {
-            for (var te = Wn(b, {}), ge = 0; ge < Z; ge++) {
+          if (!z.closed && jo(n, Y, z.tagName, S) && (z.closed = !0, t.nbsp || i.warning("unclosed xml attribute")), w && Z) {
+            for (var te = Wn(w, {}), ge = 0; ge < Z; ge++) {
               var pe = z[ge];
-              u(pe.offset), pe.locator = Wn(b, {});
+              u(pe.offset), pe.locator = Wn(w, {});
             }
-            r.locator = te, qn(z, r, M) && m.push(z), r.locator = b;
+            r.locator = te, qn(z, r, M) && m.push(z), r.locator = w;
           } else
             qn(z, r, M) && m.push(z);
           Fr.isHTML(z.uri) && !z.closed ? Y = zo(n, Y, z.tagName, a, r) : Y++;
@@ -4175,8 +4175,8 @@ function Wn(n, e) {
   return e.lineNumber = n.lineNumber, e.columnNumber = n.columnNumber, e;
 }
 function Po(n, e, t, r, i, s) {
-  function a(b, m, T) {
-    t.attributeNames.hasOwnProperty(b) && s.fatalError("Attribute " + b + " redefined"), t.addValue(b, m, T);
+  function a(w, m, S) {
+    t.attributeNames.hasOwnProperty(w) && s.fatalError("Attribute " + w + " redefined"), t.addValue(w, m, S);
   }
   for (var o, u, h = ++e, f = Sr; ; ) {
     var c = n.charAt(h);
@@ -4279,9 +4279,9 @@ function Po(n, e, t, r, i, s) {
 }
 function qn(n, e, t) {
   for (var r = n.tagName, i = null, c = n.length; c--; ) {
-    var s = n[c], a = s.qName, o = s.value, b = a.indexOf(":");
-    if (b > 0)
-      var u = s.prefix = a.slice(0, b), h = a.slice(b + 1), f = u === "xmlns" && h;
+    var s = n[c], a = s.qName, o = s.value, w = a.indexOf(":");
+    if (w > 0)
+      var u = s.prefix = a.slice(0, w), h = a.slice(w + 1), f = u === "xmlns" && h;
     else
       h = a, u = null, f = a === "xmlns" && "";
     s.localName = h, f !== !1 && (i == null && (i = {}, zs(t, t = {})), t[f] = i[f] = o, s.uri = Fr.XMLNS, e.startPrefixMapping(f, o));
@@ -4291,8 +4291,8 @@ function qn(n, e, t) {
     var u = s.prefix;
     u && (u === "xml" && (s.uri = Fr.XML), u !== "xmlns" && (s.uri = t[u || ""]));
   }
-  var b = r.indexOf(":");
-  b > 0 ? (u = n.prefix = r.slice(0, b), h = n.localName = r.slice(b + 1)) : (u = null, h = n.localName = r);
+  var w = r.indexOf(":");
+  w > 0 ? (u = n.prefix = r.slice(0, w), h = n.localName = r.slice(w + 1)) : (u = null, h = n.localName = r);
   var m = n.uri = t[u || ""];
   if (e.startElement(m, h, r, n), n.closed) {
     if (e.endElement(m, h, r), i)
@@ -4874,7 +4874,7 @@ if (!ea)
       return "/";
     }
   };
-function zt(n) {
+function jt(n) {
   if (typeof n != "string")
     throw new TypeError("Path must be a string. Received " + n);
 }
@@ -4921,30 +4921,30 @@ var ei = {
   resolve: function() {
     for (var e = "", t = !1, r, i = arguments.length - 1; i >= -1 && !t; i--) {
       var s;
-      i >= 0 ? s = arguments[i] : (r === void 0 && (r = ea.cwd()), s = r), zt(s), s.length !== 0 && (e = s + "/" + e, t = s.charCodeAt(0) === 47);
+      i >= 0 ? s = arguments[i] : (r === void 0 && (r = ea.cwd()), s = r), jt(s), s.length !== 0 && (e = s + "/" + e, t = s.charCodeAt(0) === 47);
     }
     return e = Zn(e, !t), t ? e.length > 0 ? "/" + e : "/" : e.length > 0 ? e : ".";
   },
   normalize: function(e) {
-    if (zt(e), e.length === 0)
+    if (jt(e), e.length === 0)
       return ".";
     var t = e.charCodeAt(0) === 47, r = e.charCodeAt(e.length - 1) === 47;
     return e = Zn(e, !t), e.length === 0 && !t && (e = "."), e.length > 0 && r && (e += "/"), t ? "/" + e : e;
   },
   isAbsolute: function(e) {
-    return zt(e), e.length > 0 && e.charCodeAt(0) === 47;
+    return jt(e), e.length > 0 && e.charCodeAt(0) === 47;
   },
   join: function() {
     if (arguments.length === 0)
       return ".";
     for (var e, t = 0; t < arguments.length; ++t) {
       var r = arguments[t];
-      zt(r), r.length > 0 && (e === void 0 ? e = r : e += "/" + r);
+      jt(r), r.length > 0 && (e === void 0 ? e = r : e += "/" + r);
     }
     return e === void 0 ? "." : ei.normalize(e);
   },
   relative: function(e, t) {
-    if (zt(e), zt(t), e === t || (e = ei.resolve(e), t = ei.resolve(t), e === t))
+    if (jt(e), jt(t), e === t || (e = ei.resolve(e), t = ei.resolve(t), e === t))
       return "";
     for (var r = 1; r < e.length && e.charCodeAt(r) === 47; ++r)
       ;
@@ -4961,21 +4961,21 @@ var ei = {
           s > h && (e.charCodeAt(r + c) === 47 ? f = c : c === 0 && (f = 0));
         break;
       }
-      var b = e.charCodeAt(r + c), m = t.charCodeAt(a + c);
-      if (b !== m)
+      var w = e.charCodeAt(r + c), m = t.charCodeAt(a + c);
+      if (w !== m)
         break;
-      b === 47 && (f = c);
+      w === 47 && (f = c);
     }
-    var T = "";
+    var S = "";
     for (c = r + f + 1; c <= i; ++c)
-      (c === i || e.charCodeAt(c) === 47) && (T.length === 0 ? T += ".." : T += "/..");
-    return T.length > 0 ? T + t.slice(a + f) : (a += f, t.charCodeAt(a) === 47 && ++a, t.slice(a));
+      (c === i || e.charCodeAt(c) === 47) && (S.length === 0 ? S += ".." : S += "/..");
+    return S.length > 0 ? S + t.slice(a + f) : (a += f, t.charCodeAt(a) === 47 && ++a, t.slice(a));
   },
   _makeLong: function(e) {
     return e;
   },
   dirname: function(e) {
-    if (zt(e), e.length === 0)
+    if (jt(e), e.length === 0)
       return ".";
     for (var t = e.charCodeAt(0), r = t === 47, i = -1, s = !0, a = e.length - 1; a >= 1; --a)
       if (t = e.charCodeAt(a), t === 47) {
@@ -4990,7 +4990,7 @@ var ei = {
   basename: function(e, t) {
     if (t !== void 0 && typeof t != "string")
       throw new TypeError('"ext" argument must be a string');
-    zt(e);
+    jt(e);
     var r = 0, i = -1, s = !0, a;
     if (t !== void 0 && t.length > 0 && t.length <= e.length) {
       if (t.length === e.length && t === e)
@@ -5020,7 +5020,7 @@ var ei = {
     }
   },
   extname: function(e) {
-    zt(e);
+    jt(e);
     for (var t = -1, r = 0, i = -1, s = !0, a = 0, o = e.length - 1; o >= 0; --o) {
       var u = e.charCodeAt(o);
       if (u === 47) {
@@ -5044,7 +5044,7 @@ var ei = {
     return tu("/", e);
   },
   parse: function(e) {
-    zt(e);
+    jt(e);
     var t = { root: "", dir: "", base: "", ext: "", name: "" };
     if (e.length === 0)
       return t;
@@ -5483,12 +5483,12 @@ class Fe {
    * @return {Range}
    */
   toRange(e, t) {
-    var r = e || document, i, s, a, o, u, h = this, f, c, b = t ? r.querySelector("." + t) != null : !1, m;
-    if (typeof r.createRange < "u" ? i = r.createRange() : i = new Qs(), h.range ? (s = h.start, f = h.path.steps.concat(s.steps), o = this.findNode(f, r, b ? t : null), a = h.end, c = h.path.steps.concat(a.steps), u = this.findNode(c, r, b ? t : null)) : (s = h.path, f = h.path.steps, o = this.findNode(h.path.steps, r, b ? t : null)), o)
+    var r = e || document, i, s, a, o, u, h = this, f, c, w = t ? r.querySelector("." + t) != null : !1, m;
+    if (typeof r.createRange < "u" ? i = r.createRange() : i = new Qs(), h.range ? (s = h.start, f = h.path.steps.concat(s.steps), o = this.findNode(f, r, w ? t : null), a = h.end, c = h.path.steps.concat(a.steps), u = this.findNode(c, r, w ? t : null)) : (s = h.path, f = h.path.steps, o = this.findNode(h.path.steps, r, w ? t : null)), o)
       try {
         s.terminal.offset != null ? i.setStart(o, s.terminal.offset) : i.setStart(o, 0);
       } catch {
-        m = this.fixMiss(f, s.terminal.offset, r, b ? t : null), i.setStart(m.container, m.offset);
+        m = this.fixMiss(f, s.terminal.offset, r, w ? t : null), i.setStart(m.container, m.offset);
       }
     else
       return console.log("No startContainer found for", this.toString()), null;
@@ -5496,7 +5496,7 @@ class Fe {
       try {
         a.terminal.offset != null ? i.setEnd(u, a.terminal.offset) : i.setEnd(u, 0);
       } catch {
-        m = this.fixMiss(c, h.end.terminal.offset, r, b ? t : null), i.setEnd(m.container, m.offset);
+        m = this.fixMiss(c, h.end.terminal.offset, r, w ? t : null), i.setEnd(m.container, m.offset);
       }
     return i;
   }
@@ -5620,15 +5620,15 @@ function zr(n, e, t, r) {
   for (h in r)
     o.setRequestHeader(h, r[h]);
   e == "json" && o.setRequestHeader("Accept", "application/json"), e || (e = new Xt(n).extension), e == "blob" && (o.responseType = s), Pr(e) && o.overrideMimeType("text/xml"), e == "binary" && (o.responseType = "arraybuffer"), o.send();
-  function f(b) {
-    a.reject(b);
+  function f(w) {
+    a.reject(w);
   }
   function c() {
     if (this.readyState === XMLHttpRequest.DONE) {
-      var b = !1;
-      if ((this.responseType === "" || this.responseType === "document") && (b = this.responseXML), this.status === 200 || this.status === 0 || b) {
+      var w = !1;
+      if ((this.responseType === "" || this.responseType === "document") && (w = this.responseXML), this.status === 200 || this.status === 0 || w) {
         var m;
-        if (!this.response && !b)
+        if (!this.response && !w)
           return a.reject({
             status: this.status,
             message: "Empty Response",
@@ -5641,7 +5641,7 @@ function zr(n, e, t, r) {
             message: "Forbidden",
             stack: new Error().stack
           }), a.promise;
-        b ? m = this.responseXML : Pr(e) ? m = Wt(this.response, "text/xml") : e == "xhtml" ? m = Wt(this.response, "application/xhtml+xml") : e == "html" || e == "htm" ? m = Wt(this.response, "text/html") : e == "json" ? m = JSON.parse(this.response) : e == "blob" ? i ? m = this.response : m = new Blob([this.response]) : m = this.response, a.resolve(m);
+        w ? m = this.responseXML : Pr(e) ? m = Wt(this.response, "text/xml") : e == "xhtml" ? m = Wt(this.response, "application/xhtml+xml") : e == "html" || e == "htm" ? m = Wt(this.response, "text/html") : e == "json" ? m = JSON.parse(this.response) : e == "blob" ? i ? m = this.response : m = new Blob([this.response]) : m = this.response, a.resolve(m);
       } else
         a.reject({
           status: this.status,
@@ -5705,10 +5705,10 @@ class ou {
    */
   find(e) {
     var t = this, r = [], i = e.toLowerCase(), s = function(a) {
-      for (var o = a.textContent.toLowerCase(), u = t.document.createRange(), h, f, c = -1, b, m = 150; f != -1; )
-        f = o.indexOf(i, c + 1), f != -1 && (u = t.document.createRange(), u.setStart(a, f), u.setEnd(a, f + i.length), h = t.cfiFromRange(u), a.textContent.length < m ? b = a.textContent : (b = a.textContent.substring(f - m / 2, f + m / 2), b = "..." + b + "..."), r.push({
+      for (var o = a.textContent.toLowerCase(), u = t.document.createRange(), h, f, c = -1, w, m = 150; f != -1; )
+        f = o.indexOf(i, c + 1), f != -1 && (u = t.document.createRange(), u.setStart(a, f), u.setEnd(a, f + i.length), h = t.cfiFromRange(u), a.textContent.length < m ? w = a.textContent : (w = a.textContent.substring(f - m / 2, f + m / 2), w = "..." + w + "..."), r.push({
           cfi: h,
-          excerpt: b
+          excerpt: w
         })), c = f;
     };
     return hi(t.document, function(a) {
@@ -5726,20 +5726,20 @@ class ou {
       return this.find(e);
     let r = [];
     const i = 150, s = this, a = e.toLowerCase(), o = function(c) {
-      const T = c.reduce((N, p) => N + p.textContent, "").toLowerCase().indexOf(a);
-      if (T != -1) {
-        const p = T + a.length;
+      const S = c.reduce((N, p) => N + p.textContent, "").toLowerCase().indexOf(a);
+      if (S != -1) {
+        const p = S + a.length;
         let v = 0, y = 0;
-        if (T < c[0].length) {
+        if (S < c[0].length) {
           let A;
           for (; v < c.length - 1 && (y += c[v].length, !(p <= y)); )
             v += 1;
-          let k = c[0], w = c[v], C = s.document.createRange();
-          C.setStart(k, T);
-          let S = c.slice(0, v).reduce((z, M) => z + M.textContent.length, 0);
-          C.setEnd(w, S > p ? p : p - S), A = s.cfiFromRange(C);
+          let k = c[0], b = c[v], C = s.document.createRange();
+          C.setStart(k, S);
+          let T = c.slice(0, v).reduce((z, M) => z + M.textContent.length, 0);
+          C.setEnd(b, T > p ? p : p - T), A = s.cfiFromRange(C);
           let R = c.slice(0, v + 1).reduce((z, M) => z + M.textContent, "");
-          R.length > i && (R = R.substring(T - i / 2, T + i / 2), R = "..." + R + "..."), r.push({
+          R.length > i && (R = R.substring(S - i / 2, S + i / 2), R = "..." + R + "..."), r.push({
             cfi: A,
             excerpt: R
           });
@@ -6101,24 +6101,24 @@ class ra {
     }).bind(this));
   }
   parse(e, t, r) {
-    var i = [], s, a = e.ownerDocument, o = Je(a, "body"), u = 0, h, f = r || this.break, c = function(b) {
-      var m = b.length, T, N = 0;
-      if (b.textContent.trim().length === 0)
+    var i = [], s, a = e.ownerDocument, o = Je(a, "body"), u = 0, h, f = r || this.break, c = function(w) {
+      var m = w.length, S, N = 0;
+      if (w.textContent.trim().length === 0)
         return !1;
-      for (u == 0 && (s = this.createRange(), s.startContainer = b, s.startOffset = 0), T = f - u, T > m && (u += m, N = m); N < m; )
-        if (T = f - u, u === 0 && (N += 1, s = this.createRange(), s.startContainer = b, s.startOffset = N), N + T >= m)
+      for (u == 0 && (s = this.createRange(), s.startContainer = w, s.startOffset = 0), S = f - u, S > m && (u += m, N = m); N < m; )
+        if (S = f - u, u === 0 && (N += 1, s = this.createRange(), s.startContainer = w, s.startOffset = N), N + S >= m)
           u += m - N, N = m;
         else {
-          N += T, s.endContainer = b, s.endOffset = N;
+          N += S, s.endContainer = w, s.endOffset = N;
           let p = new Fe(s, t).toString();
           i.push(p), u = 0;
         }
-      h = b;
+      h = w;
     };
     if (hi(o, c.bind(this)), s && s.startContainer && h) {
       s.endContainer = h, s.endOffset = h.length;
-      let b = new Fe(s, t).toString();
-      i.push(b), u = 0;
+      let w = new Fe(s, t).toString();
+      i.push(w), u = 0;
     }
     return i;
   }
@@ -6151,7 +6151,7 @@ class ra {
   parseWords(e, t, r, i) {
     var s = t.cfiBase, a = [], o = e.ownerDocument, u = Je(o, "body"), h = r, f = i ? i.spinePos !== t.index : !0, c;
     i && t.index === i.spinePos && (c = i.findNode(i.range ? i.path.steps.concat(i.start.steps) : i.path.steps, e.ownerDocument));
-    var b = function(m) {
+    var w = function(m) {
       if (!f)
         if (m === c)
           f = !0;
@@ -6159,19 +6159,19 @@ class ra {
           return !1;
       if (m.textContent.length < 10 && m.textContent.trim().length === 0)
         return !1;
-      var T = this.countWords(m.textContent), N, p = 0;
-      if (T === 0)
+      var S = this.countWords(m.textContent), N, p = 0;
+      if (S === 0)
         return !1;
-      for (N = h - this._wordCounter, N > T && (this._wordCounter += T, p = T); p < T; )
-        if (N = h - this._wordCounter, p + N >= T)
-          this._wordCounter += T - p, p = T;
+      for (N = h - this._wordCounter, N > S && (this._wordCounter += S, p = S); p < S; )
+        if (N = h - this._wordCounter, p + N >= S)
+          this._wordCounter += S - p, p = S;
         else {
           p += N;
           let v = new Fe(m, s);
           a.push({ cfi: v.toString(), wordCount: this._wordCounter }), this._wordCounter = 0;
         }
     };
-    return hi(u, b.bind(this)), a;
+    return hi(u, w.bind(this)), a;
   }
   /**
    * Get a location from an EpubCFI
@@ -7137,13 +7137,13 @@ class ia {
    * @param  {number} _gap    width of the gap between columns
    */
   calculate(e, t, r) {
-    var i = 1, s = r || 0, a = e, o = t, u = Math.floor(a / 12), h, f, c, b;
-    this._spread && a >= this._minSpreadWidth ? i = 2 : i = 1, this.name === "reflowable" && this._flow === "paginated" && !(r >= 0) && (s = u % 2 === 0 ? u : u - 1), this.name === "pre-paginated" && (s = 0), i > 1 ? (h = a / i - s, c = h + s) : (h = a, c = a), this.name === "pre-paginated" && i > 1 && (a = h), f = h * i + s, b = a, this.width = a, this.height = o, this.spreadWidth = f, this.pageWidth = c, this.delta = b, this.columnWidth = h, this.gap = s, this.divisor = i, this.update({
+    var i = 1, s = r || 0, a = e, o = t, u = Math.floor(a / 12), h, f, c, w;
+    this._spread && a >= this._minSpreadWidth ? i = 2 : i = 1, this.name === "reflowable" && this._flow === "paginated" && !(r >= 0) && (s = u % 2 === 0 ? u : u - 1), this.name === "pre-paginated" && (s = 0), i > 1 ? (h = a / i - s, c = h + s) : (h = a, c = a), this.name === "pre-paginated" && i > 1 && (a = h), f = h * i + s, w = a, this.width = a, this.height = o, this.spreadWidth = f, this.pageWidth = c, this.delta = w, this.columnWidth = h, this.gap = s, this.divisor = i, this.update({
       width: a,
       height: o,
       spreadWidth: f,
       pageWidth: c,
-      delta: b,
+      delta: w,
       columnWidth: h,
       gap: s,
       divisor: i
@@ -7419,7 +7419,7 @@ class ci {
   findStart(e, t, r) {
     for (var i = [e], s, a, o = e; i.length; )
       if (s = i.shift(), a = this.walk(s, (u) => {
-        var h, f, c, b, m;
+        var h, f, c, w, m;
         if (m = $i(u), this.horizontal && this.direction === "ltr") {
           if (h = this.horizontal ? m.left : m.top, f = this.horizontal ? m.right : m.bottom, h >= t && h <= r)
             return u;
@@ -7433,9 +7433,9 @@ class ci {
             return u;
           o = u, i.push(u);
         } else {
-          if (c = m.top, b = m.bottom, c >= t && c <= r)
+          if (c = m.top, w = m.bottom, c >= t && c <= r)
             return u;
-          if (b > t)
+          if (w > t)
             return u;
           o = u, i.push(u);
         }
@@ -7454,7 +7454,7 @@ class ci {
   findEnd(e, t, r) {
     for (var i = [e], s, a = e, o; i.length; )
       if (s = i.shift(), o = this.walk(s, (u) => {
-        var h, f, c, b, m;
+        var h, f, c, w, m;
         if (m = $i(u), this.horizontal && this.direction === "ltr") {
           if (h = Math.round(m.left), f = Math.round(m.right), h > r && a)
             return a;
@@ -7468,9 +7468,9 @@ class ci {
             return u;
           a = u, i.push(u);
         } else {
-          if (c = Math.round(m.top), b = Math.round(m.bottom), c > r && a)
+          if (c = Math.round(m.top), w = Math.round(m.bottom), c > r && a)
             return a;
-          if (b > r)
+          if (w > r)
             return u;
           a = u, i.push(u);
         }
@@ -7507,8 +7507,8 @@ class ci {
    * @return {Range}
    */
   findTextEndRange(e, t, r) {
-    for (var i = this.splitTextNodeIntoRanges(e), s, a, o, u, h, f, c, b = 0; b < i.length; b++) {
-      if (a = i[b], o = a.getBoundingClientRect(), this.horizontal && this.direction === "ltr") {
+    for (var i = this.splitTextNodeIntoRanges(e), s, a, o, u, h, f, c, w = 0; w < i.length; w++) {
+      if (a = i[w], o = a.getBoundingClientRect(), this.horizontal && this.direction === "ltr") {
         if (u = o.left, h = o.right, u > r && s)
           return s;
         if (h > r)
@@ -7706,8 +7706,8 @@ class vn {
       scalable: void 0
     }, i = [], s = {};
     if (t && t.hasAttribute("content")) {
-      let a = t.getAttribute("content"), o = a.match(/width\s*=\s*([^,]*)/), u = a.match(/height\s*=\s*([^,]*)/), h = a.match(/initial-scale\s*=\s*([^,]*)/), f = a.match(/minimum-scale\s*=\s*([^,]*)/), c = a.match(/maximum-scale\s*=\s*([^,]*)/), b = a.match(/user-scalable\s*=\s*([^,]*)/);
-      o && o.length && typeof o[1] < "u" && (r.width = o[1]), u && u.length && typeof u[1] < "u" && (r.height = u[1]), h && h.length && typeof h[1] < "u" && (r.scale = h[1]), f && f.length && typeof f[1] < "u" && (r.minimum = f[1]), c && c.length && typeof c[1] < "u" && (r.maximum = c[1]), b && b.length && typeof b[1] < "u" && (r.scalable = b[1]);
+      let a = t.getAttribute("content"), o = a.match(/width\s*=\s*([^,]*)/), u = a.match(/height\s*=\s*([^,]*)/), h = a.match(/initial-scale\s*=\s*([^,]*)/), f = a.match(/minimum-scale\s*=\s*([^,]*)/), c = a.match(/maximum-scale\s*=\s*([^,]*)/), w = a.match(/user-scalable\s*=\s*([^,]*)/);
+      o && o.length && typeof o[1] < "u" && (r.width = o[1]), u && u.length && typeof u[1] < "u" && (r.height = u[1]), h && h.length && typeof h[1] < "u" && (r.scale = h[1]), f && f.length && typeof f[1] < "u" && (r.minimum = f[1]), c && c.length && typeof c[1] < "u" && (r.maximum = c[1]), w && w.length && typeof w[1] < "u" && (r.scalable = w[1]);
     }
     return s = $s(e || {}, r), e && (s.width && i.push("width=" + s.width), s.height && i.push("height=" + s.height), s.scale && i.push("initial-scale=" + s.scale), s.scalable === "no" ? (i.push("minimum-scale=" + s.scale), i.push("maximum-scale=" + s.scale), i.push("user-scalable=" + s.scalable)) : (s.scalable && i.push("user-scalable=" + s.scalable), s.minimum && i.push("minimum-scale=" + s.minimum), s.maximum && i.push("minimum-scale=" + s.maximum)), t || (t = this.document.createElement("meta"), t.setAttribute("name", "viewport"), this.document.querySelector("head").appendChild(t)), t.setAttribute("content", i.join(", ")), this.window.scrollTo(0, 0)), s;
   }
@@ -7940,14 +7940,14 @@ class vn {
         }
       else
         Object.keys(e).forEach((m) => {
-          const T = e[m];
-          if (Array.isArray(T))
-            T.forEach((N) => {
+          const S = e[m];
+          if (Array.isArray(S))
+            S.forEach((N) => {
               const v = Object.keys(N).map((y) => `${y}:${N[y]}`).join(";");
               r.insertRule(`${m}{${v}}`, r.cssRules.length);
             });
           else {
-            const p = Object.keys(T).map((v) => `${v}:${T[v]}`).join(";");
+            const p = Object.keys(S).map((v) => `${v}:${S[v]}`).join(";");
             r.insertRule(`${m}{${p}}`, r.cssRules.length);
           }
         });
@@ -8215,8 +8215,8 @@ class mu {
       className: s,
       styles: a
     });
-    return this._annotations[o] = f, h in this._annotationsBySectionIndex ? this._annotationsBySectionIndex[h].push(o) : this._annotationsBySectionIndex[h] = [o], this.rendition.views().forEach((b) => {
-      f.sectionIndex === b.index && f.attach(b);
+    return this._annotations[o] = f, h in this._annotationsBySectionIndex ? this._annotationsBySectionIndex[h].push(o) : this._annotationsBySectionIndex[h] = [o], this.rendition.views().forEach((w) => {
+      f.sectionIndex === w.index && f.attach(w);
     }), f;
   }
   /**
@@ -8420,9 +8420,9 @@ function ua(n) {
 }
 function yu(n, e, t, r) {
   var i = e.getBoundingClientRect();
-  function s(f, c, b) {
-    var m = f.top - i.top, T = f.left - i.left, N = m + f.height, p = T + f.width;
-    return m <= b && T <= c && N > b && p > c;
+  function s(f, c, w) {
+    var m = f.top - i.top, S = f.left - i.left, N = m + f.height, p = S + f.width;
+    return m <= w && S <= c && N > w && p > c;
   }
   var a = n.getBoundingClientRect();
   if (!s(a, t, r))
@@ -8954,24 +8954,24 @@ function _l(n) {
 }
 var El = _l, xl = mn, ji = zu, rs = El, Cl = "Expected a function", Dl = Math.max, Al = Math.min;
 function Sl(n, e, t) {
-  var r, i, s, a, o, u, h = 0, f = !1, c = !1, b = !0;
+  var r, i, s, a, o, u, h = 0, f = !1, c = !1, w = !0;
   if (typeof n != "function")
     throw new TypeError(Cl);
-  e = rs(e) || 0, xl(t) && (f = !!t.leading, c = "maxWait" in t, s = c ? Dl(rs(t.maxWait) || 0, e) : s, b = "trailing" in t ? !!t.trailing : b);
+  e = rs(e) || 0, xl(t) && (f = !!t.leading, c = "maxWait" in t, s = c ? Dl(rs(t.maxWait) || 0, e) : s, w = "trailing" in t ? !!t.trailing : w);
   function m(C) {
-    var S = r, R = i;
-    return r = i = void 0, h = C, a = n.apply(R, S), a;
+    var T = r, R = i;
+    return r = i = void 0, h = C, a = n.apply(R, T), a;
   }
-  function T(C) {
+  function S(C) {
     return h = C, o = setTimeout(v, e), f ? m(C) : a;
   }
   function N(C) {
-    var S = C - u, R = C - h, z = e - S;
+    var T = C - u, R = C - h, z = e - T;
     return c ? Al(z, s - R) : z;
   }
   function p(C) {
-    var S = C - u, R = C - h;
-    return u === void 0 || S >= e || S < 0 || c && R >= s;
+    var T = C - u, R = C - h;
+    return u === void 0 || T >= e || T < 0 || c && R >= s;
   }
   function v() {
     var C = ji();
@@ -8980,7 +8980,7 @@ function Sl(n, e, t) {
     o = setTimeout(v, N(C));
   }
   function y(C) {
-    return o = void 0, b && r ? m(C) : (r = i = void 0, a);
+    return o = void 0, w && r ? m(C) : (r = i = void 0, a);
   }
   function A() {
     o !== void 0 && clearTimeout(o), h = 0, r = u = i = o = void 0;
@@ -8988,17 +8988,17 @@ function Sl(n, e, t) {
   function k() {
     return o === void 0 ? a : y(ji());
   }
-  function w() {
-    var C = ji(), S = p(C);
-    if (r = arguments, i = this, u = C, S) {
+  function b() {
+    var C = ji(), T = p(C);
+    if (r = arguments, i = this, u = C, T) {
       if (o === void 0)
-        return T(u);
+        return S(u);
       if (c)
         return clearTimeout(o), o = setTimeout(v, e), m(u);
     }
     return o === void 0 && (o = setTimeout(v, e)), a;
   }
-  return w.cancel = A, w.flush = k, w;
+  return b.cancel = A, b.flush = k, b;
 }
 var ma = Sl;
 const ya = /* @__PURE__ */ or(ma);
@@ -9390,41 +9390,41 @@ class pi {
     this.settings.direction;
     let a = 0, o = 0;
     return this.settings.fullsize && (a = s ? window.scrollY : window.scrollX), e.map((h) => {
-      let { index: f, href: c } = h.section, b = h.position(), m = h.width(), T = h.height(), N, p, v, y;
-      s ? (N = a + t.top - b.top + o, p = N + r - o, y = this.layout.count(T, r).pages, v = r) : (N = a + t.left - b.left + o, p = N + i - o, y = this.layout.count(m, i).pages, v = i);
-      let A = Math.ceil(N / v), k = [], w = Math.ceil(p / v);
+      let { index: f, href: c } = h.section, w = h.position(), m = h.width(), S = h.height(), N, p, v, y;
+      s ? (N = a + t.top - w.top + o, p = N + r - o, y = this.layout.count(S, r).pages, v = r) : (N = a + t.left - w.left + o, p = N + i - o, y = this.layout.count(m, i).pages, v = i);
+      let A = Math.ceil(N / v), k = [], b = Math.ceil(p / v);
       if (this.settings.direction === "rtl" && !s) {
         let R = A;
-        A = y - w, w = y - R;
+        A = y - b, b = y - R;
       }
       k = [];
-      for (var C = A; C <= w; C++) {
+      for (var C = A; C <= b; C++) {
         let R = C + 1;
         k.push(R);
       }
-      let S = this.mapping.page(h.contents, h.section.cfiBase, N, p);
+      let T = this.mapping.page(h.contents, h.section.cfiBase, N, p);
       return {
         index: f,
         href: c,
         pages: k,
         totalPages: y,
-        mapping: S
+        mapping: T
       };
     });
   }
   paginatedLocation() {
     let e = this.visible(), t = this.container.getBoundingClientRect(), r = 0, i = 0;
     return this.settings.fullsize && (r = window.scrollX), e.map((a) => {
-      let { index: o, href: u } = a.section, h, f = a.position(), c = a.width(), b, m, T;
-      this.settings.direction === "rtl" ? (h = t.right - r, T = Math.min(Math.abs(h - f.left), this.layout.width) - i, m = f.width - (f.right - h) - i, b = m - T) : (h = t.left + r, T = Math.min(f.right - h, this.layout.width) - i, b = h - f.left + i, m = b + T), i += T;
-      let N = this.mapping.page(a.contents, a.section.cfiBase, b, m), p = this.layout.count(c).pages, v = Math.floor(b / this.layout.pageWidth), y = [], A = Math.floor(m / this.layout.pageWidth);
+      let { index: o, href: u } = a.section, h, f = a.position(), c = a.width(), w, m, S;
+      this.settings.direction === "rtl" ? (h = t.right - r, S = Math.min(Math.abs(h - f.left), this.layout.width) - i, m = f.width - (f.right - h) - i, w = m - S) : (h = t.left + r, S = Math.min(f.right - h, this.layout.width) - i, w = h - f.left + i, m = w + S), i += S;
+      let N = this.mapping.page(a.contents, a.section.cfiBase, w, m), p = this.layout.count(c).pages, v = Math.floor(w / this.layout.pageWidth), y = [], A = Math.floor(m / this.layout.pageWidth);
       if (v < 0 && (v = 0, A = A + 1), this.settings.direction === "rtl") {
-        let w = v;
-        v = p - A, A = p - w;
+        let b = v;
+        v = p - A, A = p - b;
       }
       for (var k = v + 1; k <= A; k++) {
-        let w = k;
-        y.push(w);
+        let b = k;
+        y.push(b);
       }
       return {
         index: o,
@@ -9707,9 +9707,9 @@ class zl extends pi {
         if (o.displayed)
           o.show();
         else {
-          let c = o.display(this.request).then(function(b) {
-            b.show();
-          }, (b) => {
+          let c = o.display(this.request).then(function(w) {
+            w.show();
+          }, (w) => {
             o.hide();
           });
           h.push(c);
@@ -9726,16 +9726,16 @@ class zl extends pi {
     var r = new Be(), i = [], s = this.settings.axis === "horizontal", a = this.settings.offset || 0;
     e && s && (a = e), t && !s && (a = t);
     var o = this._bounds;
-    let u = s ? this.scrollLeft : this.scrollTop, h = s ? Math.floor(o.width) : o.height, f = s ? this.container.scrollWidth : this.container.scrollHeight, c = this.writingMode && this.writingMode.indexOf("vertical") === 0 ? "vertical" : "horizontal", b = this.settings.rtlScrollType, m = this.settings.direction === "rtl";
-    this.settings.fullsize ? (s && m && b === "negative" || !s && m && b === "default") && (u = u * -1) : (m && b === "default" && c === "horizontal" && (u = f - h - u), m && b === "negative" && c === "horizontal" && (u = u * -1));
-    let T = () => {
+    let u = s ? this.scrollLeft : this.scrollTop, h = s ? Math.floor(o.width) : o.height, f = s ? this.container.scrollWidth : this.container.scrollHeight, c = this.writingMode && this.writingMode.indexOf("vertical") === 0 ? "vertical" : "horizontal", w = this.settings.rtlScrollType, m = this.settings.direction === "rtl";
+    this.settings.fullsize ? (s && m && w === "negative" || !s && m && w === "default") && (u = u * -1) : (m && w === "default" && c === "horizontal" && (u = f - h - u), m && w === "negative" && c === "horizontal" && (u = u * -1));
+    let S = () => {
       let A = this.views.first(), k = A && A.section.prev();
       k && i.push(this.prepend(k));
     }, N = () => {
       let A = this.views.last(), k = A && A.section.next();
       k && i.push(this.append(k));
     }, p = u + h + a, v = u - a;
-    p >= f && N(), v < 0 && T();
+    p >= f && N(), v < 0 && S();
     let y = i.map((A) => A.display(this.request));
     return i.length ? Promise.all(y).then(() => this.check()).then(() => this.update(a), (A) => A) : (this.q.enqueue((function() {
       this.update();
@@ -10342,13 +10342,13 @@ https://github.com/nodeca/pako/blob/main/LICENSE
               return c(h, !0);
             if (o)
               return o(h, !0);
-            var b = new Error("Cannot find module '" + h + "'");
-            throw b.code = "MODULE_NOT_FOUND", b;
+            var w = new Error("Cannot find module '" + h + "'");
+            throw w.code = "MODULE_NOT_FOUND", w;
           }
           var m = i[h] = { exports: {} };
-          r[h][0].call(m.exports, function(T) {
-            var N = r[h][1][T];
-            return a(N || T);
+          r[h][0].call(m.exports, function(S) {
+            var N = r[h][1][S];
+            return a(N || S);
           }, m, m.exports, t, r, i, s);
         }
         return i[h].exports;
@@ -10359,11 +10359,11 @@ https://github.com/nodeca/pako/blob/main/LICENSE
     }({ 1: [function(t, r, i) {
       var s = t("./utils"), a = t("./support"), o = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";
       i.encode = function(u) {
-        for (var h = [], f, c, b, m, T, N, p, v = 0, y = u.length, A = y, k = s.getTypeOf(u) !== "string"; v < u.length; )
-          A = y - v, k ? (f = u[v++], c = v < y ? u[v++] : 0, b = v < y ? u[v++] : 0) : (f = u.charCodeAt(v++), c = v < y ? u.charCodeAt(v++) : 0, b = v < y ? u.charCodeAt(v++) : 0), m = f >> 2, T = (f & 3) << 4 | c >> 4, N = A > 1 ? (c & 15) << 2 | b >> 6 : 64, p = A > 2 ? b & 63 : 64, h.push(o.charAt(m) + o.charAt(T) + o.charAt(N) + o.charAt(p));
+        for (var h = [], f, c, w, m, S, N, p, v = 0, y = u.length, A = y, k = s.getTypeOf(u) !== "string"; v < u.length; )
+          A = y - v, k ? (f = u[v++], c = v < y ? u[v++] : 0, w = v < y ? u[v++] : 0) : (f = u.charCodeAt(v++), c = v < y ? u.charCodeAt(v++) : 0, w = v < y ? u.charCodeAt(v++) : 0), m = f >> 2, S = (f & 3) << 4 | c >> 4, N = A > 1 ? (c & 15) << 2 | w >> 6 : 64, p = A > 2 ? w & 63 : 64, h.push(o.charAt(m) + o.charAt(S) + o.charAt(N) + o.charAt(p));
         return h.join("");
       }, i.decode = function(u) {
-        var h, f, c, b, m, T, N, p = 0, v = 0, y = "data:";
+        var h, f, c, w, m, S, N, p = 0, v = 0, y = "data:";
         if (u.substr(0, y.length) === y)
           throw new Error("Invalid base64 input, it looks like a data url.");
         u = u.replace(/[^A-Za-z0-9+/=]/g, "");
@@ -10372,13 +10372,13 @@ https://github.com/nodeca/pako/blob/main/LICENSE
           throw new Error("Invalid base64 input, bad content length.");
         var k;
         for (a.uint8array ? k = new Uint8Array(A | 0) : k = new Array(A | 0); p < u.length; )
-          b = o.indexOf(u.charAt(p++)), m = o.indexOf(u.charAt(p++)), T = o.indexOf(u.charAt(p++)), N = o.indexOf(u.charAt(p++)), h = b << 2 | m >> 4, f = (m & 15) << 4 | T >> 2, c = (T & 3) << 6 | N, k[v++] = h, T !== 64 && (k[v++] = f), N !== 64 && (k[v++] = c);
+          w = o.indexOf(u.charAt(p++)), m = o.indexOf(u.charAt(p++)), S = o.indexOf(u.charAt(p++)), N = o.indexOf(u.charAt(p++)), h = w << 2 | m >> 4, f = (m & 15) << 4 | S >> 2, c = (S & 3) << 6 | N, k[v++] = h, S !== 64 && (k[v++] = f), N !== 64 && (k[v++] = c);
         return k;
       };
     }, { "./support": 30, "./utils": 32 }], 2: [function(t, r, i) {
       var s = t("./external"), a = t("./stream/DataWorker"), o = t("./stream/Crc32Probe"), u = t("./stream/DataLengthProbe");
-      function h(f, c, b, m, T) {
-        this.compressedSize = f, this.uncompressedSize = c, this.crc32 = b, this.compression = m, this.compressedContent = T;
+      function h(f, c, w, m, S) {
+        this.compressedSize = f, this.uncompressedSize = c, this.crc32 = w, this.compression = m, this.compressedContent = S;
       }
       h.prototype = {
         /**
@@ -10399,8 +10399,8 @@ https://github.com/nodeca/pako/blob/main/LICENSE
         getCompressedWorker: function() {
           return new a(s.Promise.resolve(this.compressedContent)).withStreamInfo("compressedSize", this.compressedSize).withStreamInfo("uncompressedSize", this.uncompressedSize).withStreamInfo("crc32", this.crc32).withStreamInfo("compression", this.compression);
         }
-      }, h.createWorkerFrom = function(f, c, b) {
-        return f.pipe(new o()).pipe(new u("uncompressedSize")).pipe(c.compressWorker(b)).pipe(new u("compressedSize")).withStreamInfo("compression", c);
+      }, h.createWorkerFrom = function(f, c, w) {
+        return f.pipe(new o()).pipe(new u("uncompressedSize")).pipe(c.compressWorker(w)).pipe(new u("compressedSize")).withStreamInfo("compression", c);
       }, r.exports = h;
     }, { "./external": 6, "./stream/Crc32Probe": 25, "./stream/DataLengthProbe": 26, "./stream/DataWorker": 27 }], 3: [function(t, r, i) {
       var s = t("./stream/GenericWorker");
@@ -10416,34 +10416,34 @@ https://github.com/nodeca/pako/blob/main/LICENSE
     }, { "./flate": 7, "./stream/GenericWorker": 28 }], 4: [function(t, r, i) {
       var s = t("./utils");
       function a() {
-        for (var f, c = [], b = 0; b < 256; b++) {
-          f = b;
+        for (var f, c = [], w = 0; w < 256; w++) {
+          f = w;
           for (var m = 0; m < 8; m++)
             f = f & 1 ? 3988292384 ^ f >>> 1 : f >>> 1;
-          c[b] = f;
+          c[w] = f;
         }
         return c;
       }
       var o = a();
-      function u(f, c, b, m) {
-        var T = o, N = m + b;
+      function u(f, c, w, m) {
+        var S = o, N = m + w;
         f = f ^ -1;
         for (var p = m; p < N; p++)
-          f = f >>> 8 ^ T[(f ^ c[p]) & 255];
+          f = f >>> 8 ^ S[(f ^ c[p]) & 255];
         return f ^ -1;
       }
-      function h(f, c, b, m) {
-        var T = o, N = m + b;
+      function h(f, c, w, m) {
+        var S = o, N = m + w;
         f = f ^ -1;
         for (var p = m; p < N; p++)
-          f = f >>> 8 ^ T[(f ^ c.charCodeAt(p)) & 255];
+          f = f >>> 8 ^ S[(f ^ c.charCodeAt(p)) & 255];
         return f ^ -1;
       }
-      r.exports = function(c, b) {
+      r.exports = function(c, w) {
         if (typeof c > "u" || !c.length)
           return 0;
         var m = s.getTypeOf(c) !== "string";
-        return m ? u(b | 0, c, c.length, 0) : h(b | 0, c, c.length, 0);
+        return m ? u(w | 0, c, c.length, 0) : h(w | 0, c, c.length, 0);
       };
     }, { "./utils": 32 }], 5: [function(t, r, i) {
       i.base64 = !1, i.binary = !1, i.dir = !1, i.createFolders = !0, i.date = null, i.compression = null, i.compressionOptions = null, i.comment = null, i.unixPermissions = null, i.dosPermissions = null;
@@ -10455,8 +10455,8 @@ https://github.com/nodeca/pako/blob/main/LICENSE
     }, { lie: 37 }], 7: [function(t, r, i) {
       var s = typeof Uint8Array < "u" && typeof Uint16Array < "u" && typeof Uint32Array < "u", a = t("pako"), o = t("./utils"), u = t("./stream/GenericWorker"), h = s ? "uint8array" : "array";
       i.magic = "\b\0";
-      function f(c, b) {
-        u.call(this, "FlateWorker/" + c), this._pako = null, this._pakoAction = c, this._pakoOptions = b, this.meta = {};
+      function f(c, w) {
+        u.call(this, "FlateWorker/" + c), this._pako = null, this._pakoAction = c, this._pakoOptions = w, this.meta = {};
       }
       o.inherits(f, u), f.prototype.processChunk = function(c) {
         this.meta = c.meta, this._pako === null && this._createPako(), this._pako.push(o.transformTo(h, c.data), !1);
@@ -10471,9 +10471,9 @@ https://github.com/nodeca/pako/blob/main/LICENSE
           // default compression
         });
         var c = this;
-        this._pako.onData = function(b) {
+        this._pako.onData = function(w) {
           c.push({
-            data: b,
+            data: w,
             meta: c.meta
           });
         };
@@ -10491,10 +10491,10 @@ https://github.com/nodeca/pako/blob/main/LICENSE
       }, c = function(v, y) {
         var A = v;
         return v || (A = y ? 16893 : 33204), (A & 65535) << 16;
-      }, b = function(v) {
+      }, w = function(v) {
         return (v || 0) & 63;
-      }, m = function(v, y, A, k, w, C) {
-        var S = v.file, R = v.compression, z = C !== o.utf8encode, M = s.transformTo("string", C(S.name)), Y = s.transformTo("string", o.utf8encode(S.name)), Z = S.comment, te = s.transformTo("string", C(Z)), ge = s.transformTo("string", o.utf8encode(Z)), pe = Y.length !== S.name.length, ve = ge.length !== Z.length, de, fe, Se = "", je = "", Oe = "", be = S.dir, Le = S.date, Ne = {
+      }, m = function(v, y, A, k, b, C) {
+        var T = v.file, R = v.compression, z = C !== o.utf8encode, M = s.transformTo("string", C(T.name)), Y = s.transformTo("string", o.utf8encode(T.name)), Z = T.comment, te = s.transformTo("string", C(Z)), ge = s.transformTo("string", o.utf8encode(Z)), pe = Y.length !== T.name.length, ve = ge.length !== Z.length, de, fe, Se = "", je = "", Oe = "", be = T.dir, Le = T.date, Ne = {
           crc32: 0,
           compressedSize: 0,
           uncompressedSize: 0
@@ -10503,7 +10503,7 @@ https://github.com/nodeca/pako/blob/main/LICENSE
         var it = 0;
         y && (it |= 8), !z && (pe || ve) && (it |= 2048);
         var Ge = 0, Ue = 0;
-        be && (Ge |= 16), w === "UNIX" ? (Ue = 798, Ge |= c(S.unixPermissions, be)) : (Ue = 20, Ge |= b(S.dosPermissions)), de = Le.getUTCHours(), de = de << 6, de = de | Le.getUTCMinutes(), de = de << 5, de = de | Le.getUTCSeconds() / 2, fe = Le.getUTCFullYear() - 1980, fe = fe << 4, fe = fe | Le.getUTCMonth() + 1, fe = fe << 5, fe = fe | Le.getUTCDate(), pe && (je = // Version
+        be && (Ge |= 16), b === "UNIX" ? (Ue = 798, Ge |= c(T.unixPermissions, be)) : (Ue = 20, Ge |= w(T.dosPermissions)), de = Le.getUTCHours(), de = de << 6, de = de | Le.getUTCMinutes(), de = de << 5, de = de | Le.getUTCSeconds() / 2, fe = Le.getUTCFullYear() - 1980, fe = fe << 4, fe = fe | Le.getUTCMonth() + 1, fe = fe << 5, fe = fe | Le.getUTCDate(), pe && (je = // Version
         f(1, 1) + // NameCRC32
         f(u(M), 4) + // UnicodeName
         Y, Se += // Info-ZIP Unicode Path Extra Field
@@ -10533,16 +10533,16 @@ https://github.com/nodeca/pako/blob/main/LICENSE
           fileRecord: Xe,
           dirRecord: Me
         };
-      }, T = function(v, y, A, k, w) {
-        var C = "", S = s.transformTo("string", w(k));
+      }, S = function(v, y, A, k, b) {
+        var C = "", T = s.transformTo("string", b(k));
         return C = h.CENTRAL_DIRECTORY_END + // number of this disk
         "\0\0\0\0" + // total number of entries in the central directory on this disk
         f(v, 2) + // total number of entries in the central directory
         f(v, 2) + // size of the central directory   4 bytes
         f(y, 4) + // offset of start of central directory with respect to the starting disk number
         f(A, 4) + // .ZIP file comment length
-        f(S.length, 2) + // .ZIP file comment
-        S, C;
+        f(T.length, 2) + // .ZIP file comment
+        T, C;
       }, N = function(v) {
         var y = "";
         return y = h.DATA_DESCRIPTOR + // crc-32                          4 bytes
@@ -10594,7 +10594,7 @@ https://github.com/nodeca/pako/blob/main/LICENSE
             data: this.dirRecords[y],
             meta: { percent: 100 }
           });
-        var A = this.bytesWritten - v, k = T(this.dirRecords.length, A, v, this.zipComment, this.encodeFileName);
+        var A = this.bytesWritten - v, k = S(this.dirRecords.length, A, v, this.zipComment, this.encodeFileName);
         this.push({
           data: k,
           meta: { percent: 100 }
@@ -10641,20 +10641,20 @@ https://github.com/nodeca/pako/blob/main/LICENSE
         return c;
       };
       i.generateWorker = function(u, h, f) {
-        var c = new a(h.streamFiles, f, h.platform, h.encodeFileName), b = 0;
+        var c = new a(h.streamFiles, f, h.platform, h.encodeFileName), w = 0;
         try {
-          u.forEach(function(m, T) {
-            b++;
-            var N = o(T.options.compression, h.compression), p = T.options.compressionOptions || h.compressionOptions || {}, v = T.dir, y = T.date;
-            T._compressWorker(N, p).withStreamInfo("file", {
+          u.forEach(function(m, S) {
+            w++;
+            var N = o(S.options.compression, h.compression), p = S.options.compressionOptions || h.compressionOptions || {}, v = S.dir, y = S.date;
+            S._compressWorker(N, p).withStreamInfo("file", {
               name: m,
               dir: v,
               date: y,
-              comment: T.comment || "",
-              unixPermissions: T.unixPermissions,
-              dosPermissions: T.dosPermissions
+              comment: S.comment || "",
+              unixPermissions: S.unixPermissions,
+              dosPermissions: S.dosPermissions
             }).pipe(c);
-          }), c.entriesCount = b;
+          }), c.entriesCount = w;
         } catch (m) {
           c.error(m);
         }
@@ -10678,25 +10678,25 @@ https://github.com/nodeca/pako/blob/main/LICENSE
       }, s.external = t("./external"), r.exports = s;
     }, { "./defaults": 5, "./external": 6, "./load": 11, "./object": 15, "./support": 30 }], 11: [function(t, r, i) {
       var s = t("./utils"), a = t("./external"), o = t("./utf8"), u = t("./zipEntries"), h = t("./stream/Crc32Probe"), f = t("./nodejsUtils");
-      function c(b) {
-        return new a.Promise(function(m, T) {
-          var N = b.decompressed.getContentWorker().pipe(new h());
+      function c(w) {
+        return new a.Promise(function(m, S) {
+          var N = w.decompressed.getContentWorker().pipe(new h());
           N.on("error", function(p) {
-            T(p);
+            S(p);
           }).on("end", function() {
-            N.streamInfo.crc32 !== b.decompressed.crc32 ? T(new Error("Corrupted zip : CRC32 mismatch")) : m();
+            N.streamInfo.crc32 !== w.decompressed.crc32 ? S(new Error("Corrupted zip : CRC32 mismatch")) : m();
           }).resume();
         });
       }
-      r.exports = function(b, m) {
-        var T = this;
+      r.exports = function(w, m) {
+        var S = this;
         return m = s.extend(m || {}, {
           base64: !1,
           checkCRC32: !1,
           optimizedBinaryString: !1,
           createFolders: !1,
           decodeFileName: o.utf8decode
-        }), f.isNode && f.isStream(b) ? a.Promise.reject(new Error("JSZip can't accept a stream when loading a zip file.")) : s.prepareContent("the loaded zip file", b, !0, m.optimizedBinaryString, m.base64).then(function(N) {
+        }), f.isNode && f.isStream(w) ? a.Promise.reject(new Error("JSZip can't accept a stream when loading a zip file.")) : s.prepareContent("the loaded zip file", w, !0, m.optimizedBinaryString, m.base64).then(function(N) {
           var p = new u(m);
           return p.load(N), p;
         }).then(function(p) {
@@ -10707,8 +10707,8 @@ https://github.com/nodeca/pako/blob/main/LICENSE
           return a.Promise.all(v);
         }).then(function(p) {
           for (var v = p.shift(), y = v.files, A = 0; A < y.length; A++) {
-            var k = y[A], w = k.fileNameStr, C = s.resolve(k.fileNameStr);
-            T.file(C, k.decompressed, {
+            var k = y[A], b = k.fileNameStr, C = s.resolve(k.fileNameStr);
+            S.file(C, k.decompressed, {
               binary: !0,
               optimizedBinaryString: !0,
               date: k.date,
@@ -10717,9 +10717,9 @@ https://github.com/nodeca/pako/blob/main/LICENSE
               unixPermissions: k.unixPermissions,
               dosPermissions: k.dosPermissions,
               createFolders: m.createFolders
-            }), k.dir || (T.file(C).unsafeOriginalName = w);
+            }), k.dir || (S.file(C).unsafeOriginalName = b);
           }
-          return v.zipComment.length && (T.comment = v.zipComment), T;
+          return v.zipComment.length && (S.comment = v.zipComment), S;
         });
       };
     }, { "./external": 6, "./nodejsUtils": 14, "./stream/Crc32Probe": 25, "./utf8": 31, "./utils": 32, "./zipEntries": 33 }], 12: [function(t, r, i) {
@@ -10752,10 +10752,10 @@ https://github.com/nodeca/pako/blob/main/LICENSE
       function o(u, h, f) {
         s.call(this, h), this._helper = u;
         var c = this;
-        u.on("data", function(b, m) {
-          c.push(b) || c._helper.pause(), f && f(m);
-        }).on("error", function(b) {
-          c.emit("error", b);
+        u.on("data", function(w, m) {
+          c.push(w) || c._helper.pause(), f && f(m);
+        }).on("error", function(w) {
+          c.emit("error", w);
         }).on("end", function() {
           c.push(null);
         });
@@ -10808,31 +10808,31 @@ https://github.com/nodeca/pako/blob/main/LICENSE
         }
       };
     }, {}], 15: [function(t, r, i) {
-      var s = t("./utf8"), a = t("./utils"), o = t("./stream/GenericWorker"), u = t("./stream/StreamHelper"), h = t("./defaults"), f = t("./compressedObject"), c = t("./zipObject"), b = t("./generate"), m = t("./nodejsUtils"), T = t("./nodejs/NodejsStreamInputAdapter"), N = function(w, C, S) {
-        var R = a.getTypeOf(C), z, M = a.extend(S || {}, h);
-        M.date = M.date || /* @__PURE__ */ new Date(), M.compression !== null && (M.compression = M.compression.toUpperCase()), typeof M.unixPermissions == "string" && (M.unixPermissions = parseInt(M.unixPermissions, 8)), M.unixPermissions && M.unixPermissions & 16384 && (M.dir = !0), M.dosPermissions && M.dosPermissions & 16 && (M.dir = !0), M.dir && (w = v(w)), M.createFolders && (z = p(w)) && y.call(this, z, !0);
+      var s = t("./utf8"), a = t("./utils"), o = t("./stream/GenericWorker"), u = t("./stream/StreamHelper"), h = t("./defaults"), f = t("./compressedObject"), c = t("./zipObject"), w = t("./generate"), m = t("./nodejsUtils"), S = t("./nodejs/NodejsStreamInputAdapter"), N = function(b, C, T) {
+        var R = a.getTypeOf(C), z, M = a.extend(T || {}, h);
+        M.date = M.date || /* @__PURE__ */ new Date(), M.compression !== null && (M.compression = M.compression.toUpperCase()), typeof M.unixPermissions == "string" && (M.unixPermissions = parseInt(M.unixPermissions, 8)), M.unixPermissions && M.unixPermissions & 16384 && (M.dir = !0), M.dosPermissions && M.dosPermissions & 16 && (M.dir = !0), M.dir && (b = v(b)), M.createFolders && (z = p(b)) && y.call(this, z, !0);
         var Y = R === "string" && M.binary === !1 && M.base64 === !1;
-        (!S || typeof S.binary > "u") && (M.binary = !Y);
+        (!T || typeof T.binary > "u") && (M.binary = !Y);
         var Z = C instanceof f && C.uncompressedSize === 0;
         (Z || M.dir || !C || C.length === 0) && (M.base64 = !1, M.binary = !0, C = "", M.compression = "STORE", R = "string");
         var te = null;
-        C instanceof f || C instanceof o ? te = C : m.isNode && m.isStream(C) ? te = new T(w, C) : te = a.prepareContent(w, C, M.binary, M.optimizedBinaryString, M.base64);
-        var ge = new c(w, te, M);
-        this.files[w] = ge;
-      }, p = function(w) {
-        w.slice(-1) === "/" && (w = w.substring(0, w.length - 1));
-        var C = w.lastIndexOf("/");
-        return C > 0 ? w.substring(0, C) : "";
-      }, v = function(w) {
-        return w.slice(-1) !== "/" && (w += "/"), w;
-      }, y = function(w, C) {
-        return C = typeof C < "u" ? C : h.createFolders, w = v(w), this.files[w] || N.call(this, w, null, {
+        C instanceof f || C instanceof o ? te = C : m.isNode && m.isStream(C) ? te = new S(b, C) : te = a.prepareContent(b, C, M.binary, M.optimizedBinaryString, M.base64);
+        var ge = new c(b, te, M);
+        this.files[b] = ge;
+      }, p = function(b) {
+        b.slice(-1) === "/" && (b = b.substring(0, b.length - 1));
+        var C = b.lastIndexOf("/");
+        return C > 0 ? b.substring(0, C) : "";
+      }, v = function(b) {
+        return b.slice(-1) !== "/" && (b += "/"), b;
+      }, y = function(b, C) {
+        return C = typeof C < "u" ? C : h.createFolders, b = v(b), this.files[b] || N.call(this, b, null, {
           dir: !0,
           createFolders: C
-        }), this.files[w];
+        }), this.files[b];
       };
-      function A(w) {
-        return Object.prototype.toString.call(w) === "[object RegExp]";
+      function A(b) {
+        return Object.prototype.toString.call(b) === "[object RegExp]";
       }
       var k = {
         /**
@@ -10847,10 +10847,10 @@ https://github.com/nodeca/pako/blob/main/LICENSE
          * function (relativePath, file) {...}
          * It takes 2 arguments : the relative path and the file.
          */
-        forEach: function(w) {
-          var C, S, R;
+        forEach: function(b) {
+          var C, T, R;
           for (C in this.files)
-            R = this.files[C], S = C.slice(this.root.length, C.length), S && C.slice(0, this.root.length) === this.root && w(S, R);
+            R = this.files[C], T = C.slice(this.root.length, C.length), T && C.slice(0, this.root.length) === this.root && b(T, R);
         },
         /**
          * Filter nested files/folders with the specified function.
@@ -10859,10 +10859,10 @@ https://github.com/nodeca/pako/blob/main/LICENSE
          * It takes 2 arguments : the relative path and the file.
          * @return {Array} An array of matching elements.
          */
-        filter: function(w) {
+        filter: function(b) {
           var C = [];
-          return this.forEach(function(S, R) {
-            w(S, R) && C.push(R);
+          return this.forEach(function(T, R) {
+            b(T, R) && C.push(R);
           }), C;
         },
         /**
@@ -10874,19 +10874,19 @@ https://github.com/nodeca/pako/blob/main/LICENSE
          * @return  {JSZip|Object|Array} this JSZip object (when adding a file),
          * a file (when searching by string) or an array of files (when searching by regex).
          */
-        file: function(w, C, S) {
+        file: function(b, C, T) {
           if (arguments.length === 1)
-            if (A(w)) {
-              var R = w;
+            if (A(b)) {
+              var R = b;
               return this.filter(function(M, Y) {
                 return !Y.dir && R.test(M);
               });
             } else {
-              var z = this.files[this.root + w];
+              var z = this.files[this.root + b];
               return z && !z.dir ? z : null;
             }
           else
-            w = this.root + w, N.call(this, w, C, S);
+            b = this.root + b, N.call(this, b, C, T);
           return this;
         },
         /**
@@ -10894,31 +10894,31 @@ https://github.com/nodeca/pako/blob/main/LICENSE
          * @param   {String|RegExp} arg The name of the directory to add, or a regex to search folders.
          * @return  {JSZip} an object with the new directory as the root, or an array containing matching folders.
          */
-        folder: function(w) {
-          if (!w)
+        folder: function(b) {
+          if (!b)
             return this;
-          if (A(w))
+          if (A(b))
             return this.filter(function(z, M) {
-              return M.dir && w.test(z);
+              return M.dir && b.test(z);
             });
-          var C = this.root + w, S = y.call(this, C), R = this.clone();
-          return R.root = S.name, R;
+          var C = this.root + b, T = y.call(this, C), R = this.clone();
+          return R.root = T.name, R;
         },
         /**
          * Delete a file, or a directory and all sub-files, from the zip
          * @param {string} name the name of the file to delete
          * @return {JSZip} this JSZip object
          */
-        remove: function(w) {
-          w = this.root + w;
-          var C = this.files[w];
-          if (C || (w.slice(-1) !== "/" && (w += "/"), C = this.files[w]), C && !C.dir)
-            delete this.files[w];
+        remove: function(b) {
+          b = this.root + b;
+          var C = this.files[b];
+          if (C || (b.slice(-1) !== "/" && (b += "/"), C = this.files[b]), C && !C.dir)
+            delete this.files[b];
           else
-            for (var S = this.filter(function(z, M) {
-              return M.name.slice(0, w.length) === w;
-            }), R = 0; R < S.length; R++)
-              delete this.files[S[R].name];
+            for (var T = this.filter(function(z, M) {
+              return M.name.slice(0, b.length) === b;
+            }), R = 0; R < T.length; R++)
+              delete this.files[T[R].name];
           return this;
         },
         /**
@@ -10934,10 +10934,10 @@ https://github.com/nodeca/pako/blob/main/LICENSE
          * - type, "base64" by default. Values are : string, base64, uint8array, arraybuffer, blob.
          * @return {StreamHelper} the streamed zip file.
          */
-        generateInternalStream: function(w) {
-          var C, S = {};
+        generateInternalStream: function(b) {
+          var C, T = {};
           try {
-            if (S = a.extend(w || {}, {
+            if (T = a.extend(b || {}, {
               streamFiles: !1,
               compression: "STORE",
               compressionOptions: null,
@@ -10946,29 +10946,29 @@ https://github.com/nodeca/pako/blob/main/LICENSE
               comment: null,
               mimeType: "application/zip",
               encodeFileName: s.utf8encode
-            }), S.type = S.type.toLowerCase(), S.compression = S.compression.toUpperCase(), S.type === "binarystring" && (S.type = "string"), !S.type)
+            }), T.type = T.type.toLowerCase(), T.compression = T.compression.toUpperCase(), T.type === "binarystring" && (T.type = "string"), !T.type)
               throw new Error("No output type specified.");
-            a.checkSupport(S.type), (S.platform === "darwin" || S.platform === "freebsd" || S.platform === "linux" || S.platform === "sunos") && (S.platform = "UNIX"), S.platform === "win32" && (S.platform = "DOS");
-            var R = S.comment || this.comment || "";
-            C = b.generateWorker(this, S, R);
+            a.checkSupport(T.type), (T.platform === "darwin" || T.platform === "freebsd" || T.platform === "linux" || T.platform === "sunos") && (T.platform = "UNIX"), T.platform === "win32" && (T.platform = "DOS");
+            var R = T.comment || this.comment || "";
+            C = w.generateWorker(this, T, R);
           } catch (z) {
             C = new o("error"), C.error(z);
           }
-          return new u(C, S.type || "string", S.mimeType);
+          return new u(C, T.type || "string", T.mimeType);
         },
         /**
          * Generate the complete zip file asynchronously.
          * @see generateInternalStream
          */
-        generateAsync: function(w, C) {
-          return this.generateInternalStream(w).accumulate(C);
+        generateAsync: function(b, C) {
+          return this.generateInternalStream(b).accumulate(C);
         },
         /**
          * Generate the complete zip file asynchronously.
          * @see generateInternalStream
          */
-        generateNodeStream: function(w, C) {
-          return w = w || {}, w.type || (w.type = "nodebuffer"), this.generateInternalStream(w).toNodejsStream(C);
+        generateNodeStream: function(b, C) {
+          return b = b || {}, b.type || (b.type = "nodebuffer"), this.generateInternalStream(b).toNodejsStream(C);
         }
       };
       r.exports = k;
@@ -10984,13 +10984,13 @@ https://github.com/nodeca/pako/blob/main/LICENSE
       a.inherits(o, s), o.prototype.byteAt = function(u) {
         return this.data[this.zero + u];
       }, o.prototype.lastIndexOfSignature = function(u) {
-        for (var h = u.charCodeAt(0), f = u.charCodeAt(1), c = u.charCodeAt(2), b = u.charCodeAt(3), m = this.length - 4; m >= 0; --m)
-          if (this.data[m] === h && this.data[m + 1] === f && this.data[m + 2] === c && this.data[m + 3] === b)
+        for (var h = u.charCodeAt(0), f = u.charCodeAt(1), c = u.charCodeAt(2), w = u.charCodeAt(3), m = this.length - 4; m >= 0; --m)
+          if (this.data[m] === h && this.data[m + 1] === f && this.data[m + 2] === c && this.data[m + 3] === w)
             return m - this.zero;
         return -1;
       }, o.prototype.readAndCheckSignature = function(u) {
-        var h = u.charCodeAt(0), f = u.charCodeAt(1), c = u.charCodeAt(2), b = u.charCodeAt(3), m = this.readData(4);
-        return h === m[0] && f === m[1] && c === m[2] && b === m[3];
+        var h = u.charCodeAt(0), f = u.charCodeAt(1), c = u.charCodeAt(2), w = u.charCodeAt(3), m = this.readData(4);
+        return h === m[0] && f === m[1] && c === m[2] && w === m[3];
       }, o.prototype.readData = function(u) {
         if (this.checkOffset(u), u === 0)
           return [];
@@ -11145,8 +11145,8 @@ https://github.com/nodeca/pako/blob/main/LICENSE
     }, { "../utils": 32, "./ArrayReader": 17 }], 22: [function(t, r, i) {
       var s = t("../utils"), a = t("../support"), o = t("./ArrayReader"), u = t("./StringReader"), h = t("./NodeBufferReader"), f = t("./Uint8ArrayReader");
       r.exports = function(c) {
-        var b = s.getTypeOf(c);
-        return s.checkSupport(b), b === "string" && !a.uint8array ? new u(c) : b === "nodebuffer" ? new h(c) : a.uint8array ? new f(s.transformTo("uint8array", c)) : new o(s.transformTo("array", c));
+        var w = s.getTypeOf(c);
+        return s.checkSupport(w), w === "string" && !a.uint8array ? new u(c) : w === "nodebuffer" ? new h(c) : a.uint8array ? new f(s.transformTo("uint8array", c)) : new o(s.transformTo("array", c));
       };
     }, { "../support": 30, "../utils": 32, "./ArrayReader": 17, "./NodeBufferReader": 19, "./StringReader": 20, "./Uint8ArrayReader": 21 }], 23: [function(t, r, i) {
       i.LOCAL_FILE_HEADER = "PK", i.CENTRAL_FILE_HEADER = "PK", i.CENTRAL_DIRECTORY_END = "PK", i.ZIP64_CENTRAL_DIRECTORY_LOCATOR = "PK\x07", i.ZIP64_CENTRAL_DIRECTORY_END = "PK", i.DATA_DESCRIPTOR = "PK\x07\b";
@@ -11387,7 +11387,7 @@ https://github.com/nodeca/pako/blob/main/LICENSE
           c = t("../nodejs/NodejsStreamOutputAdapter");
         } catch {
         }
-      function b(p, v, y) {
+      function w(p, v, y) {
         switch (p) {
           case "blob":
             return s.newBlob(s.transformTo("arraybuffer", v), y);
@@ -11398,16 +11398,16 @@ https://github.com/nodeca/pako/blob/main/LICENSE
         }
       }
       function m(p, v) {
-        var y, A = 0, k = null, w = 0;
+        var y, A = 0, k = null, b = 0;
         for (y = 0; y < v.length; y++)
-          w += v[y].length;
+          b += v[y].length;
         switch (p) {
           case "string":
             return v.join("");
           case "array":
             return Array.prototype.concat.apply([], v);
           case "uint8array":
-            for (k = new Uint8Array(w), y = 0; y < v.length; y++)
+            for (k = new Uint8Array(b), y = 0; y < v.length; y++)
               k.set(v[y], A), A += v[y].length;
             return k;
           case "nodebuffer":
@@ -11416,16 +11416,16 @@ https://github.com/nodeca/pako/blob/main/LICENSE
             throw new Error("concat : unsupported type '" + p + "'");
         }
       }
-      function T(p, v) {
+      function S(p, v) {
         return new f.Promise(function(y, A) {
-          var k = [], w = p._internalType, C = p._outputType, S = p._mimeType;
+          var k = [], b = p._internalType, C = p._outputType, T = p._mimeType;
           p.on("data", function(R, z) {
             k.push(R), v && v(z);
           }).on("error", function(R) {
             k = [], A(R);
           }).on("end", function() {
             try {
-              var R = b(C, m(w, k), S);
+              var R = w(C, m(b, k), T);
               y(R);
             } catch (z) {
               A(z);
@@ -11459,7 +11459,7 @@ https://github.com/nodeca/pako/blob/main/LICENSE
          * @return Promise the promise for the accumulation.
          */
         accumulate: function(p) {
-          return T(this, p);
+          return S(this, p);
         },
         /**
          * Add a listener on an event triggered on a stream.
@@ -11530,20 +11530,20 @@ https://github.com/nodeca/pako/blob/main/LICENSE
         h[f] = f >= 252 ? 6 : f >= 248 ? 5 : f >= 240 ? 4 : f >= 224 ? 3 : f >= 192 ? 2 : 1;
       h[254] = h[254] = 1;
       var c = function(p) {
-        var v, y, A, k, w, C = p.length, S = 0;
+        var v, y, A, k, b, C = p.length, T = 0;
         for (k = 0; k < C; k++)
-          y = p.charCodeAt(k), (y & 64512) === 55296 && k + 1 < C && (A = p.charCodeAt(k + 1), (A & 64512) === 56320 && (y = 65536 + (y - 55296 << 10) + (A - 56320), k++)), S += y < 128 ? 1 : y < 2048 ? 2 : y < 65536 ? 3 : 4;
-        for (a.uint8array ? v = new Uint8Array(S) : v = new Array(S), w = 0, k = 0; w < S; k++)
-          y = p.charCodeAt(k), (y & 64512) === 55296 && k + 1 < C && (A = p.charCodeAt(k + 1), (A & 64512) === 56320 && (y = 65536 + (y - 55296 << 10) + (A - 56320), k++)), y < 128 ? v[w++] = y : y < 2048 ? (v[w++] = 192 | y >>> 6, v[w++] = 128 | y & 63) : y < 65536 ? (v[w++] = 224 | y >>> 12, v[w++] = 128 | y >>> 6 & 63, v[w++] = 128 | y & 63) : (v[w++] = 240 | y >>> 18, v[w++] = 128 | y >>> 12 & 63, v[w++] = 128 | y >>> 6 & 63, v[w++] = 128 | y & 63);
+          y = p.charCodeAt(k), (y & 64512) === 55296 && k + 1 < C && (A = p.charCodeAt(k + 1), (A & 64512) === 56320 && (y = 65536 + (y - 55296 << 10) + (A - 56320), k++)), T += y < 128 ? 1 : y < 2048 ? 2 : y < 65536 ? 3 : 4;
+        for (a.uint8array ? v = new Uint8Array(T) : v = new Array(T), b = 0, k = 0; b < T; k++)
+          y = p.charCodeAt(k), (y & 64512) === 55296 && k + 1 < C && (A = p.charCodeAt(k + 1), (A & 64512) === 56320 && (y = 65536 + (y - 55296 << 10) + (A - 56320), k++)), y < 128 ? v[b++] = y : y < 2048 ? (v[b++] = 192 | y >>> 6, v[b++] = 128 | y & 63) : y < 65536 ? (v[b++] = 224 | y >>> 12, v[b++] = 128 | y >>> 6 & 63, v[b++] = 128 | y & 63) : (v[b++] = 240 | y >>> 18, v[b++] = 128 | y >>> 12 & 63, v[b++] = 128 | y >>> 6 & 63, v[b++] = 128 | y & 63);
         return v;
-      }, b = function(p, v) {
+      }, w = function(p, v) {
         var y;
         for (v = v || p.length, v > p.length && (v = p.length), y = v - 1; y >= 0 && (p[y] & 192) === 128; )
           y--;
         return y < 0 || y === 0 ? v : y + h[p[y]] > v ? y : v;
       }, m = function(p) {
-        var v, y, A, k, w = p.length, C = new Array(w * 2);
-        for (y = 0, v = 0; v < w; ) {
+        var v, y, A, k, b = p.length, C = new Array(b * 2);
+        for (y = 0, v = 0; v < b; ) {
           if (A = p[v++], A < 128) {
             C[y++] = A;
             continue;
@@ -11552,7 +11552,7 @@ https://github.com/nodeca/pako/blob/main/LICENSE
             C[y++] = 65533, v += k - 1;
             continue;
           }
-          for (A &= k === 2 ? 31 : k === 3 ? 15 : 7; k > 1 && v < w; )
+          for (A &= k === 2 ? 31 : k === 3 ? 15 : 7; k > 1 && v < b; )
             A = A << 6 | p[v++] & 63, k--;
           if (k > 1) {
             C[y++] = 65533;
@@ -11567,10 +11567,10 @@ https://github.com/nodeca/pako/blob/main/LICENSE
       }, i.utf8decode = function(v) {
         return a.nodebuffer ? s.transformTo("nodebuffer", v).toString("utf-8") : (v = s.transformTo(a.uint8array ? "uint8array" : "array", v), m(v));
       };
-      function T() {
+      function S() {
         u.call(this, "utf-8 decode"), this.leftOver = null;
       }
-      s.inherits(T, u), T.prototype.processChunk = function(p) {
+      s.inherits(S, u), S.prototype.processChunk = function(p) {
         var v = s.transformTo(a.uint8array ? "uint8array" : "array", p.data);
         if (this.leftOver && this.leftOver.length) {
           if (a.uint8array) {
@@ -11580,17 +11580,17 @@ https://github.com/nodeca/pako/blob/main/LICENSE
             v = this.leftOver.concat(v);
           this.leftOver = null;
         }
-        var A = b(v), k = v;
+        var A = w(v), k = v;
         A !== v.length && (a.uint8array ? (k = v.subarray(0, A), this.leftOver = v.subarray(A, v.length)) : (k = v.slice(0, A), this.leftOver = v.slice(A, v.length))), this.push({
           data: i.utf8decode(k),
           meta: p.meta
         });
-      }, T.prototype.flush = function() {
+      }, S.prototype.flush = function() {
         this.leftOver && this.leftOver.length && (this.push({
           data: i.utf8decode(this.leftOver),
           meta: {}
         }), this.leftOver = null);
-      }, i.Utf8DecodeWorker = T;
+      }, i.Utf8DecodeWorker = S;
       function N() {
         u.call(this, "utf-8 encode");
       }
@@ -11630,7 +11630,7 @@ https://github.com/nodeca/pako/blob/main/LICENSE
           v[y] = p.charCodeAt(y) & 255;
         return v;
       }
-      var b = {
+      var w = {
         /**
          * Transform an array of int into a string, chunk by chunk.
          * See the performances notes on arrayLikeToString.
@@ -11641,11 +11641,11 @@ https://github.com/nodeca/pako/blob/main/LICENSE
          * @throws Error if the chunk is too big for the stack.
          */
         stringifyByChunk: function(p, v, y) {
-          var A = [], k = 0, w = p.length;
-          if (w <= y)
+          var A = [], k = 0, b = p.length;
+          if (b <= y)
             return String.fromCharCode.apply(null, p);
-          for (; k < w; )
-            v === "array" || v === "nodebuffer" ? A.push(String.fromCharCode.apply(null, p.slice(k, Math.min(k + y, w)))) : A.push(String.fromCharCode.apply(null, p.subarray(k, Math.min(k + y, w)))), k += y;
+          for (; k < b; )
+            v === "array" || v === "nodebuffer" ? A.push(String.fromCharCode.apply(null, p.slice(k, Math.min(k + y, b)))) : A.push(String.fromCharCode.apply(null, p.subarray(k, Math.min(k + y, b)))), k += y;
           return A.join("");
         },
         /**
@@ -11685,17 +11685,17 @@ https://github.com/nodeca/pako/blob/main/LICENSE
       };
       function m(p) {
         var v = 65536, y = i.getTypeOf(p), A = !0;
-        if (y === "uint8array" ? A = b.applyCanBeUsed.uint8array : y === "nodebuffer" && (A = b.applyCanBeUsed.nodebuffer), A)
+        if (y === "uint8array" ? A = w.applyCanBeUsed.uint8array : y === "nodebuffer" && (A = w.applyCanBeUsed.nodebuffer), A)
           for (; v > 1; )
             try {
-              return b.stringifyByChunk(p, y, v);
+              return w.stringifyByChunk(p, y, v);
             } catch {
               v = Math.floor(v / 2);
             }
-        return b.stringifyByChar(p);
+        return w.stringifyByChar(p);
       }
       i.applyFromCharCode = m;
-      function T(p, v) {
+      function S(p, v) {
         for (var y = 0; y < p.length; y++)
           v[y] = p[y];
         return v;
@@ -11732,7 +11732,7 @@ https://github.com/nodeca/pako/blob/main/LICENSE
           return m(new Uint8Array(p));
         },
         array: function(p) {
-          return T(new Uint8Array(p), new Array(p.byteLength));
+          return S(new Uint8Array(p), new Array(p.byteLength));
         },
         arraybuffer: f,
         uint8array: function(p) {
@@ -11744,7 +11744,7 @@ https://github.com/nodeca/pako/blob/main/LICENSE
       }, N.uint8array = {
         string: m,
         array: function(p) {
-          return T(p, new Array(p.length));
+          return S(p, new Array(p.length));
         },
         arraybuffer: function(p) {
           return p.buffer;
@@ -11756,13 +11756,13 @@ https://github.com/nodeca/pako/blob/main/LICENSE
       }, N.nodebuffer = {
         string: m,
         array: function(p) {
-          return T(p, new Array(p.length));
+          return S(p, new Array(p.length));
         },
         arraybuffer: function(p) {
           return N.nodebuffer.uint8array(p).buffer;
         },
         uint8array: function(p) {
-          return T(p, new Uint8Array(p.length));
+          return S(p, new Uint8Array(p.length));
         },
         nodebuffer: f
       }, i.transformTo = function(p, v) {
@@ -11812,9 +11812,9 @@ https://github.com/nodeca/pako/blob/main/LICENSE
             Object.prototype.hasOwnProperty.call(arguments[v], y) && typeof p[y] > "u" && (p[y] = arguments[v][y]);
         return p;
       }, i.prepareContent = function(p, v, y, A, k) {
-        var w = u.Promise.resolve(v).then(function(C) {
-          var S = s.blob && (C instanceof Blob || ["[object File]", "[object Blob]"].indexOf(Object.prototype.toString.call(C)) !== -1);
-          return S && typeof FileReader < "u" ? new u.Promise(function(R, z) {
+        var b = u.Promise.resolve(v).then(function(C) {
+          var T = s.blob && (C instanceof Blob || ["[object File]", "[object Blob]"].indexOf(Object.prototype.toString.call(C)) !== -1);
+          return T && typeof FileReader < "u" ? new u.Promise(function(R, z) {
             var M = new FileReader();
             M.onload = function(Y) {
               R(Y.target.result);
@@ -11823,9 +11823,9 @@ https://github.com/nodeca/pako/blob/main/LICENSE
             }, M.readAsArrayBuffer(C);
           }) : C;
         });
-        return w.then(function(C) {
-          var S = i.getTypeOf(C);
-          return S ? (S === "arraybuffer" ? C = i.transformTo("uint8array", C) : S === "string" && (k ? C = a.decode(C) : y && A !== !0 && (C = h(C))), C) : u.Promise.reject(
+        return b.then(function(C) {
+          var T = i.getTypeOf(C);
+          return T ? (T === "arraybuffer" ? C = i.transformTo("uint8array", C) : T === "string" && (k ? C = a.decode(C) : y && A !== !0 && (C = h(C))), C) : u.Promise.reject(
             new Error("Can't read the data of '" + p + "'. Is it in a supported JavaScript type (String, Blob, ArrayBuffer, etc) ?")
           );
         });
@@ -11844,8 +11844,8 @@ https://github.com/nodeca/pako/blob/main/LICENSE
         checkSignature: function(c) {
           if (!this.reader.readAndCheckSignature(c)) {
             this.reader.index -= 4;
-            var b = this.reader.readString(4);
-            throw new Error("Corrupted zip or bug: unexpected signature (" + a.pretty(b) + ", expected " + a.pretty(c) + ")");
+            var w = this.reader.readString(4);
+            throw new Error("Corrupted zip or bug: unexpected signature (" + a.pretty(w) + ", expected " + a.pretty(c) + ")");
           }
         },
         /**
@@ -11854,10 +11854,10 @@ https://github.com/nodeca/pako/blob/main/LICENSE
          * @param {string} expectedSignature the signature to expect.
          * @return {boolean} true if the signature is here, false otherwise.
          */
-        isSignature: function(c, b) {
+        isSignature: function(c, w) {
           var m = this.reader.index;
           this.reader.setIndex(c);
-          var T = this.reader.readString(4), N = T === b;
+          var S = this.reader.readString(4), N = S === w;
           return this.reader.setIndex(m), N;
         },
         /**
@@ -11865,7 +11865,7 @@ https://github.com/nodeca/pako/blob/main/LICENSE
          */
         readBlockEndOfCentral: function() {
           this.diskNumber = this.reader.readInt(2), this.diskWithCentralDirStart = this.reader.readInt(2), this.centralDirRecordsOnThisDisk = this.reader.readInt(2), this.centralDirRecords = this.reader.readInt(2), this.centralDirSize = this.reader.readInt(4), this.centralDirOffset = this.reader.readInt(4), this.zipCommentLength = this.reader.readInt(2);
-          var c = this.reader.readData(this.zipCommentLength), b = h.uint8array ? "uint8array" : "array", m = a.transformTo(b, c);
+          var c = this.reader.readData(this.zipCommentLength), w = h.uint8array ? "uint8array" : "array", m = a.transformTo(w, c);
           this.zipComment = this.loadOptions.decodeFileName(m);
         },
         /**
@@ -11876,10 +11876,10 @@ https://github.com/nodeca/pako/blob/main/LICENSE
          */
         readBlockZip64EndOfCentral: function() {
           this.zip64EndOfCentralSize = this.reader.readInt(8), this.reader.skip(4), this.diskNumber = this.reader.readInt(4), this.diskWithCentralDirStart = this.reader.readInt(4), this.centralDirRecordsOnThisDisk = this.reader.readInt(8), this.centralDirRecords = this.reader.readInt(8), this.centralDirSize = this.reader.readInt(8), this.centralDirOffset = this.reader.readInt(8), this.zip64ExtensibleData = {};
-          for (var c = this.zip64EndOfCentralSize - 44, b = 0, m, T, N; b < c; )
-            m = this.reader.readInt(2), T = this.reader.readInt(4), N = this.reader.readData(T), this.zip64ExtensibleData[m] = {
+          for (var c = this.zip64EndOfCentralSize - 44, w = 0, m, S, N; w < c; )
+            m = this.reader.readInt(2), S = this.reader.readInt(4), N = this.reader.readData(S), this.zip64ExtensibleData[m] = {
               id: m,
-              length: T,
+              length: S,
               value: N
             };
         },
@@ -11894,9 +11894,9 @@ https://github.com/nodeca/pako/blob/main/LICENSE
          * Read the local files, based on the offset read in the central part.
          */
         readLocalFiles: function() {
-          var c, b;
+          var c, w;
           for (c = 0; c < this.files.length; c++)
-            b = this.files[c], this.reader.setIndex(b.localHeaderOffset), this.checkSignature(o.LOCAL_FILE_HEADER), b.readLocalPart(this.reader), b.handleUTF8(), b.processAttributes();
+            w = this.files[c], this.reader.setIndex(w.localHeaderOffset), this.checkSignature(o.LOCAL_FILE_HEADER), w.readLocalPart(this.reader), w.handleUTF8(), w.processAttributes();
         },
         /**
          * Read the central directory.
@@ -11916,8 +11916,8 @@ https://github.com/nodeca/pako/blob/main/LICENSE
         readEndOfCentral: function() {
           var c = this.reader.lastIndexOfSignature(o.CENTRAL_DIRECTORY_END);
           if (c < 0) {
-            var b = !this.isSignature(0, o.LOCAL_FILE_HEADER);
-            throw b ? new Error("Can't find end of central directory : is this a zip file ? If it is, see https://stuk.github.io/jszip/documentation/howto/read_zip.html") : new Error("Corrupted zip: can't find end of central directory");
+            var w = !this.isSignature(0, o.LOCAL_FILE_HEADER);
+            throw w ? new Error("Can't find end of central directory : is this a zip file ? If it is, see https://stuk.github.io/jszip/documentation/howto/read_zip.html") : new Error("Corrupted zip: can't find end of central directory");
           }
           this.reader.setIndex(c);
           var m = c;
@@ -11928,9 +11928,9 @@ https://github.com/nodeca/pako/blob/main/LICENSE
               throw new Error("Corrupted zip: can't find the ZIP64 end of central directory");
             this.reader.setIndex(this.relativeOffsetEndOfZip64CentralDir), this.checkSignature(o.ZIP64_CENTRAL_DIRECTORY_END), this.readBlockZip64EndOfCentral();
           }
-          var T = this.centralDirOffset + this.centralDirSize;
-          this.zip64 && (T += 20, T += 12 + this.zip64EndOfCentralSize);
-          var N = m - T;
+          var S = this.centralDirOffset + this.centralDirSize;
+          this.zip64 && (S += 20, S += 12 + this.zip64EndOfCentralSize);
+          var N = m - S;
           if (N > 0)
             this.isSignature(m, o.CENTRAL_FILE_HEADER) || (this.reader.zero = N);
           else if (N < 0)
@@ -11948,7 +11948,7 @@ https://github.com/nodeca/pako/blob/main/LICENSE
         }
       }, r.exports = f;
     }, { "./reader/readerFor": 22, "./signature": 23, "./support": 30, "./utils": 32, "./zipEntry": 34 }], 34: [function(t, r, i) {
-      var s = t("./reader/readerFor"), a = t("./utils"), o = t("./compressedObject"), u = t("./crc32"), h = t("./utf8"), f = t("./compressions"), c = t("./support"), b = 0, m = 3, T = function(p) {
+      var s = t("./reader/readerFor"), a = t("./utils"), o = t("./compressedObject"), u = t("./crc32"), h = t("./utf8"), f = t("./compressions"), c = t("./support"), w = 0, m = 3, S = function(p) {
         for (var v in f)
           if (Object.prototype.hasOwnProperty.call(f, v) && f[v].magic === p)
             return f[v];
@@ -11980,7 +11980,7 @@ https://github.com/nodeca/pako/blob/main/LICENSE
           var v, y;
           if (p.skip(22), this.fileNameLength = p.readInt(2), y = p.readInt(2), this.fileName = p.readData(this.fileNameLength), p.skip(y), this.compressedSize === -1 || this.uncompressedSize === -1)
             throw new Error("Bug or corrupted zip : didn't get enough information from the central directory (compressedSize === -1 || uncompressedSize === -1)");
-          if (v = T(this.compressionMethod), v === null)
+          if (v = S(this.compressionMethod), v === null)
             throw new Error("Corrupted zip : compression " + a.pretty(this.compressionMethod) + " unknown (inner file : " + a.transformTo("string", this.fileName) + ")");
           this.decompressed = new o(this.compressedSize, this.uncompressedSize, this.crc32, v, p.readData(this.compressedSize));
         },
@@ -12001,7 +12001,7 @@ https://github.com/nodeca/pako/blob/main/LICENSE
         processAttributes: function() {
           this.unixPermissions = null, this.dosPermissions = null;
           var p = this.versionMadeBy >> 8;
-          this.dir = !!(this.externalFileAttributes & 16), p === b && (this.dosPermissions = this.externalFileAttributes & 63), p === m && (this.unixPermissions = this.externalFileAttributes >> 16 & 65535), !this.dir && this.fileNameStr.slice(-1) === "/" && (this.dir = !0);
+          this.dir = !!(this.externalFileAttributes & 16), p === w && (this.dosPermissions = this.externalFileAttributes & 63), p === m && (this.unixPermissions = this.externalFileAttributes >> 16 & 65535), !this.dir && this.fileNameStr.slice(-1) === "/" && (this.dir = !0);
         },
         /**
          * Parse the ZIP64 extra field and merge the info in the current ZipEntry.
@@ -12077,8 +12077,8 @@ https://github.com/nodeca/pako/blob/main/LICENSE
         }
       }, r.exports = N;
     }, { "./compressedObject": 2, "./compressions": 3, "./crc32": 4, "./reader/readerFor": 22, "./support": 30, "./utf8": 31, "./utils": 32 }], 35: [function(t, r, i) {
-      var s = t("./stream/StreamHelper"), a = t("./stream/DataWorker"), o = t("./utf8"), u = t("./compressedObject"), h = t("./stream/GenericWorker"), f = function(T, N, p) {
-        this.name = T, this.dir = p.dir, this.date = p.date, this.comment = p.comment, this.unixPermissions = p.unixPermissions, this.dosPermissions = p.dosPermissions, this._data = N, this._dataBinary = p.binary, this.options = {
+      var s = t("./stream/StreamHelper"), a = t("./stream/DataWorker"), o = t("./utf8"), u = t("./compressedObject"), h = t("./stream/GenericWorker"), f = function(S, N, p) {
+        this.name = S, this.dir = p.dir, this.date = p.date, this.comment = p.comment, this.unixPermissions = p.unixPermissions, this.dosPermissions = p.dosPermissions, this._data = N, this._dataBinary = p.binary, this.options = {
           compression: p.compression,
           compressionOptions: p.compressionOptions
         };
@@ -12089,12 +12089,12 @@ https://github.com/nodeca/pako/blob/main/LICENSE
          * @param {String} type the type of each chunk.
          * @return StreamHelper the stream.
          */
-        internalStream: function(T) {
+        internalStream: function(S) {
           var N = null, p = "string";
           try {
-            if (!T)
+            if (!S)
               throw new Error("No output type specified.");
-            p = T.toLowerCase();
+            p = S.toLowerCase();
             var v = p === "string" || p === "text";
             (p === "binarystring" || p === "text") && (p = "string"), N = this._decompressWorker();
             var y = !this._dataBinary;
@@ -12110,8 +12110,8 @@ https://github.com/nodeca/pako/blob/main/LICENSE
          * @param {Function} onUpdate a function to call on each internal update.
          * @return Promise the promise of the result.
          */
-        async: function(T, N) {
-          return this.internalStream(T).accumulate(N);
+        async: function(S, N) {
+          return this.internalStream(S).accumulate(N);
         },
         /**
          * Prepare the content as a nodejs stream.
@@ -12119,8 +12119,8 @@ https://github.com/nodeca/pako/blob/main/LICENSE
          * @param {Function} onUpdate a function to call on each internal update.
          * @return Stream the stream.
          */
-        nodeStream: function(T, N) {
-          return this.internalStream(T || "nodebuffer").toNodejsStream(N);
+        nodeStream: function(S, N) {
+          return this.internalStream(S || "nodebuffer").toNodejsStream(N);
         },
         /**
          * Return a worker for the compressed content.
@@ -12129,11 +12129,11 @@ https://github.com/nodeca/pako/blob/main/LICENSE
          * @param {Object} compressionOptions the options to use when compressing.
          * @return Worker the worker.
          */
-        _compressWorker: function(T, N) {
-          if (this._data instanceof u && this._data.compression.magic === T.magic)
+        _compressWorker: function(S, N) {
+          if (this._data instanceof u && this._data.compression.magic === S.magic)
             return this._data.getCompressedWorker();
           var p = this._decompressWorker();
-          return this._dataBinary || (p = p.pipe(new o.Utf8EncodeWorker())), u.createWorkerFrom(p, T, N);
+          return this._dataBinary || (p = p.pipe(new o.Utf8EncodeWorker())), u.createWorkerFrom(p, S, N);
         },
         /**
          * Return a worker for the decompressed content.
@@ -12144,16 +12144,16 @@ https://github.com/nodeca/pako/blob/main/LICENSE
           return this._data instanceof u ? this._data.getContentWorker() : this._data instanceof h ? this._data : new a(this._data);
         }
       };
-      for (var c = ["asText", "asBinary", "asNodeBuffer", "asUint8Array", "asArrayBuffer"], b = function() {
+      for (var c = ["asText", "asBinary", "asNodeBuffer", "asUint8Array", "asArrayBuffer"], w = function() {
         throw new Error("This method has been removed in JSZip 3.0, please check the upgrade guide.");
       }, m = 0; m < c.length; m++)
-        f.prototype[c[m]] = b;
+        f.prototype[c[m]] = w;
       r.exports = f;
     }, { "./compressedObject": 2, "./stream/DataWorker": 27, "./stream/GenericWorker": 28, "./stream/StreamHelper": 29, "./utf8": 31 }], 36: [function(t, r, i) {
       (function(s) {
         var a = s.MutationObserver || s.WebKitMutationObserver, o;
         if (a) {
-          var u = 0, h = new a(T), f = s.document.createTextNode("");
+          var u = 0, h = new a(S), f = s.document.createTextNode("");
           h.observe(f, {
             characterData: !0
           }), o = function() {
@@ -12161,31 +12161,31 @@ https://github.com/nodeca/pako/blob/main/LICENSE
           };
         } else if (!s.setImmediate && typeof s.MessageChannel < "u") {
           var c = new s.MessageChannel();
-          c.port1.onmessage = T, o = function() {
+          c.port1.onmessage = S, o = function() {
             c.port2.postMessage(0);
           };
         } else
           "document" in s && "onreadystatechange" in s.document.createElement("script") ? o = function() {
             var p = s.document.createElement("script");
             p.onreadystatechange = function() {
-              T(), p.onreadystatechange = null, p.parentNode.removeChild(p), p = null;
+              S(), p.onreadystatechange = null, p.parentNode.removeChild(p), p = null;
             }, s.document.documentElement.appendChild(p);
           } : o = function() {
-            setTimeout(T, 0);
+            setTimeout(S, 0);
           };
-        var b, m = [];
-        function T() {
-          b = !0;
+        var w, m = [];
+        function S() {
+          w = !0;
           for (var p, v, y = m.length; y; ) {
             for (v = m, m = [], p = -1; ++p < y; )
               v[p]();
             y = m.length;
           }
-          b = !1;
+          w = !1;
         }
         r.exports = N;
         function N(p) {
-          m.push(p) === 1 && !b && o();
+          m.push(p) === 1 && !w && o();
         }
       }).call(this, typeof It < "u" ? It : typeof self < "u" ? self : typeof window < "u" ? window : {});
     }, {}], 37: [function(t, r, i) {
@@ -12194,97 +12194,97 @@ https://github.com/nodeca/pako/blob/main/LICENSE
       }
       var o = {}, u = ["REJECTED"], h = ["FULFILLED"], f = ["PENDING"];
       r.exports = c;
-      function c(w) {
-        if (typeof w != "function")
+      function c(b) {
+        if (typeof b != "function")
           throw new TypeError("resolver must be a function");
-        this.state = f, this.queue = [], this.outcome = void 0, w !== a && N(this, w);
+        this.state = f, this.queue = [], this.outcome = void 0, b !== a && N(this, b);
       }
-      c.prototype.finally = function(w) {
-        if (typeof w != "function")
+      c.prototype.finally = function(b) {
+        if (typeof b != "function")
           return this;
         var C = this.constructor;
-        return this.then(S, R);
-        function S(z) {
+        return this.then(T, R);
+        function T(z) {
           function M() {
             return z;
           }
-          return C.resolve(w()).then(M);
+          return C.resolve(b()).then(M);
         }
         function R(z) {
           function M() {
             throw z;
           }
-          return C.resolve(w()).then(M);
+          return C.resolve(b()).then(M);
         }
-      }, c.prototype.catch = function(w) {
-        return this.then(null, w);
-      }, c.prototype.then = function(w, C) {
-        if (typeof w != "function" && this.state === h || typeof C != "function" && this.state === u)
+      }, c.prototype.catch = function(b) {
+        return this.then(null, b);
+      }, c.prototype.then = function(b, C) {
+        if (typeof b != "function" && this.state === h || typeof C != "function" && this.state === u)
           return this;
-        var S = new this.constructor(a);
+        var T = new this.constructor(a);
         if (this.state !== f) {
-          var R = this.state === h ? w : C;
-          m(S, R, this.outcome);
+          var R = this.state === h ? b : C;
+          m(T, R, this.outcome);
         } else
-          this.queue.push(new b(S, w, C));
-        return S;
+          this.queue.push(new w(T, b, C));
+        return T;
       };
-      function b(w, C, S) {
-        this.promise = w, typeof C == "function" && (this.onFulfilled = C, this.callFulfilled = this.otherCallFulfilled), typeof S == "function" && (this.onRejected = S, this.callRejected = this.otherCallRejected);
+      function w(b, C, T) {
+        this.promise = b, typeof C == "function" && (this.onFulfilled = C, this.callFulfilled = this.otherCallFulfilled), typeof T == "function" && (this.onRejected = T, this.callRejected = this.otherCallRejected);
       }
-      b.prototype.callFulfilled = function(w) {
-        o.resolve(this.promise, w);
-      }, b.prototype.otherCallFulfilled = function(w) {
-        m(this.promise, this.onFulfilled, w);
-      }, b.prototype.callRejected = function(w) {
-        o.reject(this.promise, w);
-      }, b.prototype.otherCallRejected = function(w) {
-        m(this.promise, this.onRejected, w);
+      w.prototype.callFulfilled = function(b) {
+        o.resolve(this.promise, b);
+      }, w.prototype.otherCallFulfilled = function(b) {
+        m(this.promise, this.onFulfilled, b);
+      }, w.prototype.callRejected = function(b) {
+        o.reject(this.promise, b);
+      }, w.prototype.otherCallRejected = function(b) {
+        m(this.promise, this.onRejected, b);
       };
-      function m(w, C, S) {
+      function m(b, C, T) {
         s(function() {
           var R;
           try {
-            R = C(S);
+            R = C(T);
           } catch (z) {
-            return o.reject(w, z);
+            return o.reject(b, z);
           }
-          R === w ? o.reject(w, new TypeError("Cannot resolve promise with itself")) : o.resolve(w, R);
+          R === b ? o.reject(b, new TypeError("Cannot resolve promise with itself")) : o.resolve(b, R);
         });
       }
-      o.resolve = function(w, C) {
-        var S = p(T, C);
-        if (S.status === "error")
-          return o.reject(w, S.value);
-        var R = S.value;
+      o.resolve = function(b, C) {
+        var T = p(S, C);
+        if (T.status === "error")
+          return o.reject(b, T.value);
+        var R = T.value;
         if (R)
-          N(w, R);
+          N(b, R);
         else {
-          w.state = h, w.outcome = C;
-          for (var z = -1, M = w.queue.length; ++z < M; )
-            w.queue[z].callFulfilled(C);
+          b.state = h, b.outcome = C;
+          for (var z = -1, M = b.queue.length; ++z < M; )
+            b.queue[z].callFulfilled(C);
         }
-        return w;
-      }, o.reject = function(w, C) {
-        w.state = u, w.outcome = C;
-        for (var S = -1, R = w.queue.length; ++S < R; )
-          w.queue[S].callRejected(C);
-        return w;
+        return b;
+      }, o.reject = function(b, C) {
+        b.state = u, b.outcome = C;
+        for (var T = -1, R = b.queue.length; ++T < R; )
+          b.queue[T].callRejected(C);
+        return b;
       };
-      function T(w) {
-        var C = w && w.then;
-        if (w && (typeof w == "object" || typeof w == "function") && typeof C == "function")
+      function S(b) {
+        var C = b && b.then;
+        if (b && (typeof b == "object" || typeof b == "function") && typeof C == "function")
           return function() {
-            C.apply(w, arguments);
+            C.apply(b, arguments);
           };
       }
-      function N(w, C) {
-        var S = !1;
+      function N(b, C) {
+        var T = !1;
         function R(Z) {
-          S || (S = !0, o.reject(w, Z));
+          T || (T = !0, o.reject(b, Z));
         }
         function z(Z) {
-          S || (S = !0, o.resolve(w, Z));
+          T || (T = !0, o.resolve(b, Z));
         }
         function M() {
           C(z, R);
@@ -12292,54 +12292,54 @@ https://github.com/nodeca/pako/blob/main/LICENSE
         var Y = p(M);
         Y.status === "error" && R(Y.value);
       }
-      function p(w, C) {
-        var S = {};
+      function p(b, C) {
+        var T = {};
         try {
-          S.value = w(C), S.status = "success";
+          T.value = b(C), T.status = "success";
         } catch (R) {
-          S.status = "error", S.value = R;
+          T.status = "error", T.value = R;
         }
-        return S;
+        return T;
       }
       c.resolve = v;
-      function v(w) {
-        return w instanceof this ? w : o.resolve(new this(a), w);
+      function v(b) {
+        return b instanceof this ? b : o.resolve(new this(a), b);
       }
       c.reject = y;
-      function y(w) {
+      function y(b) {
         var C = new this(a);
-        return o.reject(C, w);
+        return o.reject(C, b);
       }
       c.all = A;
-      function A(w) {
+      function A(b) {
         var C = this;
-        if (Object.prototype.toString.call(w) !== "[object Array]")
+        if (Object.prototype.toString.call(b) !== "[object Array]")
           return this.reject(new TypeError("must be an array"));
-        var S = w.length, R = !1;
-        if (!S)
+        var T = b.length, R = !1;
+        if (!T)
           return this.resolve([]);
-        for (var z = new Array(S), M = 0, Y = -1, Z = new this(a); ++Y < S; )
-          te(w[Y], Y);
+        for (var z = new Array(T), M = 0, Y = -1, Z = new this(a); ++Y < T; )
+          te(b[Y], Y);
         return Z;
         function te(ge, pe) {
           C.resolve(ge).then(ve, function(de) {
             R || (R = !0, o.reject(Z, de));
           });
           function ve(de) {
-            z[pe] = de, ++M === S && !R && (R = !0, o.resolve(Z, z));
+            z[pe] = de, ++M === T && !R && (R = !0, o.resolve(Z, z));
           }
         }
       }
       c.race = k;
-      function k(w) {
+      function k(b) {
         var C = this;
-        if (Object.prototype.toString.call(w) !== "[object Array]")
+        if (Object.prototype.toString.call(b) !== "[object Array]")
           return this.reject(new TypeError("must be an array"));
-        var S = w.length, R = !1;
-        if (!S)
+        var T = b.length, R = !1;
+        if (!T)
           return this.resolve([]);
-        for (var z = -1, M = new this(a); ++z < S; )
-          Y(w[z]);
+        for (var z = -1, M = new this(a); ++z < T; )
+          Y(b[z]);
         return M;
         function Y(Z) {
           C.resolve(Z).then(function(te) {
@@ -12353,10 +12353,10 @@ https://github.com/nodeca/pako/blob/main/LICENSE
       var s = t("./lib/utils/common").assign, a = t("./lib/deflate"), o = t("./lib/inflate"), u = t("./lib/zlib/constants"), h = {};
       s(h, a, o, u), r.exports = h;
     }, { "./lib/deflate": 39, "./lib/inflate": 40, "./lib/utils/common": 41, "./lib/zlib/constants": 44 }], 39: [function(t, r, i) {
-      var s = t("./zlib/deflate"), a = t("./utils/common"), o = t("./utils/strings"), u = t("./zlib/messages"), h = t("./zlib/zstream"), f = Object.prototype.toString, c = 0, b = 4, m = 0, T = 1, N = 2, p = -1, v = 0, y = 8;
-      function A(S) {
+      var s = t("./zlib/deflate"), a = t("./utils/common"), o = t("./utils/strings"), u = t("./zlib/messages"), h = t("./zlib/zstream"), f = Object.prototype.toString, c = 0, w = 4, m = 0, S = 1, N = 2, p = -1, v = 0, y = 8;
+      function A(T) {
         if (!(this instanceof A))
-          return new A(S);
+          return new A(T);
         this.options = a.assign({
           level: p,
           method: y,
@@ -12365,7 +12365,7 @@ https://github.com/nodeca/pako/blob/main/LICENSE
           memLevel: 8,
           strategy: v,
           to: ""
-        }, S || {});
+        }, T || {});
         var R = this.options;
         R.raw && R.windowBits > 0 ? R.windowBits = -R.windowBits : R.gzip && R.windowBits > 0 && R.windowBits < 16 && (R.windowBits += 16), this.err = 0, this.msg = "", this.ended = !1, this.chunks = [], this.strm = new h(), this.strm.avail_out = 0;
         var z = s.deflateInit2(
@@ -12385,37 +12385,37 @@ https://github.com/nodeca/pako/blob/main/LICENSE
           this._dict_set = !0;
         }
       }
-      A.prototype.push = function(S, R) {
+      A.prototype.push = function(T, R) {
         var z = this.strm, M = this.options.chunkSize, Y, Z;
         if (this.ended)
           return !1;
-        Z = R === ~~R ? R : R === !0 ? b : c, typeof S == "string" ? z.input = o.string2buf(S) : f.call(S) === "[object ArrayBuffer]" ? z.input = new Uint8Array(S) : z.input = S, z.next_in = 0, z.avail_in = z.input.length;
+        Z = R === ~~R ? R : R === !0 ? w : c, typeof T == "string" ? z.input = o.string2buf(T) : f.call(T) === "[object ArrayBuffer]" ? z.input = new Uint8Array(T) : z.input = T, z.next_in = 0, z.avail_in = z.input.length;
         do {
-          if (z.avail_out === 0 && (z.output = new a.Buf8(M), z.next_out = 0, z.avail_out = M), Y = s.deflate(z, Z), Y !== T && Y !== m)
+          if (z.avail_out === 0 && (z.output = new a.Buf8(M), z.next_out = 0, z.avail_out = M), Y = s.deflate(z, Z), Y !== S && Y !== m)
             return this.onEnd(Y), this.ended = !0, !1;
-          (z.avail_out === 0 || z.avail_in === 0 && (Z === b || Z === N)) && (this.options.to === "string" ? this.onData(o.buf2binstring(a.shrinkBuf(z.output, z.next_out))) : this.onData(a.shrinkBuf(z.output, z.next_out)));
-        } while ((z.avail_in > 0 || z.avail_out === 0) && Y !== T);
-        return Z === b ? (Y = s.deflateEnd(this.strm), this.onEnd(Y), this.ended = !0, Y === m) : (Z === N && (this.onEnd(m), z.avail_out = 0), !0);
-      }, A.prototype.onData = function(S) {
-        this.chunks.push(S);
-      }, A.prototype.onEnd = function(S) {
-        S === m && (this.options.to === "string" ? this.result = this.chunks.join("") : this.result = a.flattenChunks(this.chunks)), this.chunks = [], this.err = S, this.msg = this.strm.msg;
+          (z.avail_out === 0 || z.avail_in === 0 && (Z === w || Z === N)) && (this.options.to === "string" ? this.onData(o.buf2binstring(a.shrinkBuf(z.output, z.next_out))) : this.onData(a.shrinkBuf(z.output, z.next_out)));
+        } while ((z.avail_in > 0 || z.avail_out === 0) && Y !== S);
+        return Z === w ? (Y = s.deflateEnd(this.strm), this.onEnd(Y), this.ended = !0, Y === m) : (Z === N && (this.onEnd(m), z.avail_out = 0), !0);
+      }, A.prototype.onData = function(T) {
+        this.chunks.push(T);
+      }, A.prototype.onEnd = function(T) {
+        T === m && (this.options.to === "string" ? this.result = this.chunks.join("") : this.result = a.flattenChunks(this.chunks)), this.chunks = [], this.err = T, this.msg = this.strm.msg;
       };
-      function k(S, R) {
+      function k(T, R) {
         var z = new A(R);
-        if (z.push(S, !0), z.err)
+        if (z.push(T, !0), z.err)
           throw z.msg || u[z.err];
         return z.result;
       }
-      function w(S, R) {
-        return R = R || {}, R.raw = !0, k(S, R);
+      function b(T, R) {
+        return R = R || {}, R.raw = !0, k(T, R);
       }
-      function C(S, R) {
-        return R = R || {}, R.gzip = !0, k(S, R);
+      function C(T, R) {
+        return R = R || {}, R.gzip = !0, k(T, R);
       }
-      i.Deflate = A, i.deflate = k, i.deflateRaw = w, i.gzip = C;
+      i.Deflate = A, i.deflate = k, i.deflateRaw = b, i.gzip = C;
     }, { "./utils/common": 41, "./utils/strings": 42, "./zlib/deflate": 46, "./zlib/messages": 51, "./zlib/zstream": 53 }], 40: [function(t, r, i) {
-      var s = t("./zlib/inflate"), a = t("./utils/common"), o = t("./utils/strings"), u = t("./zlib/constants"), h = t("./zlib/messages"), f = t("./zlib/zstream"), c = t("./zlib/gzheader"), b = Object.prototype.toString;
+      var s = t("./zlib/inflate"), a = t("./utils/common"), o = t("./utils/strings"), u = t("./zlib/constants"), h = t("./zlib/messages"), f = t("./zlib/zstream"), c = t("./zlib/gzheader"), w = Object.prototype.toString;
       function m(p) {
         if (!(this instanceof m))
           return new m(p);
@@ -12435,31 +12435,31 @@ https://github.com/nodeca/pako/blob/main/LICENSE
         this.header = new c(), s.inflateGetHeader(this.strm, this.header);
       }
       m.prototype.push = function(p, v) {
-        var y = this.strm, A = this.options.chunkSize, k = this.options.dictionary, w, C, S, R, z, M, Y = !1;
+        var y = this.strm, A = this.options.chunkSize, k = this.options.dictionary, b, C, T, R, z, M, Y = !1;
         if (this.ended)
           return !1;
-        C = v === ~~v ? v : v === !0 ? u.Z_FINISH : u.Z_NO_FLUSH, typeof p == "string" ? y.input = o.binstring2buf(p) : b.call(p) === "[object ArrayBuffer]" ? y.input = new Uint8Array(p) : y.input = p, y.next_in = 0, y.avail_in = y.input.length;
+        C = v === ~~v ? v : v === !0 ? u.Z_FINISH : u.Z_NO_FLUSH, typeof p == "string" ? y.input = o.binstring2buf(p) : w.call(p) === "[object ArrayBuffer]" ? y.input = new Uint8Array(p) : y.input = p, y.next_in = 0, y.avail_in = y.input.length;
         do {
-          if (y.avail_out === 0 && (y.output = new a.Buf8(A), y.next_out = 0, y.avail_out = A), w = s.inflate(y, u.Z_NO_FLUSH), w === u.Z_NEED_DICT && k && (typeof k == "string" ? M = o.string2buf(k) : b.call(k) === "[object ArrayBuffer]" ? M = new Uint8Array(k) : M = k, w = s.inflateSetDictionary(this.strm, M)), w === u.Z_BUF_ERROR && Y === !0 && (w = u.Z_OK, Y = !1), w !== u.Z_STREAM_END && w !== u.Z_OK)
-            return this.onEnd(w), this.ended = !0, !1;
-          y.next_out && (y.avail_out === 0 || w === u.Z_STREAM_END || y.avail_in === 0 && (C === u.Z_FINISH || C === u.Z_SYNC_FLUSH)) && (this.options.to === "string" ? (S = o.utf8border(y.output, y.next_out), R = y.next_out - S, z = o.buf2string(y.output, S), y.next_out = R, y.avail_out = A - R, R && a.arraySet(y.output, y.output, S, R, 0), this.onData(z)) : this.onData(a.shrinkBuf(y.output, y.next_out))), y.avail_in === 0 && y.avail_out === 0 && (Y = !0);
-        } while ((y.avail_in > 0 || y.avail_out === 0) && w !== u.Z_STREAM_END);
-        return w === u.Z_STREAM_END && (C = u.Z_FINISH), C === u.Z_FINISH ? (w = s.inflateEnd(this.strm), this.onEnd(w), this.ended = !0, w === u.Z_OK) : (C === u.Z_SYNC_FLUSH && (this.onEnd(u.Z_OK), y.avail_out = 0), !0);
+          if (y.avail_out === 0 && (y.output = new a.Buf8(A), y.next_out = 0, y.avail_out = A), b = s.inflate(y, u.Z_NO_FLUSH), b === u.Z_NEED_DICT && k && (typeof k == "string" ? M = o.string2buf(k) : w.call(k) === "[object ArrayBuffer]" ? M = new Uint8Array(k) : M = k, b = s.inflateSetDictionary(this.strm, M)), b === u.Z_BUF_ERROR && Y === !0 && (b = u.Z_OK, Y = !1), b !== u.Z_STREAM_END && b !== u.Z_OK)
+            return this.onEnd(b), this.ended = !0, !1;
+          y.next_out && (y.avail_out === 0 || b === u.Z_STREAM_END || y.avail_in === 0 && (C === u.Z_FINISH || C === u.Z_SYNC_FLUSH)) && (this.options.to === "string" ? (T = o.utf8border(y.output, y.next_out), R = y.next_out - T, z = o.buf2string(y.output, T), y.next_out = R, y.avail_out = A - R, R && a.arraySet(y.output, y.output, T, R, 0), this.onData(z)) : this.onData(a.shrinkBuf(y.output, y.next_out))), y.avail_in === 0 && y.avail_out === 0 && (Y = !0);
+        } while ((y.avail_in > 0 || y.avail_out === 0) && b !== u.Z_STREAM_END);
+        return b === u.Z_STREAM_END && (C = u.Z_FINISH), C === u.Z_FINISH ? (b = s.inflateEnd(this.strm), this.onEnd(b), this.ended = !0, b === u.Z_OK) : (C === u.Z_SYNC_FLUSH && (this.onEnd(u.Z_OK), y.avail_out = 0), !0);
       }, m.prototype.onData = function(p) {
         this.chunks.push(p);
       }, m.prototype.onEnd = function(p) {
         p === u.Z_OK && (this.options.to === "string" ? this.result = this.chunks.join("") : this.result = a.flattenChunks(this.chunks)), this.chunks = [], this.err = p, this.msg = this.strm.msg;
       };
-      function T(p, v) {
+      function S(p, v) {
         var y = new m(v);
         if (y.push(p, !0), y.err)
           throw y.msg || h[y.err];
         return y.result;
       }
       function N(p, v) {
-        return v = v || {}, v.raw = !0, T(p, v);
+        return v = v || {}, v.raw = !0, S(p, v);
       }
-      i.Inflate = m, i.inflate = T, i.inflateRaw = N, i.ungzip = T;
+      i.Inflate = m, i.inflate = S, i.inflateRaw = N, i.ungzip = S;
     }, { "./utils/common": 41, "./utils/strings": 42, "./zlib/constants": 44, "./zlib/gzheader": 47, "./zlib/inflate": 49, "./zlib/messages": 51, "./zlib/zstream": 53 }], 41: [function(t, r, i) {
       var s = typeof Uint8Array < "u" && typeof Uint16Array < "u" && typeof Int32Array < "u";
       i.assign = function(u) {
@@ -12477,27 +12477,27 @@ https://github.com/nodeca/pako/blob/main/LICENSE
         return u.length === h ? u : u.subarray ? u.subarray(0, h) : (u.length = h, u);
       };
       var a = {
-        arraySet: function(u, h, f, c, b) {
+        arraySet: function(u, h, f, c, w) {
           if (h.subarray && u.subarray) {
-            u.set(h.subarray(f, f + c), b);
+            u.set(h.subarray(f, f + c), w);
             return;
           }
           for (var m = 0; m < c; m++)
-            u[b + m] = h[f + m];
+            u[w + m] = h[f + m];
         },
         // Join array of chunks to single array.
         flattenChunks: function(u) {
-          var h, f, c, b, m, T;
+          var h, f, c, w, m, S;
           for (c = 0, h = 0, f = u.length; h < f; h++)
             c += u[h].length;
-          for (T = new Uint8Array(c), b = 0, h = 0, f = u.length; h < f; h++)
-            m = u[h], T.set(m, b), b += m.length;
-          return T;
+          for (S = new Uint8Array(c), w = 0, h = 0, f = u.length; h < f; h++)
+            m = u[h], S.set(m, w), w += m.length;
+          return S;
         }
       }, o = {
-        arraySet: function(u, h, f, c, b) {
+        arraySet: function(u, h, f, c, w) {
           for (var m = 0; m < c; m++)
-            u[b + m] = h[f + m];
+            u[w + m] = h[f + m];
         },
         // Join array of chunks to single array.
         flattenChunks: function(u) {
@@ -12522,59 +12522,59 @@ https://github.com/nodeca/pako/blob/main/LICENSE
       for (var u = new s.Buf8(256), h = 0; h < 256; h++)
         u[h] = h >= 252 ? 6 : h >= 248 ? 5 : h >= 240 ? 4 : h >= 224 ? 3 : h >= 192 ? 2 : 1;
       u[254] = u[254] = 1, i.string2buf = function(c) {
-        var b, m, T, N, p, v = c.length, y = 0;
+        var w, m, S, N, p, v = c.length, y = 0;
         for (N = 0; N < v; N++)
-          m = c.charCodeAt(N), (m & 64512) === 55296 && N + 1 < v && (T = c.charCodeAt(N + 1), (T & 64512) === 56320 && (m = 65536 + (m - 55296 << 10) + (T - 56320), N++)), y += m < 128 ? 1 : m < 2048 ? 2 : m < 65536 ? 3 : 4;
-        for (b = new s.Buf8(y), p = 0, N = 0; p < y; N++)
-          m = c.charCodeAt(N), (m & 64512) === 55296 && N + 1 < v && (T = c.charCodeAt(N + 1), (T & 64512) === 56320 && (m = 65536 + (m - 55296 << 10) + (T - 56320), N++)), m < 128 ? b[p++] = m : m < 2048 ? (b[p++] = 192 | m >>> 6, b[p++] = 128 | m & 63) : m < 65536 ? (b[p++] = 224 | m >>> 12, b[p++] = 128 | m >>> 6 & 63, b[p++] = 128 | m & 63) : (b[p++] = 240 | m >>> 18, b[p++] = 128 | m >>> 12 & 63, b[p++] = 128 | m >>> 6 & 63, b[p++] = 128 | m & 63);
-        return b;
+          m = c.charCodeAt(N), (m & 64512) === 55296 && N + 1 < v && (S = c.charCodeAt(N + 1), (S & 64512) === 56320 && (m = 65536 + (m - 55296 << 10) + (S - 56320), N++)), y += m < 128 ? 1 : m < 2048 ? 2 : m < 65536 ? 3 : 4;
+        for (w = new s.Buf8(y), p = 0, N = 0; p < y; N++)
+          m = c.charCodeAt(N), (m & 64512) === 55296 && N + 1 < v && (S = c.charCodeAt(N + 1), (S & 64512) === 56320 && (m = 65536 + (m - 55296 << 10) + (S - 56320), N++)), m < 128 ? w[p++] = m : m < 2048 ? (w[p++] = 192 | m >>> 6, w[p++] = 128 | m & 63) : m < 65536 ? (w[p++] = 224 | m >>> 12, w[p++] = 128 | m >>> 6 & 63, w[p++] = 128 | m & 63) : (w[p++] = 240 | m >>> 18, w[p++] = 128 | m >>> 12 & 63, w[p++] = 128 | m >>> 6 & 63, w[p++] = 128 | m & 63);
+        return w;
       };
-      function f(c, b) {
-        if (b < 65537 && (c.subarray && o || !c.subarray && a))
-          return String.fromCharCode.apply(null, s.shrinkBuf(c, b));
-        for (var m = "", T = 0; T < b; T++)
-          m += String.fromCharCode(c[T]);
+      function f(c, w) {
+        if (w < 65537 && (c.subarray && o || !c.subarray && a))
+          return String.fromCharCode.apply(null, s.shrinkBuf(c, w));
+        for (var m = "", S = 0; S < w; S++)
+          m += String.fromCharCode(c[S]);
         return m;
       }
       i.buf2binstring = function(c) {
         return f(c, c.length);
       }, i.binstring2buf = function(c) {
-        for (var b = new s.Buf8(c.length), m = 0, T = b.length; m < T; m++)
-          b[m] = c.charCodeAt(m);
-        return b;
-      }, i.buf2string = function(c, b) {
-        var m, T, N, p, v = b || c.length, y = new Array(v * 2);
-        for (T = 0, m = 0; m < v; ) {
+        for (var w = new s.Buf8(c.length), m = 0, S = w.length; m < S; m++)
+          w[m] = c.charCodeAt(m);
+        return w;
+      }, i.buf2string = function(c, w) {
+        var m, S, N, p, v = w || c.length, y = new Array(v * 2);
+        for (S = 0, m = 0; m < v; ) {
           if (N = c[m++], N < 128) {
-            y[T++] = N;
+            y[S++] = N;
             continue;
           }
           if (p = u[N], p > 4) {
-            y[T++] = 65533, m += p - 1;
+            y[S++] = 65533, m += p - 1;
             continue;
           }
           for (N &= p === 2 ? 31 : p === 3 ? 15 : 7; p > 1 && m < v; )
             N = N << 6 | c[m++] & 63, p--;
           if (p > 1) {
-            y[T++] = 65533;
+            y[S++] = 65533;
             continue;
           }
-          N < 65536 ? y[T++] = N : (N -= 65536, y[T++] = 55296 | N >> 10 & 1023, y[T++] = 56320 | N & 1023);
+          N < 65536 ? y[S++] = N : (N -= 65536, y[S++] = 55296 | N >> 10 & 1023, y[S++] = 56320 | N & 1023);
         }
-        return f(y, T);
-      }, i.utf8border = function(c, b) {
+        return f(y, S);
+      }, i.utf8border = function(c, w) {
         var m;
-        for (b = b || c.length, b > c.length && (b = c.length), m = b - 1; m >= 0 && (c[m] & 192) === 128; )
+        for (w = w || c.length, w > c.length && (w = c.length), m = w - 1; m >= 0 && (c[m] & 192) === 128; )
           m--;
-        return m < 0 || m === 0 ? b : m + u[c[m]] > b ? m : b;
+        return m < 0 || m === 0 ? w : m + u[c[m]] > w ? m : w;
       };
     }, { "./common": 41 }], 43: [function(t, r, i) {
       function s(a, o, u, h) {
-        for (var f = a & 65535 | 0, c = a >>> 16 & 65535 | 0, b = 0; u !== 0; ) {
-          b = u > 2e3 ? 2e3 : u, u -= b;
+        for (var f = a & 65535 | 0, c = a >>> 16 & 65535 | 0, w = 0; u !== 0; ) {
+          w = u > 2e3 ? 2e3 : u, u -= w;
           do
             f = f + o[h++] | 0, c = c + f | 0;
-          while (--b);
+          while (--w);
           f %= 65521, c %= 65521;
         }
         return f | c << 16 | 0;
@@ -12633,15 +12633,15 @@ https://github.com/nodeca/pako/blob/main/LICENSE
       }
       var a = s();
       function o(u, h, f, c) {
-        var b = a, m = c + f;
+        var w = a, m = c + f;
         u ^= -1;
-        for (var T = c; T < m; T++)
-          u = u >>> 8 ^ b[(u ^ h[T]) & 255];
+        for (var S = c; S < m; S++)
+          u = u >>> 8 ^ w[(u ^ h[S]) & 255];
         return u ^ -1;
       }
       r.exports = o;
     }, {}], 46: [function(t, r, i) {
-      var s = t("../utils/common"), a = t("./trees"), o = t("./adler32"), u = t("./crc32"), h = t("./messages"), f = 0, c = 1, b = 3, m = 4, T = 5, N = 0, p = 1, v = -2, y = -3, A = -5, k = -1, w = 1, C = 2, S = 3, R = 4, z = 0, M = 2, Y = 8, Z = 9, te = 15, ge = 8, pe = 29, ve = 256, de = ve + 1 + pe, fe = 30, Se = 19, je = 2 * de + 1, Oe = 15, be = 3, Le = 258, Ne = Le + be + 1, it = 32, Ge = 42, Ue = 69, De = 73, Xe = 91, Me = 103, Pe = 113, qe = 666, Ie = 1, nt = 2, We = 3, tt = 4, Re = 3;
+      var s = t("../utils/common"), a = t("./trees"), o = t("./adler32"), u = t("./crc32"), h = t("./messages"), f = 0, c = 1, w = 3, m = 4, S = 5, N = 0, p = 1, v = -2, y = -3, A = -5, k = -1, b = 1, C = 2, T = 3, R = 4, z = 0, M = 2, Y = 8, Z = 9, te = 15, ge = 8, pe = 29, ve = 256, de = ve + 1 + pe, fe = 30, Se = 19, je = 2 * de + 1, Oe = 15, be = 3, Le = 258, Ne = Le + be + 1, it = 32, Ge = 42, Ue = 69, De = 73, Xe = 91, Me = 103, Pe = 113, qe = 666, Ie = 1, nt = 2, We = 3, tt = 4, Re = 3;
       function Qe(l, V) {
         return l.msg = h[V], V;
       }
@@ -12670,7 +12670,7 @@ https://github.com/nodeca/pako/blob/main/LICENSE
         return O > _ && (O = _), O === 0 ? 0 : (l.avail_in -= O, s.arraySet(V, l.input, l.next_in, O, H), l.state.wrap === 1 ? l.adler = o(l.adler, V, O, H) : l.state.wrap === 2 && (l.adler = u(l.adler, V, O, H)), l.next_in += O, l.total_in += O, O);
       }
       function gt(l, V) {
-        var H = l.max_chain_length, _ = l.strstart, O, W, me = l.prev_length, oe = l.nice_match, he = l.strstart > l.w_size - Ne ? l.strstart - (l.w_size - Ne) : 0, Te = l.window, xt = l.w_mask, Ye = l.prev, d = l.strstart + Le, I = Te[_ + me - 1], U = Te[_ + me];
+        var H = l.max_chain_length, _ = l.strstart, O, q, me = l.prev_length, oe = l.nice_match, he = l.strstart > l.w_size - Ne ? l.strstart - (l.w_size - Ne) : 0, Te = l.window, xt = l.w_mask, Ye = l.prev, d = l.strstart + Le, I = Te[_ + me - 1], U = Te[_ + me];
         l.prev_length >= l.good_match && (H >>= 2), oe > l.lookahead && (oe = l.lookahead);
         do
           if (O = V, !(Te[O + me] !== U || Te[O + me - 1] !== I || Te[O] !== Te[_] || Te[++O] !== Te[_ + 1])) {
@@ -12678,8 +12678,8 @@ https://github.com/nodeca/pako/blob/main/LICENSE
             do
               ;
             while (Te[++_] === Te[++O] && Te[++_] === Te[++O] && Te[++_] === Te[++O] && Te[++_] === Te[++O] && Te[++_] === Te[++O] && Te[++_] === Te[++O] && Te[++_] === Te[++O] && Te[++_] === Te[++O] && _ < d);
-            if (W = Le - (d - _), _ = d - Le, W > me) {
-              if (l.match_start = V, me = W, W >= oe)
+            if (q = Le - (d - _), _ = d - Le, q > me) {
+              if (l.match_start = V, me = q, q >= oe)
                 break;
               I = Te[_ + me - 1], U = Te[_ + me];
             }
@@ -12688,9 +12688,9 @@ https://github.com/nodeca/pako/blob/main/LICENSE
         return me <= l.lookahead ? me : l.lookahead;
       }
       function Ke(l) {
-        var V = l.w_size, H, _, O, W, me;
+        var V = l.w_size, H, _, O, q, me;
         do {
-          if (W = l.window_size - l.lookahead - l.strstart, l.strstart >= V + (V - Ne)) {
+          if (q = l.window_size - l.lookahead - l.strstart, l.strstart >= V + (V - Ne)) {
             s.arraySet(l.window, l.window, V, V, 0), l.match_start -= V, l.strstart -= V, l.block_start -= V, _ = l.hash_size, H = _;
             do
               O = l.head[--H], l.head[H] = O >= V ? O - V : 0;
@@ -12699,11 +12699,11 @@ https://github.com/nodeca/pako/blob/main/LICENSE
             do
               O = l.prev[--H], l.prev[H] = O >= V ? O - V : 0;
             while (--_);
-            W += V;
+            q += V;
           }
           if (l.strm.avail_in === 0)
             break;
-          if (_ = _t(l.strm, l.window, l.strstart + l.lookahead, W), l.lookahead += _, l.lookahead + l.insert >= be)
+          if (_ = _t(l.strm, l.window, l.strstart + l.lookahead, q), l.lookahead += _, l.lookahead + l.insert >= be)
             for (me = l.strstart - l.insert, l.ins_h = l.window[me], l.ins_h = (l.ins_h << l.hash_shift ^ l.window[me + 1]) & l.hash_mask; l.insert && (l.ins_h = (l.ins_h << l.hash_shift ^ l.window[me + be - 1]) & l.hash_mask, l.prev[me & l.w_mask] = l.head[l.ins_h], l.head[l.ins_h] = me, me++, l.insert--, !(l.lookahead + l.insert < be)); )
               ;
         } while (l.lookahead < Ne && l.strm.avail_in !== 0);
@@ -12756,7 +12756,7 @@ https://github.com/nodeca/pako/blob/main/LICENSE
             if (l.lookahead === 0)
               break;
           }
-          if (H = 0, l.lookahead >= be && (l.ins_h = (l.ins_h << l.hash_shift ^ l.window[l.strstart + be - 1]) & l.hash_mask, H = l.prev[l.strstart & l.w_mask] = l.head[l.ins_h], l.head[l.ins_h] = l.strstart), l.prev_length = l.match_length, l.prev_match = l.match_start, l.match_length = be - 1, H !== 0 && l.prev_length < l.max_lazy_match && l.strstart - H <= l.w_size - Ne && (l.match_length = gt(l, H), l.match_length <= 5 && (l.strategy === w || l.match_length === be && l.strstart - l.match_start > 4096) && (l.match_length = be - 1)), l.prev_length >= be && l.match_length <= l.prev_length) {
+          if (H = 0, l.lookahead >= be && (l.ins_h = (l.ins_h << l.hash_shift ^ l.window[l.strstart + be - 1]) & l.hash_mask, H = l.prev[l.strstart & l.w_mask] = l.head[l.ins_h], l.head[l.ins_h] = l.strstart), l.prev_length = l.match_length, l.prev_match = l.match_start, l.match_length = be - 1, H !== 0 && l.prev_length < l.max_lazy_match && l.strstart - H <= l.w_size - Ne && (l.match_length = gt(l, H), l.match_length <= 5 && (l.strategy === b || l.match_length === be && l.strstart - l.match_start > 4096) && (l.match_length = be - 1)), l.prev_length >= be && l.match_length <= l.prev_length) {
             O = l.strstart + l.lookahead - be, _ = a._tr_tally(l, l.strstart - 1 - l.prev_match, l.prev_length - be), l.lookahead -= l.prev_length - 1, l.prev_length -= 2;
             do
               ++l.strstart <= O && (l.ins_h = (l.ins_h << l.hash_shift ^ l.window[l.strstart + be - 1]) & l.hash_mask, H = l.prev[l.strstart & l.w_mask] = l.head[l.ins_h], l.head[l.ins_h] = l.strstart);
@@ -12772,7 +12772,7 @@ https://github.com/nodeca/pako/blob/main/LICENSE
         return l.match_available && (_ = a._tr_tally(l, 0, l.window[l.strstart - 1]), l.match_available = 0), l.insert = l.strstart < be - 1 ? l.strstart : be - 1, V === m ? (ze(l, !0), l.strm.avail_out === 0 ? We : tt) : l.last_lit && (ze(l, !1), l.strm.avail_out === 0) ? Ie : nt;
       }
       function yt(l, V) {
-        for (var H, _, O, W, me = l.window; ; ) {
+        for (var H, _, O, q, me = l.window; ; ) {
           if (l.lookahead <= Le) {
             if (Ke(l), l.lookahead <= Le && V === f)
               return Ie;
@@ -12780,11 +12780,11 @@ https://github.com/nodeca/pako/blob/main/LICENSE
               break;
           }
           if (l.match_length = 0, l.lookahead >= be && l.strstart > 0 && (O = l.strstart - 1, _ = me[O], _ === me[++O] && _ === me[++O] && _ === me[++O])) {
-            W = l.strstart + Le;
+            q = l.strstart + Le;
             do
               ;
-            while (_ === me[++O] && _ === me[++O] && _ === me[++O] && _ === me[++O] && _ === me[++O] && _ === me[++O] && _ === me[++O] && _ === me[++O] && O < W);
-            l.match_length = Le - (W - O), l.match_length > l.lookahead && (l.match_length = l.lookahead);
+            while (_ === me[++O] && _ === me[++O] && _ === me[++O] && _ === me[++O] && _ === me[++O] && _ === me[++O] && _ === me[++O] && _ === me[++O] && O < q);
+            l.match_length = Le - (q - O), l.match_length > l.lookahead && (l.match_length = l.lookahead);
           }
           if (l.match_length >= be ? (H = a._tr_tally(l, 1, l.match_length - be), l.lookahead -= l.match_length, l.strstart += l.match_length, l.match_length = 0) : (H = a._tr_tally(l, 0, l.window[l.strstart]), l.lookahead--, l.strstart++), H && (ze(l, !1), l.strm.avail_out === 0))
             return Ie;
@@ -12847,22 +12847,22 @@ https://github.com/nodeca/pako/blob/main/LICENSE
       function ue(l, V) {
         return !l || !l.state || l.state.wrap !== 2 ? v : (l.state.gzhead = V, N);
       }
-      function B(l, V, H, _, O, W) {
+      function B(l, V, H, _, O, q) {
         if (!l)
           return v;
         var me = 1;
-        if (V === k && (V = 6), _ < 0 ? (me = 0, _ = -_) : _ > 15 && (me = 2, _ -= 16), O < 1 || O > Z || H !== Y || _ < 8 || _ > 15 || V < 0 || V > 9 || W < 0 || W > R)
+        if (V === k && (V = 6), _ < 0 ? (me = 0, _ = -_) : _ > 15 && (me = 2, _ -= 16), O < 1 || O > Z || H !== Y || _ < 8 || _ > 15 || V < 0 || V > 9 || q < 0 || q > R)
           return Qe(l, v);
         _ === 8 && (_ = 9);
         var oe = new x();
-        return l.state = oe, oe.strm = l, oe.wrap = me, oe.gzhead = null, oe.w_bits = _, oe.w_size = 1 << oe.w_bits, oe.w_mask = oe.w_size - 1, oe.hash_bits = O + 7, oe.hash_size = 1 << oe.hash_bits, oe.hash_mask = oe.hash_size - 1, oe.hash_shift = ~~((oe.hash_bits + be - 1) / be), oe.window = new s.Buf8(oe.w_size * 2), oe.head = new s.Buf16(oe.hash_size), oe.prev = new s.Buf16(oe.w_size), oe.lit_bufsize = 1 << O + 6, oe.pending_buf_size = oe.lit_bufsize * 4, oe.pending_buf = new s.Buf8(oe.pending_buf_size), oe.d_buf = 1 * oe.lit_bufsize, oe.l_buf = (1 + 2) * oe.lit_bufsize, oe.level = V, oe.strategy = W, oe.method = H, ee(l);
+        return l.state = oe, oe.strm = l, oe.wrap = me, oe.gzhead = null, oe.w_bits = _, oe.w_size = 1 << oe.w_bits, oe.w_mask = oe.w_size - 1, oe.hash_bits = O + 7, oe.hash_size = 1 << oe.hash_bits, oe.hash_mask = oe.hash_size - 1, oe.hash_shift = ~~((oe.hash_bits + be - 1) / be), oe.window = new s.Buf8(oe.w_size * 2), oe.head = new s.Buf16(oe.hash_size), oe.prev = new s.Buf16(oe.w_size), oe.lit_bufsize = 1 << O + 6, oe.pending_buf_size = oe.lit_bufsize * 4, oe.pending_buf = new s.Buf8(oe.pending_buf_size), oe.d_buf = 1 * oe.lit_bufsize, oe.l_buf = (1 + 2) * oe.lit_bufsize, oe.level = V, oe.strategy = q, oe.method = H, ee(l);
       }
       function $(l, V) {
         return B(l, V, Y, te, ge, z);
       }
       function g(l, V) {
-        var H, _, O, W;
-        if (!l || !l.state || V > T || V < 0)
+        var H, _, O, q;
+        if (!l || !l.state || V > S || V < 0)
           return l ? Qe(l, v) : v;
         if (_ = l.state, !l.output || !l.input && l.avail_in !== 0 || _.status === qe && V !== m)
           return Qe(l, l.avail_out === 0 ? A : v);
@@ -12888,12 +12888,12 @@ https://github.com/nodeca/pako/blob/main/LICENSE
             O = _.pending;
             do {
               if (_.pending === _.pending_buf_size && (_.gzhead.hcrc && _.pending > O && (l.adler = u(l.adler, _.pending_buf, _.pending - O, O)), ot(l), O = _.pending, _.pending === _.pending_buf_size)) {
-                W = 1;
+                q = 1;
                 break;
               }
-              _.gzindex < _.gzhead.name.length ? W = _.gzhead.name.charCodeAt(_.gzindex++) & 255 : W = 0, Ae(_, W);
-            } while (W !== 0);
-            _.gzhead.hcrc && _.pending > O && (l.adler = u(l.adler, _.pending_buf, _.pending - O, O)), W === 0 && (_.gzindex = 0, _.status = Xe);
+              _.gzindex < _.gzhead.name.length ? q = _.gzhead.name.charCodeAt(_.gzindex++) & 255 : q = 0, Ae(_, q);
+            } while (q !== 0);
+            _.gzhead.hcrc && _.pending > O && (l.adler = u(l.adler, _.pending_buf, _.pending - O, O)), q === 0 && (_.gzindex = 0, _.status = Xe);
           } else
             _.status = Xe;
         if (_.status === Xe)
@@ -12901,12 +12901,12 @@ https://github.com/nodeca/pako/blob/main/LICENSE
             O = _.pending;
             do {
               if (_.pending === _.pending_buf_size && (_.gzhead.hcrc && _.pending > O && (l.adler = u(l.adler, _.pending_buf, _.pending - O, O)), ot(l), O = _.pending, _.pending === _.pending_buf_size)) {
-                W = 1;
+                q = 1;
                 break;
               }
-              _.gzindex < _.gzhead.comment.length ? W = _.gzhead.comment.charCodeAt(_.gzindex++) & 255 : W = 0, Ae(_, W);
-            } while (W !== 0);
-            _.gzhead.hcrc && _.pending > O && (l.adler = u(l.adler, _.pending_buf, _.pending - O, O)), W === 0 && (_.status = Me);
+              _.gzindex < _.gzhead.comment.length ? q = _.gzhead.comment.charCodeAt(_.gzindex++) & 255 : q = 0, Ae(_, q);
+            } while (q !== 0);
+            _.gzhead.hcrc && _.pending > O && (l.adler = u(l.adler, _.pending_buf, _.pending - O, O)), q === 0 && (_.status = Me);
           } else
             _.status = Me;
         if (_.status === Me && (_.gzhead.hcrc ? (_.pending + 2 > _.pending_buf_size && ot(l), _.pending + 2 <= _.pending_buf_size && (Ae(_, l.adler & 255), Ae(_, l.adler >> 8 & 255), l.adler = 0, _.status = Pe)) : _.status = Pe), _.pending !== 0) {
@@ -12917,10 +12917,10 @@ https://github.com/nodeca/pako/blob/main/LICENSE
         if (_.status === qe && l.avail_in !== 0)
           return Qe(l, A);
         if (l.avail_in !== 0 || _.lookahead !== 0 || V !== f && _.status !== qe) {
-          var he = _.strategy === C ? Et(_, V) : _.strategy === S ? yt(_, V) : pt[_.level].func(_, V);
+          var he = _.strategy === C ? Et(_, V) : _.strategy === T ? yt(_, V) : pt[_.level].func(_, V);
           if ((he === We || he === tt) && (_.status = qe), he === Ie || he === We)
             return l.avail_out === 0 && (_.last_flush = -1), N;
-          if (he === nt && (V === c ? a._tr_align(_) : V !== T && (a._tr_stored_block(_, 0, 0, !1), V === b && (ht(_.head), _.lookahead === 0 && (_.strstart = 0, _.block_start = 0, _.insert = 0))), ot(l), l.avail_out === 0))
+          if (he === nt && (V === c ? a._tr_align(_) : V !== S && (a._tr_stored_block(_, 0, 0, !1), V === w && (ht(_.head), _.lookahead === 0 && (_.strstart = 0, _.block_start = 0, _.insert = 0))), ot(l), l.avail_out === 0))
             return _.last_flush = -1, N;
         }
         return V !== m ? N : _.wrap <= 0 ? p : (_.wrap === 2 ? (Ae(_, l.adler & 255), Ae(_, l.adler >> 8 & 255), Ae(_, l.adler >> 16 & 255), Ae(_, l.adler >> 24 & 255), Ae(_, l.total_in & 255), Ae(_, l.total_in >> 8 & 255), Ae(_, l.total_in >> 16 & 255), Ae(_, l.total_in >> 24 & 255)) : (dt(_, l.adler >>> 16), dt(_, l.adler & 65535)), ot(l), _.wrap > 0 && (_.wrap = -_.wrap), _.pending !== 0 ? N : p);
@@ -12930,14 +12930,14 @@ https://github.com/nodeca/pako/blob/main/LICENSE
         return !l || !l.state ? v : (V = l.state.status, V !== Ge && V !== Ue && V !== De && V !== Xe && V !== Me && V !== Pe && V !== qe ? Qe(l, v) : (l.state = null, V === Pe ? Qe(l, y) : N));
       }
       function _e(l, V) {
-        var H = V.length, _, O, W, me, oe, he, Te, xt;
+        var H = V.length, _, O, q, me, oe, he, Te, xt;
         if (!l || !l.state || (_ = l.state, me = _.wrap, me === 2 || me === 1 && _.status !== Ge || _.lookahead))
           return v;
         for (me === 1 && (l.adler = o(l.adler, V, H, 0)), _.wrap = 0, H >= _.w_size && (me === 0 && (ht(_.head), _.strstart = 0, _.block_start = 0, _.insert = 0), xt = new s.Buf8(_.w_size), s.arraySet(xt, V, H - _.w_size, _.w_size, 0), V = xt, H = _.w_size), oe = l.avail_in, he = l.next_in, Te = l.input, l.avail_in = H, l.next_in = 0, l.input = V, Ke(_); _.lookahead >= be; ) {
-          O = _.strstart, W = _.lookahead - (be - 1);
+          O = _.strstart, q = _.lookahead - (be - 1);
           do
             _.ins_h = (_.ins_h << _.hash_shift ^ _.window[O + be - 1]) & _.hash_mask, _.prev[O & _.w_mask] = _.head[_.ins_h], _.head[_.ins_h] = O, O++;
-          while (--W);
+          while (--q);
           _.strstart = O, _.lookahead = be - 1, Ke(_);
         }
         return _.strstart += _.lookahead, _.block_start = _.strstart, _.insert = _.lookahead, _.lookahead = 0, _.match_length = _.prev_length = be - 1, _.match_available = 0, l.next_in = he, l.input = Te, l.avail_in = oe, _.wrap = me, N;
@@ -12951,25 +12951,25 @@ https://github.com/nodeca/pako/blob/main/LICENSE
     }, {}], 48: [function(t, r, i) {
       var s = 30, a = 12;
       r.exports = function(u, h) {
-        var f, c, b, m, T, N, p, v, y, A, k, w, C, S, R, z, M, Y, Z, te, ge, pe, ve, de, fe;
-        f = u.state, c = u.next_in, de = u.input, b = c + (u.avail_in - 5), m = u.next_out, fe = u.output, T = m - (h - u.avail_out), N = m + (u.avail_out - 257), p = f.dmax, v = f.wsize, y = f.whave, A = f.wnext, k = f.window, w = f.hold, C = f.bits, S = f.lencode, R = f.distcode, z = (1 << f.lenbits) - 1, M = (1 << f.distbits) - 1;
+        var f, c, w, m, S, N, p, v, y, A, k, b, C, T, R, z, M, Y, Z, te, ge, pe, ve, de, fe;
+        f = u.state, c = u.next_in, de = u.input, w = c + (u.avail_in - 5), m = u.next_out, fe = u.output, S = m - (h - u.avail_out), N = m + (u.avail_out - 257), p = f.dmax, v = f.wsize, y = f.whave, A = f.wnext, k = f.window, b = f.hold, C = f.bits, T = f.lencode, R = f.distcode, z = (1 << f.lenbits) - 1, M = (1 << f.distbits) - 1;
         e:
           do {
-            C < 15 && (w += de[c++] << C, C += 8, w += de[c++] << C, C += 8), Y = S[w & z];
+            C < 15 && (b += de[c++] << C, C += 8, b += de[c++] << C, C += 8), Y = T[b & z];
             t:
               for (; ; ) {
-                if (Z = Y >>> 24, w >>>= Z, C -= Z, Z = Y >>> 16 & 255, Z === 0)
+                if (Z = Y >>> 24, b >>>= Z, C -= Z, Z = Y >>> 16 & 255, Z === 0)
                   fe[m++] = Y & 65535;
                 else if (Z & 16) {
-                  te = Y & 65535, Z &= 15, Z && (C < Z && (w += de[c++] << C, C += 8), te += w & (1 << Z) - 1, w >>>= Z, C -= Z), C < 15 && (w += de[c++] << C, C += 8, w += de[c++] << C, C += 8), Y = R[w & M];
+                  te = Y & 65535, Z &= 15, Z && (C < Z && (b += de[c++] << C, C += 8), te += b & (1 << Z) - 1, b >>>= Z, C -= Z), C < 15 && (b += de[c++] << C, C += 8, b += de[c++] << C, C += 8), Y = R[b & M];
                   r:
                     for (; ; ) {
-                      if (Z = Y >>> 24, w >>>= Z, C -= Z, Z = Y >>> 16 & 255, Z & 16) {
-                        if (ge = Y & 65535, Z &= 15, C < Z && (w += de[c++] << C, C += 8, C < Z && (w += de[c++] << C, C += 8)), ge += w & (1 << Z) - 1, ge > p) {
+                      if (Z = Y >>> 24, b >>>= Z, C -= Z, Z = Y >>> 16 & 255, Z & 16) {
+                        if (ge = Y & 65535, Z &= 15, C < Z && (b += de[c++] << C, C += 8, C < Z && (b += de[c++] << C, C += 8)), ge += b & (1 << Z) - 1, ge > p) {
                           u.msg = "invalid distance too far back", f.mode = s;
                           break e;
                         }
-                        if (w >>>= Z, C -= Z, Z = m - T, ge > Z) {
+                        if (b >>>= Z, C -= Z, Z = m - S, ge > Z) {
                           if (Z = ge - Z, Z > y && f.sane) {
                             u.msg = "invalid distance too far back", f.mode = s;
                             break e;
@@ -13017,7 +13017,7 @@ https://github.com/nodeca/pako/blob/main/LICENSE
                         u.msg = "invalid distance code", f.mode = s;
                         break e;
                       } else {
-                        Y = R[(Y & 65535) + (w & (1 << Z) - 1)];
+                        Y = R[(Y & 65535) + (b & (1 << Z) - 1)];
                         continue r;
                       }
                       break;
@@ -13031,16 +13031,16 @@ https://github.com/nodeca/pako/blob/main/LICENSE
                     break e;
                   }
                 else {
-                  Y = S[(Y & 65535) + (w & (1 << Z) - 1)];
+                  Y = T[(Y & 65535) + (b & (1 << Z) - 1)];
                   continue t;
                 }
                 break;
               }
-          } while (c < b && m < N);
-        te = C >> 3, c -= te, C -= te << 3, w &= (1 << C) - 1, u.next_in = c, u.next_out = m, u.avail_in = c < b ? 5 + (b - c) : 5 - (c - b), u.avail_out = m < N ? 257 + (N - m) : 257 - (m - N), f.hold = w, f.bits = C;
+          } while (c < w && m < N);
+        te = C >> 3, c -= te, C -= te << 3, b &= (1 << C) - 1, u.next_in = c, u.next_out = m, u.avail_in = c < w ? 5 + (w - c) : 5 - (c - w), u.avail_out = m < N ? 257 + (N - m) : 257 - (m - N), f.hold = b, f.bits = C;
       };
     }, {}], 49: [function(t, r, i) {
-      var s = t("../utils/common"), a = t("./adler32"), o = t("./crc32"), u = t("./inffast"), h = t("./inftrees"), f = 0, c = 1, b = 2, m = 4, T = 5, N = 6, p = 0, v = 1, y = 2, A = -2, k = -3, w = -4, C = -5, S = 8, R = 1, z = 2, M = 3, Y = 4, Z = 5, te = 6, ge = 7, pe = 8, ve = 9, de = 10, fe = 11, Se = 12, je = 13, Oe = 14, be = 15, Le = 16, Ne = 17, it = 18, Ge = 19, Ue = 20, De = 21, Xe = 22, Me = 23, Pe = 24, qe = 25, Ie = 26, nt = 27, We = 28, tt = 29, Re = 30, Qe = 31, at = 32, ht = 852, ot = 592, ze = 15, Ae = ze;
+      var s = t("../utils/common"), a = t("./adler32"), o = t("./crc32"), u = t("./inffast"), h = t("./inftrees"), f = 0, c = 1, w = 2, m = 4, S = 5, N = 6, p = 0, v = 1, y = 2, A = -2, k = -3, b = -4, C = -5, T = 8, R = 1, z = 2, M = 3, Y = 4, Z = 5, te = 6, ge = 7, pe = 8, ve = 9, de = 10, fe = 11, Se = 12, je = 13, Oe = 14, be = 15, Le = 16, Ne = 17, it = 18, Ge = 19, Ue = 20, De = 21, Xe = 22, Me = 23, Pe = 24, qe = 25, Ie = 26, nt = 27, We = 28, tt = 29, Re = 30, Qe = 31, at = 32, ht = 852, ot = 592, ze = 15, Ae = ze;
       function dt(B) {
         return (B >>> 24 & 255) + (B >>> 8 & 65280) + ((B & 65280) << 8) + ((B & 255) << 24);
       }
@@ -13080,7 +13080,7 @@ https://github.com/nodeca/pako/blob/main/LICENSE
             B.lens[$++] = 8;
           for (h(c, B.lens, 0, 288, Et, 0, B.work, { bits: 9 }), $ = 0; $ < 32; )
             B.lens[$++] = 5;
-          h(b, B.lens, 0, 32, rt, 0, B.work, { bits: 5 }), yt = !1;
+          h(w, B.lens, 0, 32, rt, 0, B.work, { bits: 5 }), yt = !1;
         }
         B.lencode = Et, B.lenbits = 9, B.distcode = rt, B.distbits = 5;
       }
@@ -13089,13 +13089,13 @@ https://github.com/nodeca/pako/blob/main/LICENSE
         return l.window === null && (l.wsize = 1 << l.wbits, l.wnext = 0, l.whave = 0, l.window = new s.Buf8(l.wsize)), X >= l.wsize ? (s.arraySet(l.window, $, g - l.wsize, l.wsize, 0), l.wnext = 0, l.whave = l.wsize) : (_e = l.wsize - l.wnext, _e > X && (_e = X), s.arraySet(l.window, $, g - X, _e, l.wnext), X -= _e, X ? (s.arraySet(l.window, $, g - X, X, 0), l.wnext = X, l.whave = l.wsize) : (l.wnext += _e, l.wnext === l.wsize && (l.wnext = 0), l.whave < l.wsize && (l.whave += _e))), 0;
       }
       function x(B, $) {
-        var g, X, _e, l, V, H, _, O, W, me, oe, he, Te, xt, Ye = 0, d, I, U, K, ce, ye, re, se, Ce = new s.Buf8(4), Ee, xe, Ve = (
+        var g, X, _e, l, V, H, _, O, q, me, oe, he, Te, xt, Ye = 0, d, I, U, K, ce, ye, re, se, Ce = new s.Buf8(4), Ee, xe, Ve = (
           /* permutation of code lengths */
           [16, 17, 18, 0, 8, 7, 9, 6, 10, 5, 11, 4, 12, 3, 13, 2, 14, 1, 15]
         );
         if (!B || !B.state || !B.output || !B.input && B.avail_in !== 0)
           return A;
-        g = B.state, g.mode === Se && (g.mode = je), V = B.next_out, _e = B.output, _ = B.avail_out, l = B.next_in, X = B.input, H = B.avail_in, O = g.hold, W = g.bits, me = H, oe = _, se = p;
+        g = B.state, g.mode === Se && (g.mode = je), V = B.next_out, _e = B.output, _ = B.avail_out, l = B.next_in, X = B.input, H = B.avail_in, O = g.hold, q = g.bits, me = H, oe = _, se = p;
         e:
           for (; ; )
             switch (g.mode) {
@@ -13104,13 +13104,13 @@ https://github.com/nodeca/pako/blob/main/LICENSE
                   g.mode = je;
                   break;
                 }
-                for (; W < 16; ) {
+                for (; q < 16; ) {
                   if (H === 0)
                     break e;
-                  H--, O += X[l++] << W, W += 8;
+                  H--, O += X[l++] << q, q += 8;
                 }
                 if (g.wrap & 2 && O === 35615) {
-                  g.check = 0, Ce[0] = O & 255, Ce[1] = O >>> 8 & 255, g.check = o(g.check, Ce, 2, 0), O = 0, W = 0, g.mode = z;
+                  g.check = 0, Ce[0] = O & 255, Ce[1] = O >>> 8 & 255, g.check = o(g.check, Ce, 2, 0), O = 0, q = 0, g.mode = z;
                   break;
                 }
                 if (g.flags = 0, g.head && (g.head.done = !1), !(g.wrap & 1) || /* check if zlib header allowed */
@@ -13118,25 +13118,25 @@ https://github.com/nodeca/pako/blob/main/LICENSE
                   B.msg = "incorrect header check", g.mode = Re;
                   break;
                 }
-                if ((O & 15) !== S) {
+                if ((O & 15) !== T) {
                   B.msg = "unknown compression method", g.mode = Re;
                   break;
                 }
-                if (O >>>= 4, W -= 4, re = (O & 15) + 8, g.wbits === 0)
+                if (O >>>= 4, q -= 4, re = (O & 15) + 8, g.wbits === 0)
                   g.wbits = re;
                 else if (re > g.wbits) {
                   B.msg = "invalid window size", g.mode = Re;
                   break;
                 }
-                g.dmax = 1 << re, B.adler = g.check = 1, g.mode = O & 512 ? de : Se, O = 0, W = 0;
+                g.dmax = 1 << re, B.adler = g.check = 1, g.mode = O & 512 ? de : Se, O = 0, q = 0;
                 break;
               case z:
-                for (; W < 16; ) {
+                for (; q < 16; ) {
                   if (H === 0)
                     break e;
-                  H--, O += X[l++] << W, W += 8;
+                  H--, O += X[l++] << q, q += 8;
                 }
-                if (g.flags = O, (g.flags & 255) !== S) {
+                if (g.flags = O, (g.flags & 255) !== T) {
                   B.msg = "unknown compression method", g.mode = Re;
                   break;
                 }
@@ -13144,29 +13144,29 @@ https://github.com/nodeca/pako/blob/main/LICENSE
                   B.msg = "unknown header flags set", g.mode = Re;
                   break;
                 }
-                g.head && (g.head.text = O >> 8 & 1), g.flags & 512 && (Ce[0] = O & 255, Ce[1] = O >>> 8 & 255, g.check = o(g.check, Ce, 2, 0)), O = 0, W = 0, g.mode = M;
+                g.head && (g.head.text = O >> 8 & 1), g.flags & 512 && (Ce[0] = O & 255, Ce[1] = O >>> 8 & 255, g.check = o(g.check, Ce, 2, 0)), O = 0, q = 0, g.mode = M;
               case M:
-                for (; W < 32; ) {
+                for (; q < 32; ) {
                   if (H === 0)
                     break e;
-                  H--, O += X[l++] << W, W += 8;
+                  H--, O += X[l++] << q, q += 8;
                 }
-                g.head && (g.head.time = O), g.flags & 512 && (Ce[0] = O & 255, Ce[1] = O >>> 8 & 255, Ce[2] = O >>> 16 & 255, Ce[3] = O >>> 24 & 255, g.check = o(g.check, Ce, 4, 0)), O = 0, W = 0, g.mode = Y;
+                g.head && (g.head.time = O), g.flags & 512 && (Ce[0] = O & 255, Ce[1] = O >>> 8 & 255, Ce[2] = O >>> 16 & 255, Ce[3] = O >>> 24 & 255, g.check = o(g.check, Ce, 4, 0)), O = 0, q = 0, g.mode = Y;
               case Y:
-                for (; W < 16; ) {
+                for (; q < 16; ) {
                   if (H === 0)
                     break e;
-                  H--, O += X[l++] << W, W += 8;
+                  H--, O += X[l++] << q, q += 8;
                 }
-                g.head && (g.head.xflags = O & 255, g.head.os = O >> 8), g.flags & 512 && (Ce[0] = O & 255, Ce[1] = O >>> 8 & 255, g.check = o(g.check, Ce, 2, 0)), O = 0, W = 0, g.mode = Z;
+                g.head && (g.head.xflags = O & 255, g.head.os = O >> 8), g.flags & 512 && (Ce[0] = O & 255, Ce[1] = O >>> 8 & 255, g.check = o(g.check, Ce, 2, 0)), O = 0, q = 0, g.mode = Z;
               case Z:
                 if (g.flags & 1024) {
-                  for (; W < 16; ) {
+                  for (; q < 16; ) {
                     if (H === 0)
                       break e;
-                    H--, O += X[l++] << W, W += 8;
+                    H--, O += X[l++] << q, q += 8;
                   }
-                  g.length = O, g.head && (g.head.extra_len = O), g.flags & 512 && (Ce[0] = O & 255, Ce[1] = O >>> 8 & 255, g.check = o(g.check, Ce, 2, 0)), O = 0, W = 0;
+                  g.length = O, g.head && (g.head.extra_len = O), g.flags & 512 && (Ce[0] = O & 255, Ce[1] = O >>> 8 & 255, g.check = o(g.check, Ce, 2, 0)), O = 0, q = 0;
                 } else
                   g.head && (g.head.extra = null);
                 g.mode = te;
@@ -13211,50 +13211,50 @@ https://github.com/nodeca/pako/blob/main/LICENSE
                 g.mode = ve;
               case ve:
                 if (g.flags & 512) {
-                  for (; W < 16; ) {
+                  for (; q < 16; ) {
                     if (H === 0)
                       break e;
-                    H--, O += X[l++] << W, W += 8;
+                    H--, O += X[l++] << q, q += 8;
                   }
                   if (O !== (g.check & 65535)) {
                     B.msg = "header crc mismatch", g.mode = Re;
                     break;
                   }
-                  O = 0, W = 0;
+                  O = 0, q = 0;
                 }
                 g.head && (g.head.hcrc = g.flags >> 9 & 1, g.head.done = !0), B.adler = g.check = 0, g.mode = Se;
                 break;
               case de:
-                for (; W < 32; ) {
+                for (; q < 32; ) {
                   if (H === 0)
                     break e;
-                  H--, O += X[l++] << W, W += 8;
+                  H--, O += X[l++] << q, q += 8;
                 }
-                B.adler = g.check = dt(O), O = 0, W = 0, g.mode = fe;
+                B.adler = g.check = dt(O), O = 0, q = 0, g.mode = fe;
               case fe:
                 if (g.havedict === 0)
-                  return B.next_out = V, B.avail_out = _, B.next_in = l, B.avail_in = H, g.hold = O, g.bits = W, y;
+                  return B.next_out = V, B.avail_out = _, B.next_in = l, B.avail_in = H, g.hold = O, g.bits = q, y;
                 B.adler = g.check = 1, g.mode = Se;
               case Se:
-                if ($ === T || $ === N)
+                if ($ === S || $ === N)
                   break e;
               case je:
                 if (g.last) {
-                  O >>>= W & 7, W -= W & 7, g.mode = nt;
+                  O >>>= q & 7, q -= q & 7, g.mode = nt;
                   break;
                 }
-                for (; W < 3; ) {
+                for (; q < 3; ) {
                   if (H === 0)
                     break e;
-                  H--, O += X[l++] << W, W += 8;
+                  H--, O += X[l++] << q, q += 8;
                 }
-                switch (g.last = O & 1, O >>>= 1, W -= 1, O & 3) {
+                switch (g.last = O & 1, O >>>= 1, q -= 1, O & 3) {
                   case 0:
                     g.mode = Oe;
                     break;
                   case 1:
                     if (pt(g), g.mode = Ue, $ === N) {
-                      O >>>= 2, W -= 2;
+                      O >>>= 2, q -= 2;
                       break e;
                     }
                     break;
@@ -13264,19 +13264,19 @@ https://github.com/nodeca/pako/blob/main/LICENSE
                   case 3:
                     B.msg = "invalid block type", g.mode = Re;
                 }
-                O >>>= 2, W -= 2;
+                O >>>= 2, q -= 2;
                 break;
               case Oe:
-                for (O >>>= W & 7, W -= W & 7; W < 32; ) {
+                for (O >>>= q & 7, q -= q & 7; q < 32; ) {
                   if (H === 0)
                     break e;
-                  H--, O += X[l++] << W, W += 8;
+                  H--, O += X[l++] << q, q += 8;
                 }
                 if ((O & 65535) !== (O >>> 16 ^ 65535)) {
                   B.msg = "invalid stored block lengths", g.mode = Re;
                   break;
                 }
-                if (g.length = O & 65535, O = 0, W = 0, g.mode = be, $ === N)
+                if (g.length = O & 65535, O = 0, q = 0, g.mode = be, $ === N)
                   break e;
               case be:
                 g.mode = Le;
@@ -13290,24 +13290,24 @@ https://github.com/nodeca/pako/blob/main/LICENSE
                 g.mode = Se;
                 break;
               case Ne:
-                for (; W < 14; ) {
+                for (; q < 14; ) {
                   if (H === 0)
                     break e;
-                  H--, O += X[l++] << W, W += 8;
+                  H--, O += X[l++] << q, q += 8;
                 }
-                if (g.nlen = (O & 31) + 257, O >>>= 5, W -= 5, g.ndist = (O & 31) + 1, O >>>= 5, W -= 5, g.ncode = (O & 15) + 4, O >>>= 4, W -= 4, g.nlen > 286 || g.ndist > 30) {
+                if (g.nlen = (O & 31) + 257, O >>>= 5, q -= 5, g.ndist = (O & 31) + 1, O >>>= 5, q -= 5, g.ncode = (O & 15) + 4, O >>>= 4, q -= 4, g.nlen > 286 || g.ndist > 30) {
                   B.msg = "too many length or distance symbols", g.mode = Re;
                   break;
                 }
                 g.have = 0, g.mode = it;
               case it:
                 for (; g.have < g.ncode; ) {
-                  for (; W < 3; ) {
+                  for (; q < 3; ) {
                     if (H === 0)
                       break e;
-                    H--, O += X[l++] << W, W += 8;
+                    H--, O += X[l++] << q, q += 8;
                   }
-                  g.lens[Ve[g.have++]] = O & 7, O >>>= 3, W -= 3;
+                  g.lens[Ve[g.have++]] = O & 7, O >>>= 3, q -= 3;
                 }
                 for (; g.have < 19; )
                   g.lens[Ve[g.have++]] = 0;
@@ -13318,39 +13318,39 @@ https://github.com/nodeca/pako/blob/main/LICENSE
                 g.have = 0, g.mode = Ge;
               case Ge:
                 for (; g.have < g.nlen + g.ndist; ) {
-                  for (; Ye = g.lencode[O & (1 << g.lenbits) - 1], d = Ye >>> 24, I = Ye >>> 16 & 255, U = Ye & 65535, !(d <= W); ) {
+                  for (; Ye = g.lencode[O & (1 << g.lenbits) - 1], d = Ye >>> 24, I = Ye >>> 16 & 255, U = Ye & 65535, !(d <= q); ) {
                     if (H === 0)
                       break e;
-                    H--, O += X[l++] << W, W += 8;
+                    H--, O += X[l++] << q, q += 8;
                   }
                   if (U < 16)
-                    O >>>= d, W -= d, g.lens[g.have++] = U;
+                    O >>>= d, q -= d, g.lens[g.have++] = U;
                   else {
                     if (U === 16) {
-                      for (xe = d + 2; W < xe; ) {
+                      for (xe = d + 2; q < xe; ) {
                         if (H === 0)
                           break e;
-                        H--, O += X[l++] << W, W += 8;
+                        H--, O += X[l++] << q, q += 8;
                       }
-                      if (O >>>= d, W -= d, g.have === 0) {
+                      if (O >>>= d, q -= d, g.have === 0) {
                         B.msg = "invalid bit length repeat", g.mode = Re;
                         break;
                       }
-                      re = g.lens[g.have - 1], he = 3 + (O & 3), O >>>= 2, W -= 2;
+                      re = g.lens[g.have - 1], he = 3 + (O & 3), O >>>= 2, q -= 2;
                     } else if (U === 17) {
-                      for (xe = d + 3; W < xe; ) {
+                      for (xe = d + 3; q < xe; ) {
                         if (H === 0)
                           break e;
-                        H--, O += X[l++] << W, W += 8;
+                        H--, O += X[l++] << q, q += 8;
                       }
-                      O >>>= d, W -= d, re = 0, he = 3 + (O & 7), O >>>= 3, W -= 3;
+                      O >>>= d, q -= d, re = 0, he = 3 + (O & 7), O >>>= 3, q -= 3;
                     } else {
-                      for (xe = d + 7; W < xe; ) {
+                      for (xe = d + 7; q < xe; ) {
                         if (H === 0)
                           break e;
-                        H--, O += X[l++] << W, W += 8;
+                        H--, O += X[l++] << q, q += 8;
                       }
-                      O >>>= d, W -= d, re = 0, he = 11 + (O & 127), O >>>= 7, W -= 7;
+                      O >>>= d, q -= d, re = 0, he = 11 + (O & 127), O >>>= 7, q -= 7;
                     }
                     if (g.have + he > g.nlen + g.ndist) {
                       B.msg = "invalid bit length repeat", g.mode = Re;
@@ -13370,7 +13370,7 @@ https://github.com/nodeca/pako/blob/main/LICENSE
                   B.msg = "invalid literal/lengths set", g.mode = Re;
                   break;
                 }
-                if (g.distbits = 6, g.distcode = g.distdyn, Ee = { bits: g.distbits }, se = h(b, g.lens, g.nlen, g.ndist, g.distcode, 0, g.work, Ee), g.distbits = Ee.bits, se) {
+                if (g.distbits = 6, g.distcode = g.distdyn, Ee = { bits: g.distbits }, se = h(w, g.lens, g.nlen, g.ndist, g.distcode, 0, g.work, Ee), g.distbits = Ee.bits, se) {
                   B.msg = "invalid distances set", g.mode = Re;
                   break;
                 }
@@ -13380,23 +13380,23 @@ https://github.com/nodeca/pako/blob/main/LICENSE
                 g.mode = De;
               case De:
                 if (H >= 6 && _ >= 258) {
-                  B.next_out = V, B.avail_out = _, B.next_in = l, B.avail_in = H, g.hold = O, g.bits = W, u(B, oe), V = B.next_out, _e = B.output, _ = B.avail_out, l = B.next_in, X = B.input, H = B.avail_in, O = g.hold, W = g.bits, g.mode === Se && (g.back = -1);
+                  B.next_out = V, B.avail_out = _, B.next_in = l, B.avail_in = H, g.hold = O, g.bits = q, u(B, oe), V = B.next_out, _e = B.output, _ = B.avail_out, l = B.next_in, X = B.input, H = B.avail_in, O = g.hold, q = g.bits, g.mode === Se && (g.back = -1);
                   break;
                 }
-                for (g.back = 0; Ye = g.lencode[O & (1 << g.lenbits) - 1], d = Ye >>> 24, I = Ye >>> 16 & 255, U = Ye & 65535, !(d <= W); ) {
+                for (g.back = 0; Ye = g.lencode[O & (1 << g.lenbits) - 1], d = Ye >>> 24, I = Ye >>> 16 & 255, U = Ye & 65535, !(d <= q); ) {
                   if (H === 0)
                     break e;
-                  H--, O += X[l++] << W, W += 8;
+                  H--, O += X[l++] << q, q += 8;
                 }
                 if (I && !(I & 240)) {
-                  for (K = d, ce = I, ye = U; Ye = g.lencode[ye + ((O & (1 << K + ce) - 1) >> K)], d = Ye >>> 24, I = Ye >>> 16 & 255, U = Ye & 65535, !(K + d <= W); ) {
+                  for (K = d, ce = I, ye = U; Ye = g.lencode[ye + ((O & (1 << K + ce) - 1) >> K)], d = Ye >>> 24, I = Ye >>> 16 & 255, U = Ye & 65535, !(K + d <= q); ) {
                     if (H === 0)
                       break e;
-                    H--, O += X[l++] << W, W += 8;
+                    H--, O += X[l++] << q, q += 8;
                   }
-                  O >>>= K, W -= K, g.back += K;
+                  O >>>= K, q -= K, g.back += K;
                 }
-                if (O >>>= d, W -= d, g.back += d, g.length = U, I === 0) {
+                if (O >>>= d, q -= d, g.back += d, g.length = U, I === 0) {
                   g.mode = Ie;
                   break;
                 }
@@ -13411,41 +13411,41 @@ https://github.com/nodeca/pako/blob/main/LICENSE
                 g.extra = I & 15, g.mode = Xe;
               case Xe:
                 if (g.extra) {
-                  for (xe = g.extra; W < xe; ) {
+                  for (xe = g.extra; q < xe; ) {
                     if (H === 0)
                       break e;
-                    H--, O += X[l++] << W, W += 8;
+                    H--, O += X[l++] << q, q += 8;
                   }
-                  g.length += O & (1 << g.extra) - 1, O >>>= g.extra, W -= g.extra, g.back += g.extra;
+                  g.length += O & (1 << g.extra) - 1, O >>>= g.extra, q -= g.extra, g.back += g.extra;
                 }
                 g.was = g.length, g.mode = Me;
               case Me:
-                for (; Ye = g.distcode[O & (1 << g.distbits) - 1], d = Ye >>> 24, I = Ye >>> 16 & 255, U = Ye & 65535, !(d <= W); ) {
+                for (; Ye = g.distcode[O & (1 << g.distbits) - 1], d = Ye >>> 24, I = Ye >>> 16 & 255, U = Ye & 65535, !(d <= q); ) {
                   if (H === 0)
                     break e;
-                  H--, O += X[l++] << W, W += 8;
+                  H--, O += X[l++] << q, q += 8;
                 }
                 if (!(I & 240)) {
-                  for (K = d, ce = I, ye = U; Ye = g.distcode[ye + ((O & (1 << K + ce) - 1) >> K)], d = Ye >>> 24, I = Ye >>> 16 & 255, U = Ye & 65535, !(K + d <= W); ) {
+                  for (K = d, ce = I, ye = U; Ye = g.distcode[ye + ((O & (1 << K + ce) - 1) >> K)], d = Ye >>> 24, I = Ye >>> 16 & 255, U = Ye & 65535, !(K + d <= q); ) {
                     if (H === 0)
                       break e;
-                    H--, O += X[l++] << W, W += 8;
+                    H--, O += X[l++] << q, q += 8;
                   }
-                  O >>>= K, W -= K, g.back += K;
+                  O >>>= K, q -= K, g.back += K;
                 }
-                if (O >>>= d, W -= d, g.back += d, I & 64) {
+                if (O >>>= d, q -= d, g.back += d, I & 64) {
                   B.msg = "invalid distance code", g.mode = Re;
                   break;
                 }
                 g.offset = U, g.extra = I & 15, g.mode = Pe;
               case Pe:
                 if (g.extra) {
-                  for (xe = g.extra; W < xe; ) {
+                  for (xe = g.extra; q < xe; ) {
                     if (H === 0)
                       break e;
-                    H--, O += X[l++] << W, W += 8;
+                    H--, O += X[l++] << q, q += 8;
                   }
-                  g.offset += O & (1 << g.extra) - 1, O >>>= g.extra, W -= g.extra, g.back += g.extra;
+                  g.offset += O & (1 << g.extra) - 1, O >>>= g.extra, q -= g.extra, g.back += g.extra;
                 }
                 if (g.offset > g.dmax) {
                   B.msg = "invalid distance too far back", g.mode = Re;
@@ -13476,31 +13476,31 @@ https://github.com/nodeca/pako/blob/main/LICENSE
                 break;
               case nt:
                 if (g.wrap) {
-                  for (; W < 32; ) {
+                  for (; q < 32; ) {
                     if (H === 0)
                       break e;
-                    H--, O |= X[l++] << W, W += 8;
+                    H--, O |= X[l++] << q, q += 8;
                   }
                   if (oe -= _, B.total_out += oe, g.total += oe, oe && (B.adler = g.check = /*UPDATE(state.check, put - _out, _out);*/
                   g.flags ? o(g.check, _e, oe, V - oe) : a(g.check, _e, oe, V - oe)), oe = _, (g.flags ? O : dt(O)) !== g.check) {
                     B.msg = "incorrect data check", g.mode = Re;
                     break;
                   }
-                  O = 0, W = 0;
+                  O = 0, q = 0;
                 }
                 g.mode = We;
               case We:
                 if (g.wrap && g.flags) {
-                  for (; W < 32; ) {
+                  for (; q < 32; ) {
                     if (H === 0)
                       break e;
-                    H--, O += X[l++] << W, W += 8;
+                    H--, O += X[l++] << q, q += 8;
                   }
                   if (O !== (g.total & 4294967295)) {
                     B.msg = "incorrect length check", g.mode = Re;
                     break;
                   }
-                  O = 0, W = 0;
+                  O = 0, q = 0;
                 }
                 g.mode = tt;
               case tt:
@@ -13510,12 +13510,12 @@ https://github.com/nodeca/pako/blob/main/LICENSE
                 se = k;
                 break e;
               case Qe:
-                return w;
+                return b;
               case at:
               default:
                 return A;
             }
-        return B.next_out = V, B.avail_out = _, B.next_in = l, B.avail_in = H, g.hold = O, g.bits = W, (g.wsize || oe !== B.avail_out && g.mode < Re && (g.mode < nt || $ !== m)) && Nt(B, B.output, B.next_out, oe - B.avail_out), me -= B.avail_in, oe -= B.avail_out, B.total_in += me, B.total_out += oe, g.total += oe, g.wrap && oe && (B.adler = g.check = /*UPDATE(state.check, strm.next_out - _out, _out);*/
+        return B.next_out = V, B.avail_out = _, B.next_in = l, B.avail_in = H, g.hold = O, g.bits = q, (g.wsize || oe !== B.avail_out && g.mode < Re && (g.mode < nt || $ !== m)) && Nt(B, B.output, B.next_out, oe - B.avail_out), me -= B.avail_in, oe -= B.avail_out, B.total_in += me, B.total_out += oe, g.total += oe, g.wrap && oe && (B.adler = g.check = /*UPDATE(state.check, strm.next_out - _out, _out);*/
         g.flags ? o(g.check, _e, oe, B.next_out - oe) : a(g.check, _e, oe, B.next_out - oe)), B.data_type = g.bits + (g.last ? 64 : 0) + (g.mode === Se ? 128 : 0) + (g.mode === Ue || g.mode === be ? 256 : 0), (me === 0 && oe === 0 || $ === m) && se === p && (se = C), se;
       }
       function J(B) {
@@ -13530,11 +13530,11 @@ https://github.com/nodeca/pako/blob/main/LICENSE
       }
       function ue(B, $) {
         var g = $.length, X, _e, l;
-        return !B || !B.state || (X = B.state, X.wrap !== 0 && X.mode !== fe) ? A : X.mode === fe && (_e = 1, _e = a(_e, $, g, 0), _e !== X.check) ? k : (l = Nt(B, $, g, g), l ? (X.mode = Qe, w) : (X.havedict = 1, p));
+        return !B || !B.state || (X = B.state, X.wrap !== 0 && X.mode !== fe) ? A : X.mode === fe && (_e = 1, _e = a(_e, $, g, 0), _e !== X.check) ? k : (l = Nt(B, $, g, g), l ? (X.mode = Qe, b) : (X.havedict = 1, p));
       }
       i.inflateReset = Ke, i.inflateReset2 = Tt, i.inflateResetKeep = gt, i.inflateInit = ft, i.inflateInit2 = mt, i.inflate = x, i.inflateEnd = J, i.inflateGetHeader = ee, i.inflateSetDictionary = ue, i.inflateInfo = "pako inflate (from Nodeca project)";
     }, { "../utils/common": 41, "./adler32": 43, "./crc32": 45, "./inffast": 48, "./inftrees": 50 }], 50: [function(t, r, i) {
-      var s = t("../utils/common"), a = 15, o = 852, u = 592, h = 0, f = 1, c = 2, b = [
+      var s = t("../utils/common"), a = 15, o = 852, u = 592, h = 0, f = 1, c = 2, w = [
         /* Length codes 257..285 base */
         3,
         4,
@@ -13600,7 +13600,7 @@ https://github.com/nodeca/pako/blob/main/LICENSE
         16,
         72,
         78
-      ], T = [
+      ], S = [
         /* Distance codes 0..29 base */
         1,
         2,
@@ -13669,7 +13669,7 @@ https://github.com/nodeca/pako/blob/main/LICENSE
         64,
         64
       ];
-      r.exports = function(v, y, A, k, w, C, S, R) {
+      r.exports = function(v, y, A, k, b, C, T, R) {
         var z = R.bits, M = 0, Y = 0, Z = 0, te = 0, ge = 0, pe = 0, ve = 0, de = 0, fe = 0, Se = 0, je, Oe, be, Le, Ne, it = null, Ge = 0, Ue, De = new s.Buf16(a + 1), Xe = new s.Buf16(a + 1), Me = null, Pe = 0, qe, Ie, nt;
         for (M = 0; M <= a; M++)
           De[M] = 0;
@@ -13678,7 +13678,7 @@ https://github.com/nodeca/pako/blob/main/LICENSE
         for (ge = z, te = a; te >= 1 && De[te] === 0; te--)
           ;
         if (ge > te && (ge = te), te === 0)
-          return w[C++] = 1 << 24 | 64 << 16 | 0, w[C++] = 1 << 24 | 64 << 16 | 0, R.bits = 1, 0;
+          return b[C++] = 1 << 24 | 64 << 16 | 0, b[C++] = 1 << 24 | 64 << 16 | 0, R.bits = 1, 0;
         for (Z = 1; Z < te && De[Z] === 0; Z++)
           ;
         for (ge < Z && (ge = Z), de = 1, M = 1; M <= a; M++)
@@ -13689,30 +13689,30 @@ https://github.com/nodeca/pako/blob/main/LICENSE
         for (Xe[1] = 0, M = 1; M < a; M++)
           Xe[M + 1] = Xe[M] + De[M];
         for (Y = 0; Y < k; Y++)
-          y[A + Y] !== 0 && (S[Xe[y[A + Y]]++] = Y);
-        if (v === h ? (it = Me = S, Ue = 19) : v === f ? (it = b, Ge -= 257, Me = m, Pe -= 257, Ue = 256) : (it = T, Me = N, Ue = -1), Se = 0, Y = 0, M = Z, Ne = C, pe = ge, ve = 0, be = -1, fe = 1 << ge, Le = fe - 1, v === f && fe > o || v === c && fe > u)
+          y[A + Y] !== 0 && (T[Xe[y[A + Y]]++] = Y);
+        if (v === h ? (it = Me = T, Ue = 19) : v === f ? (it = w, Ge -= 257, Me = m, Pe -= 257, Ue = 256) : (it = S, Me = N, Ue = -1), Se = 0, Y = 0, M = Z, Ne = C, pe = ge, ve = 0, be = -1, fe = 1 << ge, Le = fe - 1, v === f && fe > o || v === c && fe > u)
           return 1;
         for (; ; ) {
-          qe = M - ve, S[Y] < Ue ? (Ie = 0, nt = S[Y]) : S[Y] > Ue ? (Ie = Me[Pe + S[Y]], nt = it[Ge + S[Y]]) : (Ie = 32 + 64, nt = 0), je = 1 << M - ve, Oe = 1 << pe, Z = Oe;
+          qe = M - ve, T[Y] < Ue ? (Ie = 0, nt = T[Y]) : T[Y] > Ue ? (Ie = Me[Pe + T[Y]], nt = it[Ge + T[Y]]) : (Ie = 32 + 64, nt = 0), je = 1 << M - ve, Oe = 1 << pe, Z = Oe;
           do
-            Oe -= je, w[Ne + (Se >> ve) + Oe] = qe << 24 | Ie << 16 | nt | 0;
+            Oe -= je, b[Ne + (Se >> ve) + Oe] = qe << 24 | Ie << 16 | nt | 0;
           while (Oe !== 0);
           for (je = 1 << M - 1; Se & je; )
             je >>= 1;
           if (je !== 0 ? (Se &= je - 1, Se += je) : Se = 0, Y++, --De[M] === 0) {
             if (M === te)
               break;
-            M = y[A + S[Y]];
+            M = y[A + T[Y]];
           }
           if (M > ge && (Se & Le) !== be) {
             for (ve === 0 && (ve = ge), Ne += Z, pe = M - ve, de = 1 << pe; pe + ve < te && (de -= De[pe + ve], !(de <= 0)); )
               pe++, de <<= 1;
             if (fe += 1 << pe, v === f && fe > o || v === c && fe > u)
               return 1;
-            be = Se & Le, w[be] = ge << 24 | pe << 16 | Ne - C | 0;
+            be = Se & Le, b[be] = ge << 24 | pe << 16 | Ne - C | 0;
           }
         }
-        return Se !== 0 && (w[Ne + Se] = M - ve << 24 | 64 << 16 | 0), R.bits = ge, 0;
+        return Se !== 0 && (b[Ne + Se] = M - ve << 24 | 64 << 16 | 0), R.bits = ge, 0;
       };
     }, { "../utils/common": 41 }], 51: [function(t, r, i) {
       r.exports = {
@@ -13741,7 +13741,7 @@ https://github.com/nodeca/pako/blob/main/LICENSE
         for (var J = x.length; --J >= 0; )
           x[J] = 0;
       }
-      var c = 0, b = 1, m = 2, T = 3, N = 258, p = 29, v = 256, y = v + 1 + p, A = 30, k = 19, w = 2 * y + 1, C = 15, S = 16, R = 7, z = 256, M = 16, Y = 17, Z = 18, te = (
+      var c = 0, w = 1, m = 2, S = 3, N = 258, p = 29, v = 256, y = v + 1 + p, A = 30, k = 19, b = 2 * y + 1, C = 15, T = 16, R = 7, z = 256, M = 16, Y = 17, Z = 18, te = (
         /* extra bits for each length code */
         [0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 0]
       ), ge = (
@@ -13756,7 +13756,7 @@ https://github.com/nodeca/pako/blob/main/LICENSE
       f(Se);
       var je = new Array(de);
       f(je);
-      var Oe = new Array(N - T + 1);
+      var Oe = new Array(N - S + 1);
       f(Oe);
       var be = new Array(p);
       f(be);
@@ -13776,7 +13776,7 @@ https://github.com/nodeca/pako/blob/main/LICENSE
         x.pending_buf[x.pending++] = J & 255, x.pending_buf[x.pending++] = J >>> 8 & 255;
       }
       function Pe(x, J, ee) {
-        x.bi_valid > S - ee ? (x.bi_buf |= J << x.bi_valid & 65535, Me(x, x.bi_buf), x.bi_buf = J >> S - x.bi_valid, x.bi_valid += ee - S) : (x.bi_buf |= J << x.bi_valid & 65535, x.bi_valid += ee);
+        x.bi_valid > T - ee ? (x.bi_buf |= J << x.bi_valid & 65535, Me(x, x.bi_buf), x.bi_buf = J >> T - x.bi_valid, x.bi_valid += ee - T) : (x.bi_buf |= J << x.bi_valid & 65535, x.bi_valid += ee);
       }
       function qe(x, J, ee) {
         Pe(
@@ -13797,11 +13797,11 @@ https://github.com/nodeca/pako/blob/main/LICENSE
         x.bi_valid === 16 ? (Me(x, x.bi_buf), x.bi_buf = 0, x.bi_valid = 0) : x.bi_valid >= 8 && (x.pending_buf[x.pending++] = x.bi_buf & 255, x.bi_buf >>= 8, x.bi_valid -= 8);
       }
       function We(x, J) {
-        var ee = J.dyn_tree, ue = J.max_code, B = J.stat_desc.static_tree, $ = J.stat_desc.has_stree, g = J.stat_desc.extra_bits, X = J.stat_desc.extra_base, _e = J.stat_desc.max_length, l, V, H, _, O, W, me = 0;
+        var ee = J.dyn_tree, ue = J.max_code, B = J.stat_desc.static_tree, $ = J.stat_desc.has_stree, g = J.stat_desc.extra_bits, X = J.stat_desc.extra_base, _e = J.stat_desc.max_length, l, V, H, _, O, q, me = 0;
         for (_ = 0; _ <= C; _++)
           x.bl_count[_] = 0;
-        for (ee[x.heap[x.heap_max] * 2 + 1] = 0, l = x.heap_max + 1; l < w; l++)
-          V = x.heap[l], _ = ee[ee[V * 2 + 1] * 2 + 1] + 1, _ > _e && (_ = _e, me++), ee[V * 2 + 1] = _, !(V > ue) && (x.bl_count[_]++, O = 0, V >= X && (O = g[V - X]), W = ee[V * 2], x.opt_len += W * (_ + O), $ && (x.static_len += W * (B[V * 2 + 1] + O)));
+        for (ee[x.heap[x.heap_max] * 2 + 1] = 0, l = x.heap_max + 1; l < b; l++)
+          V = x.heap[l], _ = ee[ee[V * 2 + 1] * 2 + 1] + 1, _ > _e && (_ = _e, me++), ee[V * 2 + 1] = _, !(V > ue) && (x.bl_count[_]++, O = 0, V >= X && (O = g[V - X]), q = ee[V * 2], x.opt_len += q * (_ + O), $ && (x.static_len += q * (B[V * 2 + 1] + O)));
         if (me !== 0) {
           do {
             for (_ = _e - 1; x.bl_count[_] === 0; )
@@ -13882,7 +13882,7 @@ https://github.com/nodeca/pako/blob/main/LICENSE
       }
       function dt(x, J) {
         var ee = J.dyn_tree, ue = J.stat_desc.static_tree, B = J.stat_desc.has_stree, $ = J.stat_desc.elems, g, X, _e = -1, l;
-        for (x.heap_len = 0, x.heap_max = w, g = 0; g < $; g++)
+        for (x.heap_len = 0, x.heap_max = b, g = 0; g < $; g++)
           ee[g * 2] !== 0 ? (x.heap[++x.heap_len] = _e = g, x.depth[g] = 0) : ee[g * 2 + 1] = 0;
         for (; x.heap_len < 2; )
           l = x.heap[++x.heap_len] = _e < 2 ? ++_e : 0, ee[l * 2] = 1, x.depth[l] = 0, x.opt_len--, B && (x.static_len -= ue[l * 2 + 1]);
@@ -13969,11 +13969,11 @@ https://github.com/nodeca/pako/blob/main/LICENSE
         Pe(x, (c << 1) + (ue ? 1 : 0), 3), ht(x, J, ee, !0);
       }
       function rt(x) {
-        Pe(x, b << 1, 3), qe(x, z, fe), nt(x);
+        Pe(x, w << 1, 3), qe(x, z, fe), nt(x);
       }
       function pt(x, J, ee, ue) {
         var B, $, g = 0;
-        x.level > 0 ? (x.strm.data_type === h && (x.strm.data_type = mt(x)), dt(x, x.l_desc), dt(x, x.d_desc), g = Ke(x), B = x.opt_len + 3 + 7 >>> 3, $ = x.static_len + 3 + 7 >>> 3, $ <= B && (B = $)) : B = $ = ee + 5, ee + 4 <= B && J !== -1 ? Et(x, J, ee, ue) : x.strategy === a || $ === B ? (Pe(x, (b << 1) + (ue ? 1 : 0), 3), Ae(x, fe, Se)) : (Pe(x, (m << 1) + (ue ? 1 : 0), 3), Tt(x, x.l_desc.max_code + 1, x.d_desc.max_code + 1, g + 1), Ae(x, x.dyn_ltree, x.dyn_dtree)), Qe(x), ue && at(x);
+        x.level > 0 ? (x.strm.data_type === h && (x.strm.data_type = mt(x)), dt(x, x.l_desc), dt(x, x.d_desc), g = Ke(x), B = x.opt_len + 3 + 7 >>> 3, $ = x.static_len + 3 + 7 >>> 3, $ <= B && (B = $)) : B = $ = ee + 5, ee + 4 <= B && J !== -1 ? Et(x, J, ee, ue) : x.strategy === a || $ === B ? (Pe(x, (w << 1) + (ue ? 1 : 0), 3), Ae(x, fe, Se)) : (Pe(x, (m << 1) + (ue ? 1 : 0), 3), Tt(x, x.l_desc.max_code + 1, x.d_desc.max_code + 1, g + 1), Ae(x, x.dyn_ltree, x.dyn_dtree)), Qe(x), ue && at(x);
       }
       function Nt(x, J, ee) {
         return x.pending_buf[x.d_buf + x.last_lit * 2] = J >>> 8 & 255, x.pending_buf[x.d_buf + x.last_lit * 2 + 1] = J & 255, x.pending_buf[x.l_buf + x.last_lit] = ee & 255, x.last_lit++, J === 0 ? x.dyn_ltree[ee * 2]++ : (x.matches++, J--, x.dyn_ltree[(Oe[ee] + v + 1) * 2]++, x.dyn_dtree[Xe(J) * 2]++), x.last_lit === x.lit_bufsize - 1;
@@ -13989,15 +13989,15 @@ https://github.com/nodeca/pako/blob/main/LICENSE
         (function(a, o) {
           if (a.setImmediate)
             return;
-          var u = 1, h = {}, f = !1, c = a.document, b;
+          var u = 1, h = {}, f = !1, c = a.document, w;
           function m(R) {
             typeof R != "function" && (R = new Function("" + R));
             for (var z = new Array(arguments.length - 1), M = 0; M < z.length; M++)
               z[M] = arguments[M + 1];
             var Y = { callback: R, args: z };
-            return h[u] = Y, b(u), u++;
+            return h[u] = Y, w(u), u++;
           }
-          function T(R) {
+          function S(R) {
             delete h[R];
           }
           function N(R) {
@@ -14030,13 +14030,13 @@ https://github.com/nodeca/pako/blob/main/LICENSE
                 try {
                   N(z);
                 } finally {
-                  T(R), f = !1;
+                  S(R), f = !1;
                 }
               }
             }
           }
           function v() {
-            b = function(R) {
+            w = function(R) {
               process.nextTick(function() {
                 p(R);
               });
@@ -14054,7 +14054,7 @@ https://github.com/nodeca/pako/blob/main/LICENSE
             var R = "setImmediate$" + Math.random() + "$", z = function(M) {
               M.source === a && typeof M.data == "string" && M.data.indexOf(R) === 0 && p(+M.data.slice(R.length));
             };
-            a.addEventListener ? a.addEventListener("message", z, !1) : a.attachEvent("onmessage", z), b = function(M) {
+            a.addEventListener ? a.addEventListener("message", z, !1) : a.attachEvent("onmessage", z), w = function(M) {
               a.postMessage(R + M, "*");
             };
           }
@@ -14063,13 +14063,13 @@ https://github.com/nodeca/pako/blob/main/LICENSE
             R.port1.onmessage = function(z) {
               var M = z.data;
               p(M);
-            }, b = function(z) {
+            }, w = function(z) {
               R.port2.postMessage(z);
             };
           }
-          function w() {
+          function b() {
             var R = c.documentElement;
-            b = function(z) {
+            w = function(z) {
               var M = c.createElement("script");
               M.onreadystatechange = function() {
                 p(z), M.onreadystatechange = null, R.removeChild(M), M = null;
@@ -14077,12 +14077,12 @@ https://github.com/nodeca/pako/blob/main/LICENSE
             };
           }
           function C() {
-            b = function(R) {
+            w = function(R) {
               setTimeout(p, 0, R);
             };
           }
-          var S = Object.getPrototypeOf && Object.getPrototypeOf(a);
-          S = S && S.setTimeout ? S : a, {}.toString.call(a.process) === "[object process]" ? v() : y() ? A() : a.MessageChannel ? k() : c && "onreadystatechange" in c.createElement("script") ? w() : C(), S.setImmediate = m, S.clearImmediate = T;
+          var T = Object.getPrototypeOf && Object.getPrototypeOf(a);
+          T = T && T.setTimeout ? T : a, {}.toString.call(a.process) === "[object process]" ? v() : y() ? A() : a.MessageChannel ? k() : c && "onreadystatechange" in c.createElement("script") ? b() : C(), T.setImmediate = m, T.clearImmediate = S;
         })(typeof self > "u" ? typeof s > "u" ? this : s : self);
       }).call(this, typeof It < "u" ? It : typeof self < "u" ? self : typeof window < "u" ? window : {});
     }, {}] }, {}, [10])(10);
@@ -14244,13 +14244,13 @@ var wa = { exports: {} };
               return c(h, !0);
             if (o)
               return o(h, !0);
-            var b = new Error("Cannot find module '" + h + "'");
-            throw b.code = "MODULE_NOT_FOUND", b;
+            var w = new Error("Cannot find module '" + h + "'");
+            throw w.code = "MODULE_NOT_FOUND", w;
           }
           var m = i[h] = { exports: {} };
-          r[h][0].call(m.exports, function(T) {
-            var N = r[h][1][T];
-            return a(N || T);
+          r[h][0].call(m.exports, function(S) {
+            var N = r[h][1][S];
+            return a(N || S);
           }, m, m.exports, t, r, i, s);
         }
         return i[h].exports;
@@ -14262,7 +14262,7 @@ var wa = { exports: {} };
       (function(s) {
         var a = s.MutationObserver || s.WebKitMutationObserver, o;
         if (a) {
-          var u = 0, h = new a(T), f = s.document.createTextNode("");
+          var u = 0, h = new a(S), f = s.document.createTextNode("");
           h.observe(f, {
             characterData: !0
           }), o = function() {
@@ -14270,31 +14270,31 @@ var wa = { exports: {} };
           };
         } else if (!s.setImmediate && typeof s.MessageChannel < "u") {
           var c = new s.MessageChannel();
-          c.port1.onmessage = T, o = function() {
+          c.port1.onmessage = S, o = function() {
             c.port2.postMessage(0);
           };
         } else
           "document" in s && "onreadystatechange" in s.document.createElement("script") ? o = function() {
             var p = s.document.createElement("script");
             p.onreadystatechange = function() {
-              T(), p.onreadystatechange = null, p.parentNode.removeChild(p), p = null;
+              S(), p.onreadystatechange = null, p.parentNode.removeChild(p), p = null;
             }, s.document.documentElement.appendChild(p);
           } : o = function() {
-            setTimeout(T, 0);
+            setTimeout(S, 0);
           };
-        var b, m = [];
-        function T() {
-          b = !0;
+        var w, m = [];
+        function S() {
+          w = !0;
           for (var p, v, y = m.length; y; ) {
             for (v = m, m = [], p = -1; ++p < y; )
               v[p]();
             y = m.length;
           }
-          b = !1;
+          w = !1;
         }
         r.exports = N;
         function N(p) {
-          m.push(p) === 1 && !b && o();
+          m.push(p) === 1 && !w && o();
         }
       }).call(this, typeof It < "u" ? It : typeof self < "u" ? self : typeof window < "u" ? window : {});
     }, {}], 2: [function(t, r, i) {
@@ -14303,80 +14303,80 @@ var wa = { exports: {} };
       }
       var o = {}, u = ["REJECTED"], h = ["FULFILLED"], f = ["PENDING"];
       r.exports = c;
-      function c(w) {
-        if (typeof w != "function")
+      function c(b) {
+        if (typeof b != "function")
           throw new TypeError("resolver must be a function");
-        this.state = f, this.queue = [], this.outcome = void 0, w !== a && N(this, w);
+        this.state = f, this.queue = [], this.outcome = void 0, b !== a && N(this, b);
       }
-      c.prototype.catch = function(w) {
-        return this.then(null, w);
-      }, c.prototype.then = function(w, C) {
-        if (typeof w != "function" && this.state === h || typeof C != "function" && this.state === u)
+      c.prototype.catch = function(b) {
+        return this.then(null, b);
+      }, c.prototype.then = function(b, C) {
+        if (typeof b != "function" && this.state === h || typeof C != "function" && this.state === u)
           return this;
-        var S = new this.constructor(a);
+        var T = new this.constructor(a);
         if (this.state !== f) {
-          var R = this.state === h ? w : C;
-          m(S, R, this.outcome);
+          var R = this.state === h ? b : C;
+          m(T, R, this.outcome);
         } else
-          this.queue.push(new b(S, w, C));
-        return S;
+          this.queue.push(new w(T, b, C));
+        return T;
       };
-      function b(w, C, S) {
-        this.promise = w, typeof C == "function" && (this.onFulfilled = C, this.callFulfilled = this.otherCallFulfilled), typeof S == "function" && (this.onRejected = S, this.callRejected = this.otherCallRejected);
+      function w(b, C, T) {
+        this.promise = b, typeof C == "function" && (this.onFulfilled = C, this.callFulfilled = this.otherCallFulfilled), typeof T == "function" && (this.onRejected = T, this.callRejected = this.otherCallRejected);
       }
-      b.prototype.callFulfilled = function(w) {
-        o.resolve(this.promise, w);
-      }, b.prototype.otherCallFulfilled = function(w) {
-        m(this.promise, this.onFulfilled, w);
-      }, b.prototype.callRejected = function(w) {
-        o.reject(this.promise, w);
-      }, b.prototype.otherCallRejected = function(w) {
-        m(this.promise, this.onRejected, w);
+      w.prototype.callFulfilled = function(b) {
+        o.resolve(this.promise, b);
+      }, w.prototype.otherCallFulfilled = function(b) {
+        m(this.promise, this.onFulfilled, b);
+      }, w.prototype.callRejected = function(b) {
+        o.reject(this.promise, b);
+      }, w.prototype.otherCallRejected = function(b) {
+        m(this.promise, this.onRejected, b);
       };
-      function m(w, C, S) {
+      function m(b, C, T) {
         s(function() {
           var R;
           try {
-            R = C(S);
+            R = C(T);
           } catch (z) {
-            return o.reject(w, z);
+            return o.reject(b, z);
           }
-          R === w ? o.reject(w, new TypeError("Cannot resolve promise with itself")) : o.resolve(w, R);
+          R === b ? o.reject(b, new TypeError("Cannot resolve promise with itself")) : o.resolve(b, R);
         });
       }
-      o.resolve = function(w, C) {
-        var S = p(T, C);
-        if (S.status === "error")
-          return o.reject(w, S.value);
-        var R = S.value;
+      o.resolve = function(b, C) {
+        var T = p(S, C);
+        if (T.status === "error")
+          return o.reject(b, T.value);
+        var R = T.value;
         if (R)
-          N(w, R);
+          N(b, R);
         else {
-          w.state = h, w.outcome = C;
-          for (var z = -1, M = w.queue.length; ++z < M; )
-            w.queue[z].callFulfilled(C);
+          b.state = h, b.outcome = C;
+          for (var z = -1, M = b.queue.length; ++z < M; )
+            b.queue[z].callFulfilled(C);
         }
-        return w;
-      }, o.reject = function(w, C) {
-        w.state = u, w.outcome = C;
-        for (var S = -1, R = w.queue.length; ++S < R; )
-          w.queue[S].callRejected(C);
-        return w;
+        return b;
+      }, o.reject = function(b, C) {
+        b.state = u, b.outcome = C;
+        for (var T = -1, R = b.queue.length; ++T < R; )
+          b.queue[T].callRejected(C);
+        return b;
       };
-      function T(w) {
-        var C = w && w.then;
-        if (w && (typeof w == "object" || typeof w == "function") && typeof C == "function")
+      function S(b) {
+        var C = b && b.then;
+        if (b && (typeof b == "object" || typeof b == "function") && typeof C == "function")
           return function() {
-            C.apply(w, arguments);
+            C.apply(b, arguments);
           };
       }
-      function N(w, C) {
-        var S = !1;
+      function N(b, C) {
+        var T = !1;
         function R(Z) {
-          S || (S = !0, o.reject(w, Z));
+          T || (T = !0, o.reject(b, Z));
         }
         function z(Z) {
-          S || (S = !0, o.resolve(w, Z));
+          T || (T = !0, o.resolve(b, Z));
         }
         function M() {
           C(z, R);
@@ -14384,54 +14384,54 @@ var wa = { exports: {} };
         var Y = p(M);
         Y.status === "error" && R(Y.value);
       }
-      function p(w, C) {
-        var S = {};
+      function p(b, C) {
+        var T = {};
         try {
-          S.value = w(C), S.status = "success";
+          T.value = b(C), T.status = "success";
         } catch (R) {
-          S.status = "error", S.value = R;
+          T.status = "error", T.value = R;
         }
-        return S;
+        return T;
       }
       c.resolve = v;
-      function v(w) {
-        return w instanceof this ? w : o.resolve(new this(a), w);
+      function v(b) {
+        return b instanceof this ? b : o.resolve(new this(a), b);
       }
       c.reject = y;
-      function y(w) {
+      function y(b) {
         var C = new this(a);
-        return o.reject(C, w);
+        return o.reject(C, b);
       }
       c.all = A;
-      function A(w) {
+      function A(b) {
         var C = this;
-        if (Object.prototype.toString.call(w) !== "[object Array]")
+        if (Object.prototype.toString.call(b) !== "[object Array]")
           return this.reject(new TypeError("must be an array"));
-        var S = w.length, R = !1;
-        if (!S)
+        var T = b.length, R = !1;
+        if (!T)
           return this.resolve([]);
-        for (var z = new Array(S), M = 0, Y = -1, Z = new this(a); ++Y < S; )
-          te(w[Y], Y);
+        for (var z = new Array(T), M = 0, Y = -1, Z = new this(a); ++Y < T; )
+          te(b[Y], Y);
         return Z;
         function te(ge, pe) {
           C.resolve(ge).then(ve, function(de) {
             R || (R = !0, o.reject(Z, de));
           });
           function ve(de) {
-            z[pe] = de, ++M === S && !R && (R = !0, o.resolve(Z, z));
+            z[pe] = de, ++M === T && !R && (R = !0, o.resolve(Z, z));
           }
         }
       }
       c.race = k;
-      function k(w) {
+      function k(b) {
         var C = this;
-        if (Object.prototype.toString.call(w) !== "[object Array]")
+        if (Object.prototype.toString.call(b) !== "[object Array]")
           return this.reject(new TypeError("must be an array"));
-        var S = w.length, R = !1;
-        if (!S)
+        var T = b.length, R = !1;
+        if (!T)
           return this.resolve([]);
-        for (var z = -1, M = new this(a); ++z < S; )
-          Y(w[z]);
+        for (var z = -1, M = new this(a); ++z < T; )
+          Y(b[z]);
         return M;
         function Y(Z) {
           C.resolve(Z).then(function(te) {
@@ -14500,7 +14500,7 @@ var wa = { exports: {} };
       }
       typeof Promise > "u" && t(3);
       var c = Promise;
-      function b(E, L) {
+      function w(E, L) {
         L && E.then(function(D) {
           L(null, D);
         }, function(D) {
@@ -14510,22 +14510,22 @@ var wa = { exports: {} };
       function m(E, L, D) {
         typeof L == "function" && E.then(L), typeof D == "function" && E.catch(D);
       }
-      function T(E) {
+      function S(E) {
         return typeof E != "string" && (console.warn(E + " used as a key, but it is not a string."), E = String(E)), E;
       }
       function N() {
         if (arguments.length && typeof arguments[arguments.length - 1] == "function")
           return arguments[arguments.length - 1];
       }
-      var p = "local-forage-detect-blob-support", v = void 0, y = {}, A = Object.prototype.toString, k = "readonly", w = "readwrite";
+      var p = "local-forage-detect-blob-support", v = void 0, y = {}, A = Object.prototype.toString, k = "readonly", b = "readwrite";
       function C(E) {
         for (var L = E.length, D = new ArrayBuffer(L), P = new Uint8Array(D), j = 0; j < L; j++)
           P[j] = E.charCodeAt(j);
         return D;
       }
-      function S(E) {
+      function T(E) {
         return new c(function(L) {
-          var D = E.transaction(p, w), P = f([""]);
+          var D = E.transaction(p, b), P = f([""]);
           D.objectStore(p).put(P, "key"), D.onabort = function(j) {
             j.preventDefault(), j.stopPropagation(), L(!1);
           }, D.oncomplete = function() {
@@ -14537,7 +14537,7 @@ var wa = { exports: {} };
         });
       }
       function R(E) {
-        return typeof v == "boolean" ? c.resolve(v) : S(E).then(function(L) {
+        return typeof v == "boolean" ? c.resolve(v) : T(E).then(function(L) {
           return v = L, v;
         });
       }
@@ -14714,7 +14714,7 @@ var wa = { exports: {} };
       }
       function Ne(E, L) {
         var D = this;
-        E = T(E);
+        E = S(E);
         var P = new c(function(j, F) {
           D.ready().then(function() {
             Oe(D._dbInfo, k, function(G, Q) {
@@ -14734,7 +14734,7 @@ var wa = { exports: {} };
             });
           }).catch(F);
         });
-        return b(P, L), P;
+        return w(P, L), P;
       }
       function it(E, L) {
         var D = this, P = new c(function(j, F) {
@@ -14762,11 +14762,11 @@ var wa = { exports: {} };
             });
           }).catch(F);
         });
-        return b(P, L), P;
+        return w(P, L), P;
       }
       function Ge(E, L, D) {
         var P = this;
-        E = T(E);
+        E = S(E);
         var j = new c(function(F, G) {
           var Q;
           P.ready().then(function() {
@@ -14774,7 +14774,7 @@ var wa = { exports: {} };
               return ie ? L : ve(L);
             }) : L;
           }).then(function(ie) {
-            Oe(P._dbInfo, w, function(ne, ae) {
+            Oe(P._dbInfo, b, function(ne, ae) {
               if (ne)
                 return G(ne);
               try {
@@ -14793,14 +14793,14 @@ var wa = { exports: {} };
             });
           }).catch(G);
         });
-        return b(j, D), j;
+        return w(j, D), j;
       }
       function Ue(E, L) {
         var D = this;
-        E = T(E);
+        E = S(E);
         var P = new c(function(j, F) {
           D.ready().then(function() {
-            Oe(D._dbInfo, w, function(G, Q) {
+            Oe(D._dbInfo, b, function(G, Q) {
               if (G)
                 return F(G);
               try {
@@ -14819,12 +14819,12 @@ var wa = { exports: {} };
             });
           }).catch(F);
         });
-        return b(P, L), P;
+        return w(P, L), P;
       }
       function De(E) {
         var L = this, D = new c(function(P, j) {
           L.ready().then(function() {
-            Oe(L._dbInfo, w, function(F, G) {
+            Oe(L._dbInfo, b, function(F, G) {
               if (F)
                 return j(F);
               try {
@@ -14841,7 +14841,7 @@ var wa = { exports: {} };
             });
           }).catch(j);
         });
-        return b(D, E), D;
+        return w(D, E), D;
       }
       function Xe(E) {
         var L = this, D = new c(function(P, j) {
@@ -14862,7 +14862,7 @@ var wa = { exports: {} };
             });
           }).catch(j);
         });
-        return b(D, E), D;
+        return w(D, E), D;
       }
       function Me(E, L) {
         var D = this, P = new c(function(j, F) {
@@ -14892,7 +14892,7 @@ var wa = { exports: {} };
             });
           }).catch(F);
         });
-        return b(P, L), P;
+        return w(P, L), P;
       }
       function Pe(E) {
         var L = this, D = new c(function(P, j) {
@@ -14918,7 +14918,7 @@ var wa = { exports: {} };
             });
           }).catch(j);
         });
-        return b(D, E), D;
+        return w(D, E), D;
       }
       function qe(E, L) {
         L = N.apply(this, arguments);
@@ -15001,7 +15001,7 @@ var wa = { exports: {} };
             });
           });
         }
-        return b(j, L), j;
+        return w(j, L), j;
       }
       var Ie = {
         _driver: "asyncStorage",
@@ -15132,7 +15132,7 @@ var wa = { exports: {} };
       }
       function $(E, L) {
         var D = this;
-        E = T(E);
+        E = S(E);
         var P = new c(function(j, F) {
           D.ready().then(function() {
             var G = D._dbInfo;
@@ -15146,7 +15146,7 @@ var wa = { exports: {} };
             });
           }).catch(F);
         });
-        return b(P, L), P;
+        return w(P, L), P;
       }
       function g(E, L) {
         var D = this, P = new c(function(j, F) {
@@ -15168,11 +15168,11 @@ var wa = { exports: {} };
             });
           }).catch(F);
         });
-        return b(P, L), P;
+        return w(P, L), P;
       }
       function X(E, L, D, P) {
         var j = this;
-        E = T(E);
+        E = S(E);
         var F = new c(function(G, Q) {
           j.ready().then(function() {
             L === void 0 && (L = null);
@@ -15196,14 +15196,14 @@ var wa = { exports: {} };
             });
           }).catch(Q);
         });
-        return b(F, D), F;
+        return w(F, D), F;
       }
       function _e(E, L, D) {
         return X.apply(this, [E, L, D, 1]);
       }
       function l(E, L) {
         var D = this;
-        E = T(E);
+        E = S(E);
         var P = new c(function(j, F) {
           D.ready().then(function() {
             var G = D._dbInfo;
@@ -15216,7 +15216,7 @@ var wa = { exports: {} };
             });
           }).catch(F);
         });
-        return b(P, L), P;
+        return w(P, L), P;
       }
       function V(E) {
         var L = this, D = new c(function(P, j) {
@@ -15231,7 +15231,7 @@ var wa = { exports: {} };
             });
           }).catch(j);
         });
-        return b(D, E), D;
+        return w(D, E), D;
       }
       function H(E) {
         var L = this, D = new c(function(P, j) {
@@ -15247,7 +15247,7 @@ var wa = { exports: {} };
             });
           }).catch(j);
         });
-        return b(D, E), D;
+        return w(D, E), D;
       }
       function _(E, L) {
         var D = this, P = new c(function(j, F) {
@@ -15263,7 +15263,7 @@ var wa = { exports: {} };
             });
           }).catch(F);
         });
-        return b(P, L), P;
+        return w(P, L), P;
       }
       function O(E) {
         var L = this, D = new c(function(P, j) {
@@ -15280,9 +15280,9 @@ var wa = { exports: {} };
             });
           }).catch(j);
         });
-        return b(D, E), D;
+        return w(D, E), D;
       }
-      function W(E) {
+      function q(E) {
         return new c(function(L, D) {
           E.transaction(function(P) {
             P.executeSql("SELECT name FROM sqlite_master WHERE type='table' AND name <> '__WebKitDatabaseInfoTable__'", [], function(j, F) {
@@ -15310,7 +15310,7 @@ var wa = { exports: {} };
           E.name === D.name ? G = P._dbInfo.db : G = openDatabase(E.name, "", "", 0), E.storeName ? F({
             db: G,
             storeNames: [E.storeName]
-          }) : F(W(G));
+          }) : F(q(G));
         }).then(function(F) {
           return new c(function(G, Q) {
             F.db.transaction(function(ie) {
@@ -15334,7 +15334,7 @@ var wa = { exports: {} };
               Q(ie);
             });
           });
-        }) : j = c.reject("Invalid arguments"), b(j, L), j;
+        }) : j = c.reject("Invalid arguments"), w(j, L), j;
       }
       var oe = {
         _driver: "webSQLStorage",
@@ -15387,16 +15387,16 @@ var wa = { exports: {} };
             F.indexOf(P) === 0 && localStorage.removeItem(F);
           }
         });
-        return b(D, E), D;
+        return w(D, E), D;
       }
       function U(E, L) {
         var D = this;
-        E = T(E);
+        E = S(E);
         var P = D.ready().then(function() {
           var j = D._dbInfo, F = localStorage.getItem(j.keyPrefix + E);
           return F && (F = j.serializer.deserialize(F)), F;
         });
-        return b(P, L), P;
+        return w(P, L), P;
       }
       function K(E, L) {
         var D = this, P = D.ready().then(function() {
@@ -15409,7 +15409,7 @@ var wa = { exports: {} };
             }
           }
         });
-        return b(P, L), P;
+        return w(P, L), P;
       }
       function ce(E, L) {
         var D = this, P = D.ready().then(function() {
@@ -15421,7 +15421,7 @@ var wa = { exports: {} };
           }
           return F && (F = F.substring(j.keyPrefix.length)), F;
         });
-        return b(P, L), P;
+        return w(P, L), P;
       }
       function ye(E) {
         var L = this, D = L.ready().then(function() {
@@ -15431,26 +15431,26 @@ var wa = { exports: {} };
           }
           return F;
         });
-        return b(D, E), D;
+        return w(D, E), D;
       }
       function re(E) {
         var L = this, D = L.keys().then(function(P) {
           return P.length;
         });
-        return b(D, E), D;
+        return w(D, E), D;
       }
       function se(E, L) {
         var D = this;
-        E = T(E);
+        E = S(E);
         var P = D.ready().then(function() {
           var j = D._dbInfo;
           localStorage.removeItem(j.keyPrefix + E);
         });
-        return b(P, L), P;
+        return w(P, L), P;
       }
       function Ce(E, L, D) {
         var P = this;
-        E = T(E);
+        E = S(E);
         var j = P.ready().then(function() {
           L === void 0 && (L = null);
           var F = L;
@@ -15468,7 +15468,7 @@ var wa = { exports: {} };
             });
           });
         });
-        return b(j, D), j;
+        return w(j, D), j;
       }
       function Ee(E, L) {
         if (L = N.apply(this, arguments), E = typeof E != "function" && E || {}, !E.name) {
@@ -15483,7 +15483,7 @@ var wa = { exports: {} };
             var Q = localStorage.key(G);
             Q.indexOf(F) === 0 && localStorage.removeItem(Q);
           }
-        }) : j = c.reject("Invalid arguments"), b(j, L), j;
+        }) : j = c.reject("Invalid arguments"), w(j, L), j;
       }
       var xe = {
         _driver: "localStorageWrapper",
@@ -15582,7 +15582,7 @@ var wa = { exports: {} };
                 for (var Cr = function(Fa) {
                   return function() {
                     var Pa = new Error("Method " + Fa + " is not implemented by the current driver"), xn = c.reject(Pa);
-                    return b(xn, arguments[arguments.length - 1]), xn;
+                    return w(xn, arguments[arguments.length - 1]), xn;
                   };
                 }, Si = 0, Ba = $r.length; Si < Ba; Si++) {
                   var Ti = $r[Si];
@@ -16201,7 +16201,7 @@ ur.Contents = vn;
 ur.CFI = Fe;
 ur.utils = eu;
 function ss(n) {
-  return /* @__PURE__ */ q.jsx(
+  return /* @__PURE__ */ W.jsx(
     "svg",
     {
       width: 50,
@@ -16210,12 +16210,12 @@ function ss(n) {
       fill: "none",
       xmlns: "http://www.w3.org/2000/svg",
       ...n,
-      children: /* @__PURE__ */ q.jsx("path", { d: "M198.416 117.731L113.949 33.2638C112.599 31.8472 110.975 30.7194 109.176 29.9489C107.377 29.1783 105.441 28.781 103.484 28.781C101.527 28.781 99.5904 29.1783 97.7916 29.9489C95.9927 30.7194 94.369 31.8472 93.0189 33.2638C91.6023 34.6139 90.4746 36.2376 89.704 38.0364C88.9335 39.8353 88.5362 41.7718 88.5362 43.7288C88.5362 45.6857 88.9335 47.6223 89.704 49.4211C90.4746 51.22 91.6023 52.8436 93.0189 54.1938L177.486 138.661C178.903 140.011 180.031 141.635 180.801 143.434C181.572 145.233 181.969 147.169 181.969 149.126C181.969 151.083 181.572 153.02 180.801 154.819C180.031 156.617 178.903 158.241 177.486 159.591L92.2714 244.806C89.5421 247.591 88.0221 251.341 88.0418 255.24C88.0615 259.14 89.6193 262.874 92.3766 265.631C95.1339 268.388 98.868 269.946 102.767 269.966C106.667 269.986 110.416 268.466 113.201 265.736L197.669 181.269C215.609 163.329 215.609 134.924 198.416 117.731Z" })
+      children: /* @__PURE__ */ W.jsx("path", { d: "M198.416 117.731L113.949 33.2638C112.599 31.8472 110.975 30.7194 109.176 29.9489C107.377 29.1783 105.441 28.781 103.484 28.781C101.527 28.781 99.5904 29.1783 97.7916 29.9489C95.9927 30.7194 94.369 31.8472 93.0189 33.2638C91.6023 34.6139 90.4746 36.2376 89.704 38.0364C88.9335 39.8353 88.5362 41.7718 88.5362 43.7288C88.5362 45.6857 88.9335 47.6223 89.704 49.4211C90.4746 51.22 91.6023 52.8436 93.0189 54.1938L177.486 138.661C178.903 140.011 180.031 141.635 180.801 143.434C181.572 145.233 181.969 147.169 181.969 149.126C181.969 151.083 181.572 153.02 180.801 154.819C180.031 156.617 178.903 158.241 177.486 159.591L92.2714 244.806C89.5421 247.591 88.0221 251.341 88.0418 255.24C88.0615 259.14 89.6193 262.874 92.3766 265.631C95.1339 268.388 98.868 269.946 102.767 269.966C106.667 269.986 110.416 268.466 113.201 265.736L197.669 181.269C215.609 163.329 215.609 134.924 198.416 117.731Z" })
     }
   );
 }
 function Vl(n) {
-  return /* @__PURE__ */ q.jsxs(
+  return /* @__PURE__ */ W.jsxs(
     "svg",
     {
       width: 24,
@@ -16225,37 +16225,37 @@ function Vl(n) {
       xmlns: "http://www.w3.org/2000/svg",
       ...n,
       children: [
-        /* @__PURE__ */ q.jsx(
+        /* @__PURE__ */ W.jsx(
           "path",
           {
             d: "M22.5 3H7.5C7.10218 3 6.72064 2.84196 6.43934 2.56066C6.15804 2.27936 6 1.89782 6 1.5C6 1.10218 6.15804 0.720645 6.43934 0.43934C6.72064 0.158036 7.10218 0 7.5 0H22.5C22.8978 0 23.2794 0.158036 23.5607 0.43934C23.842 0.720645 24 1.10218 24 1.5C24 1.89782 23.842 2.27936 23.5607 2.56066C23.2794 2.84196 22.8978 3 22.5 3Z"
           }
         ),
-        /* @__PURE__ */ q.jsx(
+        /* @__PURE__ */ W.jsx(
           "path",
           {
             d: "M22.5 10.5H7.5C7.10218 10.5 6.72064 10.342 6.43934 10.0607C6.15804 9.77936 6 9.39782 6 9C6 8.60218 6.15804 8.22064 6.43934 7.93934C6.72064 7.65804 7.10218 7.5 7.5 7.5H22.5C22.8978 7.5 23.2794 7.65804 23.5607 7.93934C23.842 8.22064 24 8.60218 24 9C24 9.39782 23.842 9.77936 23.5607 10.0607C23.2794 10.342 22.8978 10.5 22.5 10.5Z"
           }
         ),
-        /* @__PURE__ */ q.jsx(
+        /* @__PURE__ */ W.jsx(
           "path",
           {
             d: "M22.5 18H7.5C7.10218 18 6.72064 17.842 6.43934 17.5607C6.15804 17.2794 6 16.8978 6 16.5C6 16.1022 6.15804 15.7206 6.43934 15.4393C6.72064 15.158 7.10218 15 7.5 15H22.5C22.8978 15 23.2794 15.158 23.5607 15.4393C23.842 15.7206 24 16.1022 24 16.5C24 16.8978 23.842 17.2794 23.5607 17.5607C23.2794 17.842 22.8978 18 22.5 18Z"
           }
         ),
-        /* @__PURE__ */ q.jsx(
+        /* @__PURE__ */ W.jsx(
           "path",
           {
             d: "M1.5 3C2.32843 3 3 2.32843 3 1.5C3 0.671573 2.32843 0 1.5 0C0.671573 0 0 0.671573 0 1.5C0 2.32843 0.671573 3 1.5 3Z"
           }
         ),
-        /* @__PURE__ */ q.jsx(
+        /* @__PURE__ */ W.jsx(
           "path",
           {
             d: "M1.5 10.5C2.32843 10.5 3 9.82843 3 9C3 8.17157 2.32843 7.5 1.5 7.5C0.671573 7.5 0 8.17157 0 9C0 9.82843 0.671573 10.5 1.5 10.5Z"
           }
         ),
-        /* @__PURE__ */ q.jsx(
+        /* @__PURE__ */ W.jsx(
           "path",
           {
             d: "M1.5 18C2.32843 18 3 17.3284 3 16.5C3 15.6716 2.32843 15 1.5 15C0.671573 15 0 15.6716 0 16.5C0 17.3284 0.671573 18 1.5 18Z"
@@ -16282,14 +16282,14 @@ function Hl() {
   as = 1;
   var n = gi, e = Symbol.for("react.element"), t = Symbol.for("react.fragment"), r = Object.prototype.hasOwnProperty, i = n.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED.ReactCurrentOwner, s = { key: !0, ref: !0, __self: !0, __source: !0 };
   function a(o, u, h) {
-    var f, c = {}, b = null, m = null;
-    h !== void 0 && (b = "" + h), u.key !== void 0 && (b = "" + u.key), u.ref !== void 0 && (m = u.ref);
+    var f, c = {}, w = null, m = null;
+    h !== void 0 && (w = "" + h), u.key !== void 0 && (w = "" + u.key), u.ref !== void 0 && (m = u.ref);
     for (f in u)
       r.call(u, f) && !s.hasOwnProperty(f) && (c[f] = u[f]);
     if (o && o.defaultProps)
       for (f in u = o.defaultProps, u)
         c[f] === void 0 && (c[f] = u[f]);
-    return { $$typeof: e, type: o, key: b, ref: m, props: c, _owner: i.current };
+    return { $$typeof: e, type: o, key: w, ref: m, props: c, _owner: i.current };
   }
   return Or.Fragment = t, Or.jsx = a, Or.jsxs = a, Or;
 }
@@ -16306,11 +16306,11 @@ var Yr = {};
 var os;
 function $l() {
   return os || (os = 1, process.env.NODE_ENV !== "production" && function() {
-    var n = gi, e = Symbol.for("react.element"), t = Symbol.for("react.portal"), r = Symbol.for("react.fragment"), i = Symbol.for("react.strict_mode"), s = Symbol.for("react.profiler"), a = Symbol.for("react.provider"), o = Symbol.for("react.context"), u = Symbol.for("react.forward_ref"), h = Symbol.for("react.suspense"), f = Symbol.for("react.suspense_list"), c = Symbol.for("react.memo"), b = Symbol.for("react.lazy"), m = Symbol.for("react.offscreen"), T = Symbol.iterator, N = "@@iterator";
+    var n = gi, e = Symbol.for("react.element"), t = Symbol.for("react.portal"), r = Symbol.for("react.fragment"), i = Symbol.for("react.strict_mode"), s = Symbol.for("react.profiler"), a = Symbol.for("react.provider"), o = Symbol.for("react.context"), u = Symbol.for("react.forward_ref"), h = Symbol.for("react.suspense"), f = Symbol.for("react.suspense_list"), c = Symbol.for("react.memo"), w = Symbol.for("react.lazy"), m = Symbol.for("react.offscreen"), S = Symbol.iterator, N = "@@iterator";
     function p(d) {
       if (d === null || typeof d != "object")
         return null;
-      var I = T && d[T] || d[N];
+      var I = S && d[S] || d[N];
       return typeof I == "function" ? I : null;
     }
     var v = n.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
@@ -16331,10 +16331,10 @@ function $l() {
         ye.unshift("Warning: " + I), Function.prototype.apply.call(console[d], console, ye);
       }
     }
-    var k = !1, w = !1, C = !1, S = !1, R = !1, z;
+    var k = !1, b = !1, C = !1, T = !1, R = !1, z;
     z = Symbol.for("react.module.reference");
     function M(d) {
-      return !!(typeof d == "string" || typeof d == "function" || d === r || d === s || R || d === i || d === h || d === f || S || d === m || k || w || C || typeof d == "object" && d !== null && (d.$$typeof === b || d.$$typeof === c || d.$$typeof === a || d.$$typeof === o || d.$$typeof === u || d.$$typeof === z || d.getModuleId !== void 0));
+      return !!(typeof d == "string" || typeof d == "function" || d === r || d === s || R || d === i || d === h || d === f || T || d === m || k || b || C || typeof d == "object" && d !== null && (d.$$typeof === w || d.$$typeof === c || d.$$typeof === a || d.$$typeof === o || d.$$typeof === u || d.$$typeof === z || d.getModuleId !== void 0));
     }
     function Y(d, I, U) {
       var K = d.displayName;
@@ -16380,7 +16380,7 @@ function $l() {
           case c:
             var K = d.displayName || null;
             return K !== null ? K : te(d.type) || "Memo";
-          case b: {
+          case w: {
             var ce = d, ye = ce._payload, re = ce._init;
             try {
               return te(re(ye));
@@ -16569,7 +16569,7 @@ function $l() {
             return Ie(d.render);
           case c:
             return We(d.type, I, U);
-          case b: {
+          case w: {
             var K = d, ce = K._payload, ye = K._init;
             try {
               return We(ye(ce), I, U);
@@ -16806,7 +16806,7 @@ Check the top-level render call using <` + U + ">.");
         }
       }
     }
-    function W(d) {
+    function q(d) {
       {
         var I = d.type;
         if (I == null || typeof I == "string")
@@ -16868,7 +16868,7 @@ Check the top-level render call using <` + U + ">.");
             else
               O(Ve, d);
         }
-        return d === r ? me(xe) : W(xe), xe;
+        return d === r ? me(xe) : q(xe), xe;
       }
     }
     function he(d, I, U) {
@@ -16978,7 +16978,7 @@ function Gl({ rendition: n, children: e, state: t, book: r, ...i }) {
       color: s.theme.txt
     }
   })), (() => n == null ? void 0 : n.views().forEach((u) => u.pane ? u.pane.render() : null))(), () => {
-  }), [n, s]), /* @__PURE__ */ q.jsx(
+  }), [n, s]), /* @__PURE__ */ W.jsx(
     Aa.Provider,
     {
       value: { setting: s, rendition: n, dispatch: a, book: r, ...i },
@@ -16989,25 +16989,25 @@ function Gl({ rendition: n, children: e, state: t, book: r, ...i }) {
 const ar = () => ja(Aa);
 function Yl({ navItem: n, rendition: e }) {
   var o, u;
-  const [t, r] = jt(!1), i = xa(() => {
+  const [t, r] = Pt(!1), i = xa(() => {
     r(!1);
   });
   Ca(() => {
     r(!1);
   });
   const s = (u = (o = e == null ? void 0 : e.location) == null ? void 0 : o.start) == null ? void 0 : u.href, { setting: a } = ar();
-  return /* @__PURE__ */ q.jsxs("div", { ref: i, className: "r_epub_header_chapter-menu", children: [
-    /* @__PURE__ */ q.jsx(
+  return /* @__PURE__ */ W.jsxs("div", { ref: i, className: "r_epub_header_chapter-menu", children: [
+    /* @__PURE__ */ W.jsx(
       "div",
       {
         onClick: () => {
           r(!t);
         },
         className: "r_epub_header_chapter_btn",
-        children: /* @__PURE__ */ q.jsx(Vl, { fill: a.theme.txt })
+        children: /* @__PURE__ */ W.jsx(Vl, { fill: a.theme.txt })
       }
     ),
-    t && /* @__PURE__ */ q.jsx("div", { className: "r_epub_header_dropdown", children: n && n.length > 0 ? n.map((h, f) => /* @__PURE__ */ q.jsx(
+    t && /* @__PURE__ */ W.jsx("div", { className: "r_epub_header_dropdown", children: n && n.length > 0 ? n.map((h, f) => /* @__PURE__ */ W.jsx(
       "div",
       {
         onClick: () => {
@@ -17020,11 +17020,11 @@ function Yl({ navItem: n, rendition: e }) {
         children: h.label
       },
       "ghe" + f
-    )) : /* @__PURE__ */ q.jsx("div", { className: er("no_text"), children: "No chapter found" }) })
+    )) : /* @__PURE__ */ W.jsx("div", { className: er("no_text"), children: "No chapter found" }) })
   ] });
 }
 function Xl(n) {
-  return /* @__PURE__ */ q.jsxs(
+  return /* @__PURE__ */ W.jsxs(
     "svg",
     {
       width: 24,
@@ -17034,8 +17034,8 @@ function Xl(n) {
       xmlns: "http://www.w3.org/2000/svg",
       ...n,
       children: [
-        /* @__PURE__ */ q.jsxs("g", { clipPath: "url(#clip0_2014_266)", children: [
-          /* @__PURE__ */ q.jsx(
+        /* @__PURE__ */ W.jsxs("g", { clipPath: "url(#clip0_2014_266)", children: [
+          /* @__PURE__ */ W.jsx(
             "path",
             {
               d: "M13.125 18L7.125 5.25L1.125 18",
@@ -17044,7 +17044,7 @@ function Xl(n) {
               strokeLinejoin: "round"
             }
           ),
-          /* @__PURE__ */ q.jsx(
+          /* @__PURE__ */ W.jsx(
             "path",
             {
               d: "M11.3625 14.25H2.88745",
@@ -17053,7 +17053,7 @@ function Xl(n) {
               strokeLinejoin: "round"
             }
           ),
-          /* @__PURE__ */ q.jsx(
+          /* @__PURE__ */ W.jsx(
             "path",
             {
               d: "M19.125 18.1875C20.7819 18.1875 22.125 17.0542 22.125 15.6562C22.125 14.2583 20.7819 13.125 19.125 13.125C17.4681 13.125 16.125 14.2583 16.125 15.6562C16.125 17.0542 17.4681 18.1875 19.125 18.1875Z",
@@ -17062,7 +17062,7 @@ function Xl(n) {
               strokeLinejoin: "round"
             }
           ),
-          /* @__PURE__ */ q.jsx(
+          /* @__PURE__ */ W.jsx(
             "path",
             {
               d: "M17.25 10.2187C17.8024 9.84207 18.4564 9.64259 19.125 9.64687C20.7844 9.64687 22.125 10.8187 22.125 12.2719V18",
@@ -17072,13 +17072,13 @@ function Xl(n) {
             }
           )
         ] }),
-        /* @__PURE__ */ q.jsx("defs", { children: /* @__PURE__ */ q.jsx("clipPath", { id: "clip0_2014_266", children: /* @__PURE__ */ q.jsx("rect", { width: 24, height: 24, fill: "white" }) }) })
+        /* @__PURE__ */ W.jsx("defs", { children: /* @__PURE__ */ W.jsx("clipPath", { id: "clip0_2014_266", children: /* @__PURE__ */ W.jsx("rect", { width: 24, height: 24, fill: "white" }) }) })
       ]
     }
   );
 }
 function Kl(n) {
-  return /* @__PURE__ */ q.jsxs(
+  return /* @__PURE__ */ W.jsxs(
     "svg",
     {
       width: 24,
@@ -17088,20 +17088,20 @@ function Kl(n) {
       xmlns: "http://www.w3.org/2000/svg",
       ...n,
       children: [
-        /* @__PURE__ */ q.jsx("g", { clipPath: "url(#clip0_2017_27)", children: /* @__PURE__ */ q.jsx(
+        /* @__PURE__ */ W.jsx("g", { clipPath: "url(#clip0_2017_27)", children: /* @__PURE__ */ W.jsx(
           "path",
           {
             d: "M12 24C8.8174 24 5.76516 22.7357 3.51472 20.4853C1.26428 18.2348 0 15.1826 0 12C0 8.8174 1.26428 5.76516 3.51472 3.51472C5.76516 1.26428 8.8174 0 12 0C15.1826 0 18.2348 1.26428 20.4853 3.51472C22.7357 5.76516 24 8.8174 24 12C24 15.1826 22.7357 18.2348 20.4853 20.4853C18.2348 22.7357 15.1826 24 12 24ZM12 21.6C14.5461 21.6 16.9879 20.5886 18.7882 18.7882C20.5886 16.9879 21.6 14.5461 21.6 12C21.6 9.45392 20.5886 7.01212 18.7882 5.21178C16.9879 3.41143 14.5461 2.4 12 2.4C9.45392 2.4 7.01212 3.41143 5.21178 5.21178C3.41143 7.01212 2.4 9.45392 2.4 12C2.4 14.5461 3.41143 16.9879 5.21178 18.7882C7.01212 20.5886 9.45392 21.6 12 21.6ZM18 10.8V13.2H6V10.8H18Z",
             fill: "black"
           }
         ) }),
-        /* @__PURE__ */ q.jsx("defs", { children: /* @__PURE__ */ q.jsx("clipPath", { id: "clip0_2017_27", children: /* @__PURE__ */ q.jsx("rect", { width: 24, height: 24, fill: "white" }) }) })
+        /* @__PURE__ */ W.jsx("defs", { children: /* @__PURE__ */ W.jsx("clipPath", { id: "clip0_2017_27", children: /* @__PURE__ */ W.jsx("rect", { width: 24, height: 24, fill: "white" }) }) })
       ]
     }
   );
 }
 function Jl(n) {
-  return /* @__PURE__ */ q.jsxs(
+  return /* @__PURE__ */ W.jsxs(
     "svg",
     {
       width: 24,
@@ -17111,7 +17111,7 @@ function Jl(n) {
       xmlns: "http://www.w3.org/2000/svg",
       ...n,
       children: [
-        /* @__PURE__ */ q.jsx("g", { clipPath: "url(#clip0_2016_25)", children: /* @__PURE__ */ q.jsx(
+        /* @__PURE__ */ W.jsx("g", { clipPath: "url(#clip0_2016_25)", children: /* @__PURE__ */ W.jsx(
           "path",
           {
             fillRule: "evenodd",
@@ -17120,13 +17120,13 @@ function Jl(n) {
             fill: "black"
           }
         ) }),
-        /* @__PURE__ */ q.jsx("defs", { children: /* @__PURE__ */ q.jsx("clipPath", { id: "clip0_2016_25", children: /* @__PURE__ */ q.jsx("rect", { width: 24, height: 24, fill: "white" }) }) })
+        /* @__PURE__ */ W.jsx("defs", { children: /* @__PURE__ */ W.jsx("clipPath", { id: "clip0_2016_25", children: /* @__PURE__ */ W.jsx("rect", { width: 24, height: 24, fill: "white" }) }) })
       ]
     }
   );
 }
 function Ql(n) {
-  return /* @__PURE__ */ q.jsxs(
+  return /* @__PURE__ */ W.jsxs(
     "svg",
     {
       width: 48,
@@ -17136,8 +17136,8 @@ function Ql(n) {
       xmlns: "http://www.w3.org/2000/svg",
       ...n,
       children: [
-        /* @__PURE__ */ q.jsxs("g", { clipPath: "url(#clip0_2019_39)", children: [
-          /* @__PURE__ */ q.jsx(
+        /* @__PURE__ */ W.jsxs("g", { clipPath: "url(#clip0_2019_39)", children: [
+          /* @__PURE__ */ W.jsx(
             "path",
             {
               d: "M24 29C26.7614 29 29 26.7614 29 24C29 21.2386 26.7614 19 24 19C21.2386 19 19 21.2386 19 24C19 26.7614 21.2386 29 24 29Z",
@@ -17147,7 +17147,7 @@ function Ql(n) {
               strokeLinejoin: "round"
             }
           ),
-          /* @__PURE__ */ q.jsx(
+          /* @__PURE__ */ W.jsx(
             "path",
             {
               d: "M15 12L3 24L15 36M33 12L45 24L33 36",
@@ -17158,13 +17158,13 @@ function Ql(n) {
             }
           )
         ] }),
-        /* @__PURE__ */ q.jsx("defs", { children: /* @__PURE__ */ q.jsx("clipPath", { id: "clip0_2019_39", children: /* @__PURE__ */ q.jsx("rect", { width: 48, height: 48, fill: "white" }) }) })
+        /* @__PURE__ */ W.jsx("defs", { children: /* @__PURE__ */ W.jsx("clipPath", { id: "clip0_2019_39", children: /* @__PURE__ */ W.jsx("rect", { width: 48, height: 48, fill: "white" }) }) })
       ]
     }
   );
 }
 function eh(n) {
-  return /* @__PURE__ */ q.jsxs(
+  return /* @__PURE__ */ W.jsxs(
     "svg",
     {
       width: 48,
@@ -17174,8 +17174,8 @@ function eh(n) {
       xmlns: "http://www.w3.org/2000/svg",
       ...n,
       children: [
-        /* @__PURE__ */ q.jsxs("g", { clipPath: "url(#clip0_2019_33)", children: [
-          /* @__PURE__ */ q.jsx(
+        /* @__PURE__ */ W.jsxs("g", { clipPath: "url(#clip0_2019_33)", children: [
+          /* @__PURE__ */ W.jsx(
             "path",
             {
               d: "M24 29C26.7614 29 29 26.7614 29 24C29 21.2386 26.7614 19 24 19C21.2386 19 19 21.2386 19 24C19 26.7614 21.2386 29 24 29Z",
@@ -17185,7 +17185,7 @@ function eh(n) {
               strokeLinejoin: "round"
             }
           ),
-          /* @__PURE__ */ q.jsx(
+          /* @__PURE__ */ W.jsx(
             "path",
             {
               d: "M36 15L24 3L12 15M36 33L24 45L12 33",
@@ -17196,7 +17196,7 @@ function eh(n) {
             }
           )
         ] }),
-        /* @__PURE__ */ q.jsx("defs", { children: /* @__PURE__ */ q.jsx("clipPath", { id: "clip0_2019_33", children: /* @__PURE__ */ q.jsx("rect", { width: 48, height: 48, fill: "white" }) }) })
+        /* @__PURE__ */ W.jsx("defs", { children: /* @__PURE__ */ W.jsx("clipPath", { id: "clip0_2019_33", children: /* @__PURE__ */ W.jsx("rect", { width: 48, height: 48, fill: "white" }) }) })
       ]
     }
   );
@@ -17222,7 +17222,7 @@ const Sa = [
   }
 ];
 function th() {
-  const [n, e] = jt(!1), t = xa(() => {
+  const [n, e] = Pt(!1), t = xa(() => {
     e(!1);
   });
   Ca(() => {
@@ -17236,20 +17236,20 @@ function th() {
       fontSize: Math.max(o - 10, 50)
     });
   };
-  return /* @__PURE__ */ q.jsxs("div", { ref: t, className: "r_epub_settings_dropdown_wrapper", children: [
-    /* @__PURE__ */ q.jsx(
+  return /* @__PURE__ */ W.jsxs("div", { ref: t, className: "r_epub_settings_dropdown_wrapper", children: [
+    /* @__PURE__ */ W.jsx(
       "div",
       {
         className: "btn_icon",
         onClick: () => {
           e(!n);
         },
-        children: /* @__PURE__ */ q.jsx(Xl, { stroke: r.theme.txt })
+        children: /* @__PURE__ */ W.jsx(Xl, { stroke: r.theme.txt })
       }
     ),
-    n && /* @__PURE__ */ q.jsxs("div", { className: "dropdown_wrapper", children: [
-      /* @__PURE__ */ q.jsx("div", { className: "dropdown_header ", children: "Background Color:" }),
-      /* @__PURE__ */ q.jsx("div", { className: "dropdown_content", children: Sa.map((a, o) => /* @__PURE__ */ q.jsx(
+    n && /* @__PURE__ */ W.jsxs("div", { className: "dropdown_wrapper", children: [
+      /* @__PURE__ */ W.jsx("div", { className: "dropdown_header ", children: "Background Color:" }),
+      /* @__PURE__ */ W.jsx("div", { className: "dropdown_content", children: Sa.map((a, o) => /* @__PURE__ */ W.jsx(
         "div",
         {
           style: { backgroundColor: a.bg },
@@ -17263,17 +17263,17 @@ function th() {
         },
         "ghs" + o
       )) }),
-      /* @__PURE__ */ q.jsx("div", { className: "dropdown_gap" }),
-      /* @__PURE__ */ q.jsx("div", { className: "dropdown_header", children: "Font Size:" }),
-      /* @__PURE__ */ q.jsxs("div", { className: "dropdown_content", children: [
-        /* @__PURE__ */ q.jsx("div", { onClick: () => s("dec"), children: /* @__PURE__ */ q.jsx(Kl, { className: "font_size_icon" }) }),
-        /* @__PURE__ */ q.jsx("div", { className: "font_size_txt", children: "Aa" }),
-        /* @__PURE__ */ q.jsx("div", { onClick: () => s("inc"), children: /* @__PURE__ */ q.jsx(Jl, { className: "font_size_icon" }) })
+      /* @__PURE__ */ W.jsx("div", { className: "dropdown_gap" }),
+      /* @__PURE__ */ W.jsx("div", { className: "dropdown_header", children: "Font Size:" }),
+      /* @__PURE__ */ W.jsxs("div", { className: "dropdown_content", children: [
+        /* @__PURE__ */ W.jsx("div", { onClick: () => s("dec"), children: /* @__PURE__ */ W.jsx(Kl, { className: "font_size_icon" }) }),
+        /* @__PURE__ */ W.jsx("div", { className: "font_size_txt", children: "Aa" }),
+        /* @__PURE__ */ W.jsx("div", { onClick: () => s("inc"), children: /* @__PURE__ */ W.jsx(Jl, { className: "font_size_icon" }) })
       ] }),
-      /* @__PURE__ */ q.jsx("div", { className: "dropdown_gap" }),
-      /* @__PURE__ */ q.jsx("div", { className: "dropdown_header", children: "Font Family:" }),
-      /* @__PURE__ */ q.jsxs("div", { className: "dropdown_content", children: [
-        /* @__PURE__ */ q.jsx(
+      /* @__PURE__ */ W.jsx("div", { className: "dropdown_gap" }),
+      /* @__PURE__ */ W.jsx("div", { className: "dropdown_header", children: "Font Family:" }),
+      /* @__PURE__ */ W.jsxs("div", { className: "dropdown_content", children: [
+        /* @__PURE__ */ W.jsx(
           "div",
           {
             onClick: () => {
@@ -17286,7 +17286,7 @@ function th() {
             children: "Sans-Serif"
           }
         ),
-        /* @__PURE__ */ q.jsx(
+        /* @__PURE__ */ W.jsx(
           "div",
           {
             onClick: () => {
@@ -17300,10 +17300,10 @@ function th() {
           }
         )
       ] }),
-      /* @__PURE__ */ q.jsx("div", { className: "dropdown_gap" }),
-      /* @__PURE__ */ q.jsx("div", { className: "dropdown_header", children: "Scroll Direction:" }),
-      /* @__PURE__ */ q.jsxs("div", { className: "dropdown_content", children: [
-        /* @__PURE__ */ q.jsx(
+      /* @__PURE__ */ W.jsx("div", { className: "dropdown_gap" }),
+      /* @__PURE__ */ W.jsx("div", { className: "dropdown_header", children: "Scroll Direction:" }),
+      /* @__PURE__ */ W.jsxs("div", { className: "dropdown_content", children: [
+        /* @__PURE__ */ W.jsx(
           "div",
           {
             className: er(
@@ -17313,10 +17313,10 @@ function th() {
             onClick: () => {
               i({ direction: "horizontal" });
             },
-            children: /* @__PURE__ */ q.jsx(Ql, { className: "icon" })
+            children: /* @__PURE__ */ W.jsx(Ql, { className: "icon" })
           }
         ),
-        /* @__PURE__ */ q.jsx(
+        /* @__PURE__ */ W.jsx(
           "div",
           {
             className: er(
@@ -17326,7 +17326,7 @@ function th() {
             onClick: () => {
               i({ direction: "vertical" });
             },
-            children: /* @__PURE__ */ q.jsx(eh, { className: "icon" })
+            children: /* @__PURE__ */ W.jsx(eh, { className: "icon" })
           }
         )
       ] })
@@ -17334,7 +17334,7 @@ function th() {
   ] });
 }
 function rh(n) {
-  return /* @__PURE__ */ q.jsxs(
+  return /* @__PURE__ */ W.jsxs(
     "svg",
     {
       width: 24,
@@ -17344,7 +17344,7 @@ function rh(n) {
       xmlns: "http://www.w3.org/2000/svg",
       ...n,
       children: [
-        /* @__PURE__ */ q.jsx(
+        /* @__PURE__ */ W.jsx(
           "path",
           {
             d: "M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z",
@@ -17353,7 +17353,7 @@ function rh(n) {
             strokeLinejoin: "round"
           }
         ),
-        /* @__PURE__ */ q.jsx(
+        /* @__PURE__ */ W.jsx(
           "path",
           {
             d: "M20.9999 21L16.6499 16.65",
@@ -17367,7 +17367,7 @@ function rh(n) {
   );
 }
 function ih(n) {
-  return /* @__PURE__ */ q.jsxs(
+  return /* @__PURE__ */ W.jsxs(
     "svg",
     {
       width: 24,
@@ -17377,8 +17377,8 @@ function ih(n) {
       xmlns: "http://www.w3.org/2000/svg",
       ...n,
       children: [
-        /* @__PURE__ */ q.jsxs("g", { clipPath: "url(#clip0_2017_29)", children: [
-          /* @__PURE__ */ q.jsx(
+        /* @__PURE__ */ W.jsxs("g", { clipPath: "url(#clip0_2017_29)", children: [
+          /* @__PURE__ */ W.jsx(
             "path",
             {
               d: "M1.5 1.5L22.5 22.5",
@@ -17387,7 +17387,7 @@ function ih(n) {
               strokeLinejoin: "round"
             }
           ),
-          /* @__PURE__ */ q.jsx(
+          /* @__PURE__ */ W.jsx(
             "path",
             {
               d: "M1.5 22.5L22.5 1.5",
@@ -17397,7 +17397,7 @@ function ih(n) {
             }
           )
         ] }),
-        /* @__PURE__ */ q.jsx("defs", { children: /* @__PURE__ */ q.jsx("clipPath", { id: "clip0_2017_29", children: /* @__PURE__ */ q.jsx("rect", { width: 24, height: 24, fill: "white" }) }) })
+        /* @__PURE__ */ W.jsx("defs", { children: /* @__PURE__ */ W.jsx("clipPath", { id: "clip0_2017_29", children: /* @__PURE__ */ W.jsx("rect", { width: 24, height: 24, fill: "white" }) }) })
       ]
     }
   );
@@ -17506,7 +17506,7 @@ function ch(n, e) {
   };
 }
 function dh(n, e, t) {
-  var r = wn(jt({}), 2), i = r[0], s = r[1], a = ch(function() {
+  var r = wn(Pt({}), 2), i = r[0], s = r[1], a = ch(function() {
     s({});
   }, t).run;
   Kt(function() {
@@ -17647,79 +17647,79 @@ var ka = { exports: {} };
 var ph = ka.exports;
 const kt = /* @__PURE__ */ or(ph);
 var vh = function(n, e) {
-  var t = e || {}, r = t.onExit, i = t.onEnter, s = t.pageFullscreen, a = s === void 0 ? !1 : s, o = ah(a) || !a ? {} : a, u = o.className, h = u === void 0 ? "ahooks-page-fullscreen" : u, f = o.zIndex, c = f === void 0 ? 999999 : f, b = vi(r), m = vi(i), T = wn(jt(!1), 2), N = T[0], p = T[1], v = function(S) {
+  var t = e || {}, r = t.onExit, i = t.onEnter, s = t.pageFullscreen, a = s === void 0 ? !1 : s, o = ah(a) || !a ? {} : a, u = o.className, h = u === void 0 ? "ahooks-page-fullscreen" : u, f = o.zIndex, c = f === void 0 ? 999999 : f, w = vi(r), m = vi(i), S = wn(Pt(!1), 2), N = S[0], p = S[1], v = function(T) {
     var R, z;
-    S ? (R = m.current) === null || R === void 0 || R.call(m) : (z = b.current) === null || z === void 0 || z.call(b);
+    T ? (R = m.current) === null || R === void 0 || R.call(m) : (z = w.current) === null || z === void 0 || z.call(w);
   }, y = Xr(function() {
     if (kt.isEnabled) {
-      var S = Kr(n);
+      var T = Kr(n);
       if (!kt.element)
         v(!1), p(!1), kt.off("change", y);
       else {
-        var R = kt.element === S;
+        var R = kt.element === T;
         v(R), p(R);
       }
     }
-  }), A = function(S) {
+  }), A = function(T) {
     var R = Kr(n);
     if (R) {
       var z = document.getElementById(h);
-      S ? (R.classList.add(h), z || (z = document.createElement("style"), z.setAttribute("id", h), z.textContent = `
+      T ? (R.classList.add(h), z || (z = document.createElement("style"), z.setAttribute("id", h), z.textContent = `
           .`.concat(h, ` {
             position: fixed; left: 0; top: 0; right: 0; bottom: 0;
             width: 100% !important; height: 100% !important;
             z-index: `).concat(c, `;
-          }`), R.appendChild(z))) : (R.classList.remove(h), z && z.remove()), N !== S && (v(S), p(S));
+          }`), R.appendChild(z))) : (R.classList.remove(h), z && z.remove()), N !== T && (v(T), p(T));
     }
   }, k = function() {
-    var S = Kr(n);
-    if (S) {
+    var T = Kr(n);
+    if (T) {
       if (a) {
         A(!0);
         return;
       }
       if (kt.isEnabled)
         try {
-          kt.request(S), kt.on("change", y);
+          kt.request(T), kt.on("change", y);
         } catch (R) {
           console.error(R);
         }
     }
-  }, w = function() {
-    var S = Kr(n);
-    if (S) {
+  }, b = function() {
+    var T = Kr(n);
+    if (T) {
       if (a) {
         A(!1);
         return;
       }
-      kt.isEnabled && kt.element === S && kt.exit();
+      kt.isEnabled && kt.element === T && kt.exit();
     }
   }, C = function() {
-    N ? w() : k();
+    N ? b() : k();
   };
   return Ta(function() {
     kt.isEnabled && !a && kt.off("change", y);
   }), [N, {
     enterFullscreen: Xr(k),
-    exitFullscreen: Xr(w),
+    exitFullscreen: Xr(b),
     toggleFullscreen: Xr(C),
     isEnabled: kt.isEnabled
   }];
 };
 const gh = vh;
 function mh() {
-  const { book: n, rendition: e } = ar(), [t, r] = jt(!1), [i, s] = jt("");
+  const { book: n, rendition: e } = ar(), [t, r] = Pt(!1), [i, s] = Pt("");
   async function a(c) {
-    const b = n == null ? void 0 : n.spine, m = await Promise.all(
-      b.spineItems.map(async (T) => {
-        await T.load(n == null ? void 0 : n.load.bind(n));
-        const N = await T.find.bind(T, c)();
-        return await T.unload.bind(T)(), N;
+    const w = n == null ? void 0 : n.spine, m = await Promise.all(
+      w.spineItems.map(async (S) => {
+        await S.load(n == null ? void 0 : n.load.bind(n));
+        const N = await S.find.bind(S, c)();
+        return await S.unload.bind(S)(), N;
       })
     );
     return [].concat(...m);
   }
-  const [o, u] = jt(null);
+  const [o, u] = Pt(null);
   dh(
     () => {
       h();
@@ -17732,28 +17732,28 @@ function mh() {
       u(null);
       return;
     }
-    const b = (await a(i)).map((m) => {
-      var T;
+    const w = (await a(i)).map((m) => {
+      var S;
       return {
         ...m,
-        txt: (T = m == null ? void 0 : m.excerpt) == null ? void 0 : T.replace(i, `<span>${i}</span>`)
+        txt: (S = m == null ? void 0 : m.excerpt) == null ? void 0 : S.replace(i, `<span>${i}</span>`)
       };
     });
-    u(b);
+    u(w);
   }, { setting: f } = ar();
-  return /* @__PURE__ */ q.jsxs("div", { className: "r_epub_search_wrapper", children: [
-    /* @__PURE__ */ q.jsxs("div", { className: er("search_container", t && "active"), children: [
-      /* @__PURE__ */ q.jsx(
+  return /* @__PURE__ */ W.jsxs("div", { className: "r_epub_search_wrapper", children: [
+    /* @__PURE__ */ W.jsxs("div", { className: er("search_container", t && "active"), children: [
+      /* @__PURE__ */ W.jsx(
         "div",
         {
           onClick: () => {
             r(!0);
           },
-          children: /* @__PURE__ */ q.jsx(rh, { stroke: f.theme.txt })
+          children: /* @__PURE__ */ W.jsx(rh, { stroke: f.theme.txt })
         }
       ),
-      t && /* @__PURE__ */ q.jsxs("div", { className: "search_input_wrapper  ", children: [
-        /* @__PURE__ */ q.jsx(
+      t && /* @__PURE__ */ W.jsxs("div", { className: "search_input_wrapper  ", children: [
+        /* @__PURE__ */ W.jsx(
           "input",
           {
             type: "text",
@@ -17769,19 +17769,19 @@ function mh() {
             }
           }
         ),
-        /* @__PURE__ */ q.jsx(
+        /* @__PURE__ */ W.jsx(
           "div",
           {
             className: "icon_wrapper",
             onClick: () => {
               r(!1), u(null), s("");
             },
-            children: /* @__PURE__ */ q.jsx(ih, { stroke: f.theme.txt, className: "icon" })
+            children: /* @__PURE__ */ W.jsx(ih, { stroke: f.theme.txt, className: "icon" })
           }
         )
       ] })
     ] }),
-    o && /* @__PURE__ */ q.jsx("div", { className: "search_result_container", children: o.length > 0 ? o.map((c, b) => /* @__PURE__ */ q.jsx(
+    o && /* @__PURE__ */ W.jsx("div", { className: "search_result_container", children: o.length > 0 ? o.map((c, w) => /* @__PURE__ */ W.jsx(
       "div",
       {
         className: "search_result_item",
@@ -17790,12 +17790,12 @@ function mh() {
           e == null || e.display(c.cfi);
         }
       },
-      "dgs" + b
-    )) : /* @__PURE__ */ q.jsx("div", { className: "no_text ", children: "No result found" }) })
+      "dgs" + w
+    )) : /* @__PURE__ */ W.jsx("div", { className: "no_text ", children: "No result found" }) })
   ] });
 }
 function yh(n) {
-  return /* @__PURE__ */ q.jsxs(
+  return /* @__PURE__ */ W.jsxs(
     "svg",
     {
       width: 24,
@@ -17805,25 +17805,25 @@ function yh(n) {
       xmlns: "http://www.w3.org/2000/svg",
       ...n,
       children: [
-        /* @__PURE__ */ q.jsx(
+        /* @__PURE__ */ W.jsx(
           "path",
           {
             d: "M7.83333 2H3.16667C3.01343 1.99991 2.86169 2.03003 2.7201 2.08863C2.57851 2.14723 2.44987 2.23316 2.34152 2.34152C2.23316 2.44987 2.14723 2.57851 2.08863 2.7201C2.03003 2.86169 1.99991 3.01343 2 3.16667V7.83333C2 8.14275 2.12292 8.4395 2.34171 8.65829C2.5605 8.87708 2.85725 9 3.16667 9C3.47609 9 3.77283 8.87708 3.99162 8.65829C4.21042 8.4395 4.33333 8.14275 4.33333 7.83333V4.33333H7.83333C8.14275 4.33333 8.4395 4.21042 8.65829 3.99162C8.87708 3.77283 9 3.47609 9 3.16667C9 2.85725 8.87708 2.5605 8.65829 2.34171C8.4395 2.12292 8.14275 2 7.83333 2Z"
           }
         ),
-        /* @__PURE__ */ q.jsx(
+        /* @__PURE__ */ W.jsx(
           "path",
           {
             d: "M20.6667 2H15.3333C14.9797 2 14.6406 2.12292 14.3905 2.34171C14.1405 2.5605 14 2.85725 14 3.16667C14 3.47609 14.1405 3.77283 14.3905 3.99162C14.6406 4.21042 14.9797 4.33333 15.3333 4.33333H19.3333V7.83333C19.3333 8.14275 19.4738 8.4395 19.7239 8.65829C19.9739 8.87708 20.313 9 20.6667 9C21.0203 9 21.3594 8.87708 21.6095 8.65829C21.8595 8.4395 22 8.14275 22 7.83333V3.16667C22.0001 3.01343 21.9657 2.86169 21.8987 2.7201C21.8317 2.57851 21.7335 2.44987 21.6097 2.34152C21.4859 2.23316 21.3388 2.14723 21.177 2.08863C21.0152 2.03003 20.8418 1.99991 20.6667 2Z"
           }
         ),
-        /* @__PURE__ */ q.jsx(
+        /* @__PURE__ */ W.jsx(
           "path",
           {
             d: "M7.83333 19.3333H4.33333V15.3333C4.33333 14.9797 4.21042 14.6406 3.99162 14.3905C3.77283 14.1405 3.47609 14 3.16667 14C2.85725 14 2.5605 14.1405 2.34171 14.3905C2.12292 14.6406 2 14.9797 2 15.3333V20.6667C1.99991 20.8418 2.03003 21.0152 2.08863 21.177C2.14723 21.3388 2.23316 21.4859 2.34152 21.6097C2.44987 21.7335 2.57851 21.8317 2.7201 21.8987C2.86169 21.9657 3.01343 22.0001 3.16667 22H7.83333C8.14275 22 8.4395 21.8595 8.65829 21.6095C8.87708 21.3594 9 21.0203 9 20.6667C9 20.313 8.87708 19.9739 8.65829 19.7239C8.4395 19.4738 8.14275 19.3333 7.83333 19.3333Z"
           }
         ),
-        /* @__PURE__ */ q.jsx(
+        /* @__PURE__ */ W.jsx(
           "path",
           {
             d: "M20.6667 14C20.4915 13.9999 20.3181 14.0343 20.1563 14.1013C19.9945 14.1683 19.8475 14.2665 19.7236 14.3903C19.5998 14.5141 19.5016 14.6612 19.4346 14.823C19.3677 14.9848 19.3332 15.1582 19.3333 15.3333V19.3333H15.3333C14.9797 19.3333 14.6406 19.4738 14.3905 19.7239C14.1405 19.9739 14 20.313 14 20.6667C14 21.0203 14.1405 21.3594 14.3905 21.6095C14.6406 21.8595 14.9797 22 15.3333 22H20.6667C20.8418 22.0001 21.0152 21.9657 21.177 21.8987C21.3388 21.8317 21.4859 21.7335 21.6097 21.6097C21.7335 21.4859 21.8317 21.3388 21.8987 21.177C21.9657 21.0152 22.0001 20.8418 22 20.6667V15.3333C22.0001 15.1582 21.9657 14.9848 21.8987 14.823C21.8317 14.6612 21.7335 14.5141 21.6097 14.3903C21.4859 14.2665 21.3388 14.1683 21.177 14.1013C21.0152 14.0343 20.8418 13.9999 20.6667 14Z"
@@ -17834,7 +17834,7 @@ function yh(n) {
   );
 }
 function bh(n) {
-  return /* @__PURE__ */ q.jsxs(
+  return /* @__PURE__ */ W.jsxs(
     "svg",
     {
       width: 24,
@@ -17844,25 +17844,25 @@ function bh(n) {
       xmlns: "http://www.w3.org/2000/svg",
       ...n,
       children: [
-        /* @__PURE__ */ q.jsx(
+        /* @__PURE__ */ W.jsx(
           "path",
           {
             d: "M7.83333 14H3.16667C2.85725 14 2.5605 14.1405 2.34171 14.3905C2.12292 14.6406 2 14.9797 2 15.3333C2 15.687 2.12292 16.0261 2.34171 16.2761C2.5605 16.5262 2.85725 16.6667 3.16667 16.6667H6.66667V20.6667C6.66667 21.0203 6.78958 21.3594 7.00838 21.6095C7.22717 21.8595 7.52391 22 7.83333 22C8.14275 22 8.4395 21.8595 8.65829 21.6095C8.87708 21.3594 9 21.0203 9 20.6667V15.3333C9.00009 15.1582 8.96997 14.9848 8.91137 14.823C8.85277 14.6612 8.76684 14.5141 8.65849 14.3903C8.55013 14.2665 8.42149 14.1683 8.2799 14.1013C8.13831 14.0343 7.98657 13.9999 7.83333 14Z"
           }
         ),
-        /* @__PURE__ */ q.jsx(
+        /* @__PURE__ */ W.jsx(
           "path",
           {
             d: "M20.6667 14H15.3333C15.1582 13.9999 14.9848 14.0343 14.823 14.1013C14.6612 14.1683 14.5141 14.2665 14.3903 14.3903C14.2665 14.5141 14.1683 14.6612 14.1013 14.823C14.0343 14.9848 13.9999 15.1582 14 15.3333V20.6667C14 21.0203 14.1405 21.3594 14.3905 21.6095C14.6406 21.8595 14.9797 22 15.3333 22C15.687 22 16.0261 21.8595 16.2761 21.6095C16.5262 21.3594 16.6667 21.0203 16.6667 20.6667V16.6667H20.6667C21.0203 16.6667 21.3594 16.5262 21.6095 16.2761C21.8595 16.0261 22 15.687 22 15.3333C22 14.9797 21.8595 14.6406 21.6095 14.3905C21.3594 14.1405 21.0203 14 20.6667 14Z"
           }
         ),
-        /* @__PURE__ */ q.jsx(
+        /* @__PURE__ */ W.jsx(
           "path",
           {
             d: "M15.3333 9H20.6667C21.0203 9 21.3594 8.87708 21.6095 8.65829C21.8595 8.4395 22 8.14275 22 7.83333C22 7.52391 21.8595 7.22717 21.6095 7.00838C21.3594 6.78958 21.0203 6.66667 20.6667 6.66667H16.6667V3.16667C16.6667 2.85725 16.5262 2.5605 16.2761 2.34171C16.0261 2.12292 15.687 2 15.3333 2C14.9797 2 14.6406 2.12292 14.3905 2.34171C14.1405 2.5605 14 2.85725 14 3.16667V7.83333C13.9999 7.98657 14.0343 8.13831 14.1013 8.2799C14.1683 8.42149 14.2665 8.55013 14.3903 8.65849C14.5141 8.76684 14.6612 8.85277 14.823 8.91137C14.9848 8.96997 15.1582 9.00009 15.3333 9Z"
           }
         ),
-        /* @__PURE__ */ q.jsx(
+        /* @__PURE__ */ W.jsx(
           "path",
           {
             d: "M7.83333 2C7.6801 1.9999 7.52835 2.03432 7.38677 2.10129C7.24518 2.16826 7.11653 2.26647 7.00818 2.3903C6.89983 2.51413 6.8139 2.66116 6.7553 2.82297C6.6967 2.98478 6.66658 3.15821 6.66667 3.33333V7.33333H3.16667C2.85725 7.33333 2.5605 7.47381 2.34171 7.72386C2.12292 7.97391 2 8.31304 2 8.66667C2 9.02029 2.12292 9.35943 2.34171 9.60947C2.5605 9.85952 2.85725 10 3.16667 10H7.83333C7.98657 10.0001 8.13831 9.96568 8.2799 9.89871C8.42149 9.83174 8.55013 9.73353 8.65849 9.6097C8.76684 9.48586 8.85277 9.33884 8.91137 9.17703C8.96997 9.01522 9.00009 8.84179 9 8.66667V3.33333C9.00009 3.15821 8.96997 2.98478 8.91137 2.82297C8.85277 2.66116 8.76684 2.51413 8.65849 2.3903C8.55013 2.26647 8.42149 2.16826 8.2799 2.10129C8.13831 2.03432 7.98657 1.9999 7.83333 2Z"
@@ -17874,7 +17874,7 @@ function bh(n) {
 }
 function wh() {
   const [n, { toggleFullscreen: e }] = gh(document.body), { setting: t } = ar();
-  return /* @__PURE__ */ q.jsx("div", { onClick: e, children: n ? /* @__PURE__ */ q.jsx(bh, { fill: t.theme.txt }) : /* @__PURE__ */ q.jsx(yh, { fill: t.theme.txt }) });
+  return /* @__PURE__ */ W.jsx("div", { onClick: e, children: n ? /* @__PURE__ */ W.jsx(bh, { fill: t.theme.txt }) : /* @__PURE__ */ W.jsx(yh, { fill: t.theme.txt }) });
 }
 function _h(n, e, t) {
   const r = (t == null ? void 0 : t.returnFunction) || !1, i = e[n], s = Object.keys(e).filter((o) => o.includes(",")), a = s.flatMap((o) => o.split(",")).map((o) => o.trim());
@@ -17915,72 +17915,72 @@ function xh() {
     onNewHightlight: i,
     onUpdateHighlight: s,
     onShareQuote: a
-  } = ar(), [o, u] = jt(null), h = Ht(null), [f, c] = jt("");
+  } = ar(), [o, u] = Pt(null), h = Ht(null), [f, c] = Pt("");
   Kt(() => {
     const k = n == null ? void 0 : n.annotations;
-    Object.values((k == null ? void 0 : k._annotations) || {}).forEach((w) => {
-      n == null || n.annotations.remove(w.cfiRange, w.type);
-    }), t.forEach((w) => {
+    Object.values((k == null ? void 0 : k._annotations) || {}).forEach((b) => {
+      n == null || n.annotations.remove(b.cfiRange, b.type);
+    }), t.forEach((b) => {
       n == null || n.annotations.highlight(
-        w.cfi,
-        { txt: w.txt, cfi: w.cfi, note: w.noteTxt || "" },
+        b.cfi,
+        { txt: b.txt, cfi: b.cfi, note: b.noteTxt || "" },
         (C) => {
           var z, M, Y, Z;
-          const S = us(C.target), R = (M = (z = C.target) == null ? void 0 : z.dataset) == null ? void 0 : M.epubcfi;
+          const T = us(C.target), R = (M = (z = C.target) == null ? void 0 : z.dataset) == null ? void 0 : M.epubcfi;
           if (R) {
             h.current = R;
             const te = (Z = (Y = C.target) == null ? void 0 : Y.dataset) == null ? void 0 : Z.note;
             console.log(te), te ? (c(te), u({
-              ...S,
-              top: Math.max(S.top - 114, 0),
-              left: Math.max(S.left + 23.5, 0),
+              ...T,
+              top: Math.max(T.top - 114, 0),
+              left: Math.max(T.left + 23.5, 0),
               type: "update-note"
-            })) : u({ ...S, type: "update-highlight" }), b();
+            })) : u({ ...T, type: "update-highlight" }), w();
           }
         }
-      ), w.noteTxt && (n == null || n.annotations.mark(
-        w.cfi,
-        { txt: w.txt, cfi: w.cfi, noteTxt: f },
+      ), b.noteTxt && (n == null || n.annotations.mark(
+        b.cfi,
+        { txt: b.txt, cfi: b.cfi, noteTxt: f },
         (C) => {
           console.log(C);
         }
       ));
     });
   }, [t, n]);
-  const b = () => {
+  const w = () => {
     const k = () => {
       u(null), c(""), n == null || n.off("mouseup", k);
     };
     n == null || n.on("mouseup", k);
-    const w = n == null ? void 0 : n.views(), C = w == null ? void 0 : w.container, S = () => {
-      u(null), c(""), C == null || C.removeEventListener("scroll", S);
+    const b = n == null ? void 0 : n.views(), C = b == null ? void 0 : b.container, T = () => {
+      u(null), c(""), C == null || C.removeEventListener("scroll", T);
     };
-    C == null || C.addEventListener("scroll", S);
+    C == null || C.addEventListener("scroll", T);
   }, m = () => {
-    var w, C;
+    var b, C;
     const k = n == null ? void 0 : n.getContents();
-    Array.isArray(k) && ((C = (w = k == null ? void 0 : k[0].window) == null ? void 0 : w.getSelection()) == null || C.removeAllRanges());
+    Array.isArray(k) && ((C = (b = k == null ? void 0 : k[0].window) == null ? void 0 : b.getSelection()) == null || C.removeAllRanges());
   };
-  Eh((k, w) => {
+  Eh((k, b) => {
     var M;
-    const C = (M = w.document.defaultView) == null ? void 0 : M.frameElement, S = w.window.getSelection(), R = S == null ? void 0 : S.getRangeAt(0), z = us(R, C);
-    h.current = k, u({ ...z, type: "add-highlight" }), b();
+    const C = (M = b.document.defaultView) == null ? void 0 : M.frameElement, T = b.window.getSelection(), R = T == null ? void 0 : T.getRangeAt(0), z = us(R, C);
+    h.current = k, u({ ...z, type: "add-highlight" }), w();
   });
-  const T = async () => {
-    var w;
+  const S = async () => {
+    var b;
     const k = h.current;
     if (k) {
-      const C = await ((w = await (e == null ? void 0 : e.getRange(k))) == null ? void 0 : w.toString()) || "";
+      const C = await ((b = await (e == null ? void 0 : e.getRange(k))) == null ? void 0 : b.toString()) || "";
       i == null || i({ txt: C, cfi: k }), m(), u(null), h.current = null;
     }
   }, N = () => {
     const k = h.current;
     k && (r == null || r(k), m(), u(null), h.current = null);
   }, p = async () => {
-    var w;
+    var b;
     const k = h.current;
     if (f && k) {
-      const C = await ((w = await (e == null ? void 0 : e.getRange(k))) == null ? void 0 : w.toString()) || "";
+      const C = await ((b = await (e == null ? void 0 : e.getRange(k))) == null ? void 0 : b.toString()) || "";
       i == null || i({ txt: C, cfi: k, noteTxt: f }), m(), u(null), h.current = null;
     }
   }, v = () => {
@@ -17991,48 +17991,48 @@ function xh() {
       left: Math.max(o.left + 23.5, 0)
     });
   }, y = async () => {
-    var w;
+    var b;
     const k = h.current;
     if (k) {
-      const C = await ((w = await (e == null ? void 0 : e.getRange(k))) == null ? void 0 : w.toString()) || "";
+      const C = await ((b = await (e == null ? void 0 : e.getRange(k))) == null ? void 0 : b.toString()) || "";
       a == null || a(C), m(), u(null), h.current = null;
     }
   }, A = async () => {
     const k = h.current;
     f && k && (s == null || s(k, f), m(), u(null), h.current = null);
   };
-  return /* @__PURE__ */ q.jsxs("div", { className: "r_epub_popup_wrapper", children: [
-    o && o.type == "add-highlight" && /* @__PURE__ */ q.jsx(
+  return /* @__PURE__ */ W.jsxs("div", { className: "r_epub_popup_wrapper", children: [
+    o && o.type == "add-highlight" && /* @__PURE__ */ W.jsx(
       "div",
       {
         className: "popup",
         style: { top: o == null ? void 0 : o.top, left: o == null ? void 0 : o.left },
-        children: /* @__PURE__ */ q.jsxs("div", { className: "popup_btn_group ", children: [
-          /* @__PURE__ */ q.jsx("button", { onClick: T, className: "popup_btn", children: "Highlight" }),
-          /* @__PURE__ */ q.jsx("button", { onClick: v, className: "popup_btn", children: "Add Note" }),
-          /* @__PURE__ */ q.jsx("button", { onClick: y, className: "popup_btn", children: "Share Quote" })
+        children: /* @__PURE__ */ W.jsxs("div", { className: "popup_btn_group ", children: [
+          /* @__PURE__ */ W.jsx("button", { onClick: S, className: "popup_btn", children: "Highlight" }),
+          /* @__PURE__ */ W.jsx("button", { onClick: v, className: "popup_btn", children: "Add Note" }),
+          /* @__PURE__ */ W.jsx("button", { onClick: y, className: "popup_btn", children: "Share Quote" })
         ] })
       }
     ),
-    o && o.type === "update-highlight" && /* @__PURE__ */ q.jsx(
+    o && o.type === "update-highlight" && /* @__PURE__ */ W.jsx(
       "div",
       {
         className: "popup",
         style: { top: o == null ? void 0 : o.top, left: o == null ? void 0 : o.left },
-        children: /* @__PURE__ */ q.jsxs("div", { className: "popup_btn_group", children: [
-          /* @__PURE__ */ q.jsx("button", { onClick: N, className: "popup_btn", children: "Delete" }),
-          /* @__PURE__ */ q.jsx("button", { onClick: v, className: "popup_btn", children: "Add Note" }),
-          /* @__PURE__ */ q.jsx("button", { onClick: y, className: "popup_btn", children: "Share Quote" })
+        children: /* @__PURE__ */ W.jsxs("div", { className: "popup_btn_group", children: [
+          /* @__PURE__ */ W.jsx("button", { onClick: N, className: "popup_btn", children: "Delete" }),
+          /* @__PURE__ */ W.jsx("button", { onClick: v, className: "popup_btn", children: "Add Note" }),
+          /* @__PURE__ */ W.jsx("button", { onClick: y, className: "popup_btn", children: "Share Quote" })
         ] })
       }
     ),
-    o && o.type === "add-note" && /* @__PURE__ */ q.jsx(
+    o && o.type === "add-note" && /* @__PURE__ */ W.jsx(
       "div",
       {
         className: "popup",
         style: { top: o == null ? void 0 : o.top, left: o == null ? void 0 : o.left },
-        children: /* @__PURE__ */ q.jsxs("div", { className: "note_popup", children: [
-          /* @__PURE__ */ q.jsx(
+        children: /* @__PURE__ */ W.jsxs("div", { className: "note_popup", children: [
+          /* @__PURE__ */ W.jsx(
             "textarea",
             {
               placeholder: "write something here",
@@ -18043,17 +18043,17 @@ function xh() {
               }
             }
           ),
-          /* @__PURE__ */ q.jsx("div", { className: "btn_wrap", children: /* @__PURE__ */ q.jsx("button", { onClick: p, className: "btn", children: "Add" }) })
+          /* @__PURE__ */ W.jsx("div", { className: "btn_wrap", children: /* @__PURE__ */ W.jsx("button", { onClick: p, className: "btn", children: "Add" }) })
         ] })
       }
     ),
-    o && o.type === "update-note" && /* @__PURE__ */ q.jsx(
+    o && o.type === "update-note" && /* @__PURE__ */ W.jsx(
       "div",
       {
         style: { top: o == null ? void 0 : o.top, left: o == null ? void 0 : o.left },
         className: "popup",
-        children: /* @__PURE__ */ q.jsxs("div", { className: "note_popup", children: [
-          /* @__PURE__ */ q.jsx(
+        children: /* @__PURE__ */ W.jsxs("div", { className: "note_popup", children: [
+          /* @__PURE__ */ W.jsx(
             "textarea",
             {
               placeholder: "write something here",
@@ -18064,104 +18064,146 @@ function xh() {
               }
             }
           ),
-          /* @__PURE__ */ q.jsxs("div", { className: "btn_wrap", children: [
-            /* @__PURE__ */ q.jsx("button", { onClick: N, className: "btn delete", children: "Delete" }),
-            /* @__PURE__ */ q.jsx("button", { onClick: A, className: "btn", children: "Update" })
+          /* @__PURE__ */ W.jsxs("div", { className: "btn_wrap", children: [
+            /* @__PURE__ */ W.jsx("button", { onClick: N, className: "btn delete", children: "Delete" }),
+            /* @__PURE__ */ W.jsx("button", { onClick: A, className: "btn", children: "Update" })
           ] })
         ] })
       }
     )
   ] });
 }
-function Sh({ epubSrc: n, highlights: e, ...t }) {
-  const r = Ht(null), i = Ht(null), s = Ht(null), [a, o] = jt(null), [u, h] = Ma(Zl, {
+const Ch = (n) => /* @__PURE__ */ W.jsx(
+  "svg",
+  {
+    xmlns: "http://www.w3.org/2000/svg",
+    style: {
+      display: "block",
+      shapeRendering: "auto"
+    },
+    width: 40,
+    height: 40,
+    viewBox: "0 0 100 100",
+    preserveAspectRatio: "xMidYMid",
+    ...n,
+    children: /* @__PURE__ */ W.jsx(
+      "circle",
+      {
+        cx: 50,
+        cy: 50,
+        r: 32,
+        strokeWidth: 8,
+        stroke: "#1875b9",
+        strokeDasharray: "50.26548245743669 50.26548245743669",
+        fill: "none",
+        strokeLinecap: "round",
+        children: /* @__PURE__ */ W.jsx(
+          "animateTransform",
+          {
+            attributeName: "transform",
+            type: "rotate",
+            repeatCount: "indefinite",
+            dur: "1s",
+            keyTimes: "0;1",
+            values: "0 50 50;360 50 50"
+          }
+        )
+      }
+    )
+  }
+);
+function Th({ epubSrc: n, highlights: e, ...t }) {
+  const r = Ht(null), i = Ht(null), s = Ht(null), [a, o] = Pt(null), [u, h] = Pt(!0), [f, c] = Ma(Zl, {
     theme: Sa[0],
     fontSize: 100,
     fontFamily: "sans-serif",
     direction: "horizontal"
   });
   Kt(() => {
-    var N, p;
-    const b = ur(n);
-    s.current = b;
-    const m = r.current;
-    i.current = b.renderTo(m, {
+    var v, y;
+    const S = ur(n);
+    s.current = S;
+    const N = r.current;
+    i.current = S.renderTo(N, {
       width: "100%",
       height: "100%",
-      ...Ch(u.direction)
-    }), (N = i.current) == null || N.display(), b.loaded.navigation.then(function(v) {
-      o(v.toc);
+      ...Dh(f.direction)
+    }), (v = i.current) == null || v.display(), S.loaded.navigation.then(function(A) {
+      o(A.toc);
     });
-    const T = () => {
-      var v;
-      return (v = i.current) == null ? void 0 : v.views().forEach((y) => y.pane ? y.pane.render() : null);
+    const p = () => {
+      var A;
+      return (A = i.current) == null ? void 0 : A.views().forEach((k) => k.pane ? k.pane.render() : null);
     };
-    return (p = i.current) == null || p.on("rendered", () => {
-      T();
+    return (y = i.current) == null || y.on("rendered", () => {
+      p();
+    }), S.ready.then(() => {
+      h(!1);
     }), () => {
-      b.destroy();
+      S.destroy();
     };
-  }, [n, u.direction]);
-  const f = () => {
-    var b;
-    (b = i.current) == null || b.next();
-  }, c = () => {
-    var b;
-    (b = i.current) == null || b.prev();
+  }, [n, f.direction]);
+  const w = () => {
+    var S;
+    (S = i.current) == null || S.next();
+  }, m = () => {
+    var S;
+    (S = i.current) == null || S.prev();
   };
-  return /* @__PURE__ */ q.jsxs(
+  return /* @__PURE__ */ W.jsxs(
     Gl,
     {
-      state: [u, h],
+      state: [f, c],
       rendition: i.current,
       book: s.current,
       highlights: e,
       ...t,
       children: [
-        /* @__PURE__ */ q.jsxs(
+        /* @__PURE__ */ W.jsxs(
           "div",
           {
-            style: { backgroundColor: u.theme.bg },
+            style: { backgroundColor: f.theme.bg },
             className: "r_epub_root_wrapper",
             children: [
-              /* @__PURE__ */ q.jsx(
+              /* @__PURE__ */ W.jsx(
                 "div",
                 {
                   className: "r_epub_header_wrapper",
-                  style: { backgroundColor: u.theme.bg },
-                  children: /* @__PURE__ */ q.jsxs("div", { className: "r_epub_header_container r_epub_container", children: [
-                    /* @__PURE__ */ q.jsx(Yl, { navItem: a, rendition: i.current }),
-                    /* @__PURE__ */ q.jsxs("div", { className: "r_epub_header_right ", children: [
-                      /* @__PURE__ */ q.jsx(mh, {}),
-                      /* @__PURE__ */ q.jsx(wh, {}),
-                      /* @__PURE__ */ q.jsx(th, {})
+                  style: { backgroundColor: f.theme.bg },
+                  children: /* @__PURE__ */ W.jsxs("div", { className: "r_epub_header_container r_epub_container", children: [
+                    /* @__PURE__ */ W.jsx(Yl, { navItem: a, rendition: i.current }),
+                    /* @__PURE__ */ W.jsxs("div", { className: "r_epub_header_right ", children: [
+                      /* @__PURE__ */ W.jsx(mh, {}),
+                      /* @__PURE__ */ W.jsx(wh, {}),
+                      /* @__PURE__ */ W.jsx(th, {})
                     ] })
                   ] })
                 }
               ),
-              /* @__PURE__ */ q.jsx("div", { className: "r_epub_main_wrapper r_epub_container", children: /* @__PURE__ */ q.jsxs("div", { className: "r_epub_main_container", children: [
-                /* @__PURE__ */ q.jsx(
+              /* @__PURE__ */ W.jsx("div", { className: "r_epub_main_wrapper r_epub_container", children: /* @__PURE__ */ W.jsxs("div", { className: "r_epub_main_container", children: [
+                /* @__PURE__ */ W.jsx(
                   "div",
                   {
-                    style: { backgroundColor: u.theme.container },
+                    style: { backgroundColor: f.theme.container },
                     className: "r_epub_viewer ",
                     ref: r
                   }
                 ),
-                u.direction === "horizontal" && /* @__PURE__ */ q.jsxs(q.Fragment, { children: [
-                  /* @__PURE__ */ q.jsx("div", { onClick: f, className: "r_epub_next_btn", children: /* @__PURE__ */ q.jsx(ss, { fill: u.theme.txt, className: "icon" }) }),
-                  /* @__PURE__ */ q.jsx("div", { onClick: c, className: "r_epub_prev_btn", children: /* @__PURE__ */ q.jsx(ss, { fill: u.theme.txt, className: "icon" }) })
-                ] })
+                f.direction === "horizontal" && /* @__PURE__ */ W.jsxs(W.Fragment, { children: [
+                  /* @__PURE__ */ W.jsx("div", { onClick: w, className: "r_epub_next_btn", children: /* @__PURE__ */ W.jsx(ss, { fill: f.theme.txt, className: "icon" }) }),
+                  /* @__PURE__ */ W.jsx("div", { onClick: m, className: "r_epub_prev_btn", children: /* @__PURE__ */ W.jsx(ss, { fill: f.theme.txt, className: "icon" }) })
+                ] }),
+                u && /* @__PURE__ */ W.jsx("div", { className: "loading_wrapper", children: /* @__PURE__ */ W.jsx(Ch, {}) })
               ] }) })
             ]
           }
         ),
-        /* @__PURE__ */ q.jsx(xh, {})
+        /* @__PURE__ */ W.jsx(xh, {})
       ]
     }
   );
 }
-const Ch = (n) => _h(n, {
+const Dh = (n) => _h(n, {
   vertical: {
     manager: "continuous",
     flow: "scrolled-doc",
@@ -18170,5 +18212,5 @@ const Ch = (n) => _h(n, {
   "": {}
 });
 export {
-  Sh as default
+  Th as default
 };
