@@ -17876,11 +17876,11 @@ function wh() {
   const [n, { toggleFullscreen: e }] = Na(document.body), { setting: t } = ar();
   return /* @__PURE__ */ W.jsx("div", { onClick: e, children: n ? /* @__PURE__ */ W.jsx(Oa, { fill: t.theme.txt }) : /* @__PURE__ */ W.jsx(Ra, { fill: t.theme.txt }) });
 }
-function Th() {
+function _h() {
   const [n, { toggleFullscreen: e }] = Na(document.body);
   return /* @__PURE__ */ W.jsx("div", { onClick: e, children: n ? /* @__PURE__ */ W.jsx(Oa, { fill: "#333" }) : /* @__PURE__ */ W.jsx(Ra, { fill: "#333" }) });
 }
-function _h(n, e, t) {
+function Eh(n, e, t) {
   const r = (t == null ? void 0 : t.returnFunction) || !1, i = e[n], s = Object.keys(e).filter((o) => o.includes(",")), a = s.flatMap((o) => o.split(",")).map((o) => o.trim());
   if (i)
     return typeof i == "function" && !r ? i() : i;
@@ -17893,7 +17893,7 @@ function _h(n, e, t) {
     return typeof o == "function" && !r ? o() : o;
   }
 }
-function Eh(n) {
+function xh(n) {
   const { rendition: e } = ar();
   Kt(() => {
     let t = !1;
@@ -17910,7 +17910,7 @@ const us = (n, e) => {
   const t = n.getBoundingClientRect(), r = e ? e.getBoundingClientRect() : { left: 0, top: 0 }, i = t.left + r.left + (t.width - 297) / 2, s = t.right + r.left, a = t.top + r.top - 34, o = t.bottom + r.top;
   return { left: i, right: s, top: a, bottom: o };
 };
-function xh() {
+function Ch() {
   const {
     rendition: n,
     book: e,
@@ -17965,7 +17965,7 @@ function xh() {
     const k = n == null ? void 0 : n.getContents();
     Array.isArray(k) && ((C = (b = k == null ? void 0 : k[0].window) == null ? void 0 : b.getSelection()) == null || C.removeAllRanges());
   };
-  Eh((k, b) => {
+  xh((k, b) => {
     var M;
     const C = (M = b.document.defaultView) == null ? void 0 : M.frameElement, T = b.window.getSelection(), R = T == null ? void 0 : T.getRangeAt(0), z = us(R, C);
     h.current = k, u({ ...z, type: "add-highlight" }), w();
@@ -18077,7 +18077,7 @@ function xh() {
     )
   ] });
 }
-const Ch = (n) => /* @__PURE__ */ W.jsx(
+const Dh = (n) => /* @__PURE__ */ W.jsx(
   "svg",
   {
     xmlns: "http://www.w3.org/2000/svg",
@@ -18131,7 +18131,7 @@ function kh({ epubSrc: n, highlights: e, ...t }) {
     i.current = S.renderTo(N, {
       width: "100%",
       height: "100%",
-      ...Dh(f.direction)
+      ...Ah(f.direction)
     }), (v = i.current) == null || v.display(), S.loaded.navigation.then(function(A) {
       o(A.toc);
     });
@@ -18197,17 +18197,17 @@ function kh({ epubSrc: n, highlights: e, ...t }) {
                   /* @__PURE__ */ W.jsx("div", { onClick: w, className: "r_epub_next_btn", children: /* @__PURE__ */ W.jsx(ss, { fill: f.theme.txt, className: "icon" }) }),
                   /* @__PURE__ */ W.jsx("div", { onClick: m, className: "r_epub_prev_btn", children: /* @__PURE__ */ W.jsx(ss, { fill: f.theme.txt, className: "icon" }) })
                 ] }),
-                u && /* @__PURE__ */ W.jsx("div", { className: "loading_wrapper", children: /* @__PURE__ */ W.jsx(Ch, {}) })
+                u && /* @__PURE__ */ W.jsx("div", { className: "loading_wrapper", children: /* @__PURE__ */ W.jsx(Dh, {}) })
               ] }) })
             ]
           }
         ),
-        /* @__PURE__ */ W.jsx(xh, {})
+        /* @__PURE__ */ W.jsx(Ch, {})
       ]
     }
   );
 }
-const Dh = (n) => _h(n, {
+const Ah = (n) => Eh(n, {
   vertical: {
     manager: "continuous",
     flow: "scrolled-doc",
@@ -18215,7 +18215,8 @@ const Dh = (n) => _h(n, {
   },
   "": {}
 });
+const Nh = _h;
 export {
-  Th as FullscreenButtonShare,
+  Nh as FullscreenButton,
   kh as default
 };
