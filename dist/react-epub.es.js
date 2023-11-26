@@ -18212,5 +18212,6 @@ const Dh = (n) => _h(n, {
   "": {}
 });
 export {
+  wh as FullscreenButton,
   Th as default
 };
