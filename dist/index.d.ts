@@ -1,5 +1,4 @@
 import EpubReader from "./EpubReader";
-export default EpubReader;
 import FullscreenButton from "./components/FullscreenButton";
-export { FullscreenButton };
+export { FullscreenButton, EpubReader };
 //# sourceMappingURL=index.d.ts.map
