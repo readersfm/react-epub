@@ -18228,8 +18228,8 @@ function Sh({
 }
 function Th({ navItem: n, rendition: e, onBackClick: t, ...r }) {
   const { setting: i } = Jt();
-  return /* @__PURE__ */ z.jsxs("div", { className: "flex items-center gap-5", children: [
-    /* @__PURE__ */ z.jsx("div", { onClick: t, className: "cursor-pointer", children: /* @__PURE__ */ z.jsx(Dh, { fill: i.theme.txt }) }),
+  return /* @__PURE__ */ z.jsxs("div", { className: "r_epub_header_left", children: [
+    /* @__PURE__ */ z.jsx("div", { onClick: t, className: "cpp", children: /* @__PURE__ */ z.jsx(Dh, { fill: i.theme.txt }) }),
     /* @__PURE__ */ z.jsx(Ch, { navItem: n, rendition: e }),
     /* @__PURE__ */ z.jsx("div", { children: /* @__PURE__ */ z.jsx(Sh, { ...r }) })
   ] });
@@ -18313,6 +18313,7 @@ function Oh({
                         onChapterClick: a
                       }
                     ),
+                    /* @__PURE__ */ z.jsx("div", { children: t }),
                     /* @__PURE__ */ z.jsxs("div", { className: "r_epub_header_right ", children: [
                       /* @__PURE__ */ z.jsx(vh, {}),
                       /* @__PURE__ */ z.jsx(yh, {}),
