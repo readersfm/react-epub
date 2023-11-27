@@ -1,12 +1,14 @@
 export type ItemType = {
-    chapterName: string;
-    fileSrc: string;
+    id: number;
+    name: string;
+    pdf_url: string;
+    book_type: string;
 };
 type Props = {
-    chapterItem?: ItemType[] | null;
-    activeFileSrc?: string;
-    onChapterClick?: (v: ItemType) => any;
+    chapters?: ItemType[] | null;
+    activeChapter?: string | number;
+    onChapterSelect?: (v: ItemType) => any;
 };
-declare function FileChapterMenu({ chapterItem, activeFileSrc, onChapterClick, }: Props): import("react/jsx-runtime").JSX.Element;
+declare function FileChapterMenu({ chapters, activeChapter, onChapterSelect }: Props): import("react/jsx-runtime").JSX.Element | null;
 export default FileChapterMenu;
 //# sourceMappingURL=FileChapterMenu.d.ts.map

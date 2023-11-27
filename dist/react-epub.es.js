@@ -18187,11 +18187,7 @@ function Ah(n) {
     }
   );
 }
-function Sh({
-  chapterItem: n,
-  activeFileSrc: e,
-  onChapterClick: t
-}) {
+function Sh({ chapters: n, activeChapter: e, onChapterSelect: t }) {
   const [r, i] = Lt(!1), s = wn(() => {
     i(!1);
   });
@@ -18199,7 +18195,7 @@ function Sh({
     i(!1);
   });
   const { setting: a } = Jt();
-  return /* @__PURE__ */ z.jsxs("div", { ref: s, className: "r_epub_header_chapter-menu", children: [
+  return n && (n == null ? void 0 : n.length) > 0 ? /* @__PURE__ */ z.jsxs("div", { ref: s, className: "r_epub_header_chapter-menu", children: [
     /* @__PURE__ */ z.jsx(
       "div",
       {
@@ -18210,21 +18206,21 @@ function Sh({
         children: /* @__PURE__ */ z.jsx(Ah, { fill: a.theme.txt })
       }
     ),
-    r && /* @__PURE__ */ z.jsx("div", { className: "r_epub_header_dropdown", children: n && n.length > 0 ? n.map((o, u) => /* @__PURE__ */ z.jsx(
+    r && /* @__PURE__ */ z.jsx("div", { className: "r_epub_header_dropdown", children: n && n.length > 0 ? n.map((u, h) => /* @__PURE__ */ z.jsx(
       "div",
       {
         onClick: () => {
-          t == null || t(o), i(!1);
+          String(e) != String(u.id) && (t == null || t(u), i(!1));
         },
         className: Mt(
           "dropdown_item",
-          e == o.fileSrc ? "active" : "not_active"
+          String(e) == String(u.id) ? "active" : "not_active"
         ),
-        children: o.chapterName
+        children: u.name
       },
-      "ghe" + u
+      "ghe" + h
     )) : /* @__PURE__ */ z.jsx("div", { className: Mt("no_text"), children: "No chapter found" }) })
-  ] });
+  ] }) : null;
 }
 function Th({ navItem: n, rendition: e, onBackClick: t, ...r }) {
   const { setting: i } = Jt();
@@ -18239,9 +18235,9 @@ function Oh({
   highlights: e,
   header: t,
   onBackClick: r,
-  chapterItem: i,
-  activeFileSrc: s,
-  onChapterClick: a,
+  chapters: i,
+  activeChapter: s,
+  onChapterSelect: a,
   ...o
 }) {
   const u = Zt(null), h = Zt(null), f = Zt(null), [c, w] = Lt(null), [m, T] = Lt(!0), [N, p] = Ma(Kl, {
@@ -18308,9 +18304,9 @@ function Oh({
                         navItem: c,
                         rendition: h.current,
                         onBackClick: r,
-                        activeFileSrc: s,
-                        chapterItem: i,
-                        onChapterClick: a
+                        activeChapter: s,
+                        chapters: i,
+                        onChapterSelect: a
                       }
                     ),
                     /* @__PURE__ */ z.jsx("div", { children: t }),
